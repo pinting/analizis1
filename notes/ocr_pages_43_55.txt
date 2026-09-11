@@ -1,0 +1,312 @@
+Page 43
+Ha $a,b \in \mathbb{R}$, $x,y \in \mathbb{R}_{\ge 0} \overset{\text{def.}}{=} \mathbb{N} \cup \{0\}$ akkor
+(középisk, vagy indukció)
+-43-
+HATVÁNY. I. $(ab)^x = a^x b^x$, II. $a^{x+y} = a^x a^y$, III. $(a^x)^y = a^{xy}$.
+Cél: kiterjeszteni valós x-ekre $a^x$-et.
+$a \neq 0$ esetén
+$a^{x+0} = a^x \cdot a^0 = a^x \implies a^0 \overset{\text{def.}}{=} 1$ kell legyen
+$a^{x+(-x)} = a^0 = 1 \implies a^{-x} \overset{\text{def.}}{=} \frac{1}{a^x}$ kell legyen.
+$\implies$ $a^x$ értelmezhető $x \in \mathbb{Z}$-re.
+$0^x = 0$ ha $x \in \mathbb{N}$, $0^0 \overset{\text{def.}}{=} 1$, többi hatv. nem def.
+Ha $a > 0$ volt, hogy $\forall k \in \mathbb{N}$, $\exists! \sqrt[k]{a}$.
+Ha $a < 0$ és $k$ ptlan, akkor $a = \left(-\sqrt[k]{|a|}\right)^k \overset{\text{def.}}{=} :\sqrt[k]{a}$
+$a > 0$ esetén $p, q \in \mathbb{Z}$, $q > 0$ esetén
+$a^{\frac{p}{q}} \overset{\text{def.}}{=} \sqrt[q]{a^p}$ ($\implies \left(a^{\frac{p}{q}}\right)^q = \left(\sqrt[q]{a^p}\right)^q = a^p$)
+ha $q$ ps. akkor $-\sqrt[q]{a^p}$ is jó lenne de mi $a^{\frac{p}{q}}$
+alatt vig a poz. értéket vesszük.
+Ha $q$ ptlan akkor $\sqrt[q]{a^p} = a^{\frac{p}{q}}$ értelmezhető $a < 0$-ra is.
+Mostantól fölt. $a > 0$.
+T.: (Jó a def.) T.f.h. $a > 0$, $n, m, p, q \in \mathbb{Z}$, $m, q > 0 \implies a^{\frac{n}{m}} = a^{\frac{p}{q}}$
+Biz.: 
+$\left(\sqrt[m]{a^n}\right)^{mq} = (a^n)^q = a^{nq}$
+$\left(\sqrt[q]{a^p}\right)^{mq} = (a^p)^m = a^{pm}$
+mivel $\frac{n}{m} = \frac{p}{q} \implies qn = pm$
+Mivel $\sqrt[m]{a^n}, \sqrt[q]{a^p} > 0$ így ha $mq$-ik hatv egyenlő, akkor ők is. $\blacksquare$
+
+Page 44
+T.: HATV. AZ. telj. ha $a,b > 0$, $x,y \in \mathbb{Q}$.
+-44-
+Biz.: I., III. HF / 64.
+II. sz. 
+$\left(a^{\frac{p}{q} + \frac{r}{s}}\right)^{qs} = \left(a^{\frac{ps+rq}{qs}}\right)^{qs} = a^{ps+rq}$
+$\left(a^{\frac{p}{q}} \cdot a^{\frac{r}{s}}\right)^{qs} = \left(a^{\frac{p}{q}}\right)^{qs} \cdot \left(a^{\frac{r}{s}}\right)^{qs} = a^{ps} \cdot a^{rq}$ egész kit. eset
+T.: Ha $a > 0$ és $r \in \mathbb{Q}$, akkor $a^r > 0$.
+T.t.h. $r_1, r_2 \in \mathbb{Q}$, $r_1 < r_2$. Ha $a > 1$, akkor $a^{r_1} < a^{r_2}$.
+Ha $0 < a < 1$, akkor $a^{r_1} > a^{r_2}$.
+Biz.: $a > 0 \implies a^p > 0 \implies \sqrt[q]{a^p} > 0. \blacksquare$
+Ha $p, q \in \mathbb{N}$, $a > 1$, akkor $a^p > 1 \implies \sqrt[q]{a^p} > 1$ (mert ha
+nem, akkor $a^p = (\sqrt[q]{a^p})^q \le 1^p = 1$)
+$\implies a^r > 1$ ha $r \in \mathbb{Q}$, $r > 0$. $a^{r_2} = a^{r_1} \cdot a^{r_2-r_1} > a^{r_1}$ (mert $a^{r_2-r_1}>1$)
+$0 < a < 1$ eset HF / 64. $\blacksquare$
+$a^{\sqrt{2}} = ?$ $a > 1$, $a^{1.4} < a^{1.41} < a^{1.414}$ stb. $< a^{\sqrt{2}} < \dots < a^{1.5} < a^2$
+Def.: Ha $a > 1$ és $x \in \mathbb{R}$, akkor
+$a^x \overset{\text{def.}}{=} \sup \underbrace{\{a^r : r \in \mathbb{Q}, r < x\}}_{A} \overset{(*)}{=} \inf \underbrace{\{a^s : s \in \mathbb{Q}, s > x\}}_{B}$
+Ha $0 < a < 1$, akkor $a^x = \inf A \overset{(**)}{=} \sup B$.
+A $(*)$ és $(**)$ egyenl. nem trivi. biz. TK.
+T.: $\forall a > 0$ és $\forall x \in \mathbb{R}$-re $a^x > 0$. Ha $x_1 < x_2$, akkor
+$a > 1$ esetén $a^{x_1} < a^{x_2}$, $0 < a < 1$ esetén $a^{x_1} > a^{x_2}$.
+Biz.: Ha $a > 1$, vál. $r < x$, $r \in \mathbb{Q}$-t, ekkor $a^x \ge a^r > 0$ def. + T.ből.
+Ha $x_1 < x_2$ vál. $r_1, r_2 \in \mathbb{Q}$-t, hogy $x_1 < r_1 < r_2 < x_2 \implies$
+$\implies a^{x_1} \underset{\text{def.}}{\le} a^{r_1} \underset{\text{T.}}{<} a^{r_2} \underset{\text{def.}}{\le} a^{x_2}$.
+Ha $0 < a < 1$ akkor $1/a$ v. has. biz. HF $\blacksquare$
+
+Page 45
+Exponenciális és hatvány fv.-ek
+-45-
+T.: T.f.h. $a > 0$ és $x_n \to x$. Ekkor $a^{x_n} \to a^x$.
+Köv.: $a^x \in C(\mathbb{R})$.
+Megj.: Ez, azaz vál. $x_n \in \mathbb{Q}$, $x_n \to x$-et és legyen $a^x \overset{\text{def}}{=} \lim_{n \to \infty} a^{x_n}$
+lehetne az $a^x$ def.-ja, de meg kéne mutatni,
+hogy $\exists \lim$ és nem függ $x_n$ választásától.
+Biz.: $a > 1$ eset ($0 < a < 1$ has., $a = 1$ TRIVI)
+Volt $a^x = \sup \{a^r : r \in \mathbb{Q}, r < x\} = \inf \{a^s : s \in \mathbb{Q}, x < s\}$
+T.f.h. $\varepsilon > 0$, $\exists r < x < s$, $r,s \in \mathbb{Q}$,
+$a^x - \varepsilon < a^r \le a^x \le a^s < a^x + \varepsilon$.
+$x_n \to x \implies \exists n_0$, hogy $\forall n \ge n_0$-ra $x_n \in (r,s)$, volt, hogy
+$a^x$ sz. mon. növ. ha $a > 1 \implies \forall n \ge n_0$-ra, $a^x - \varepsilon < a^r <$
+$< a^{x_n} < a^s < a^x + \varepsilon$ ez $\forall \varepsilon > 0$-ra működik $\implies a^{x_n} \to a^x \blacksquare$
+T.: HATV.AZ. telj. ha $a,b > 0$, $x,y \in \mathbb{R}$.
+Biz.: I, II, III volt, rac. kit.
+I. II. Vál $r_n, s_n \in \mathbb{Q}$, $r_n \to x$, $s_n \to y$
+$(ab)^x = \lim_{n \to \infty} (ab)^{r_n} \underset{\text{rac. kit.}}{=} \lim_{n \to \infty} a^{r_n} b^{r_n} = a^x b^x$
+$r_n + s_n \to x+y$, $a^{x+y} = \lim_{n \to \infty} a^{r_n+s_n} \underset{\text{rac. kit.}}{=} \lim_{n \to \infty} a^{r_n} a^{s_n} = a^x a^y$
+III. kis óvatossággal has. biz. HF / 69 TK $(a^x)^y = a^{xy} \blacksquare$
+Def.: T.f.h. $a > 0$ rögz. Az $x \mapsto a^x$ ($x \in \mathbb{R}$) fv.-t a
+alapú exponenciális fv.-nek nev. (más jel $\exp_a(x)$).
+Ha $b \in \mathbb{R}$ rögz., akkor az $x \mapsto x^b$ ($x > 0$) fv.-t
+$b$ kitevőjű hatvány fv.-nek nev.
+
+Page 46
+T.: Ha $a > 1 \implies \forall x \in \mathbb{R} \quad a^x > 0$, sz. m. növ. 
+-46-
+és folyt. (*) $\lim_{x \to \infty} a^x = +\infty$, $\lim_{x \to -\infty} a^x = 0$.
+Ha $0 < a < 1 \implies \forall x \in \mathbb{R} \quad a^x > 0$, sz. m. csökk. és folyt.
+(**) $\lim_{x \to \infty} a^x = 0$ és $\lim_{x \to -\infty} a^x = +\infty$.
+Biz.: $a > 1$ Volt. $a^x > 0$, sz. mon. növ. és folyt.
+$a^n = (1+b)^n \ge 1+nb \to +\infty \implies a^n \to +\infty$ ha $n \to +\infty$
+$a^{-n} = \frac{1}{a^n} \to 0$. A mon. miatt $\forall K, \exists N_K$, hogy
+$n_x = [x] \ge N_K \implies a^x \ge a^{[x]} > K \implies a^x \to +\infty$ ha $x \to +\infty$.
+ha $x \to -\infty$ akkor $(-x) \to +\infty$, $a^{-x} = \frac{1}{a^x} \to +\infty \implies a^x \to 0$.
+$0 < a < 1$ és (**) HF. $\frac{1}{a} > 1$ visszavezethető $\blacksquare$
+[Diagram of exponential functions $a^x$ for $a>1$, $a=1$, $0<a<1$]
+T.: i) $b > 0 \implies x^b > 0$, sz. mon. növ. és folyt. $(0, +\infty)$-en,
+valamint (*) $\lim_{x \to 0+0} x^b = 0$, $\lim_{x \to \infty} x^b = +\infty$.
+ii) $b < 0 \implies x^b > 0$, sz. mon. csökk. és folyt. $(0, +\infty)$-en,
+valamint (**) $\lim_{x \to 0+0} x^b = +\infty$, $\lim_{x \to \infty} x^b = 0$.
+Biz.: $b > 0$ eset ($b < 0$ HF), $t \ge 1 \implies t^b \ge t^0 = 1 \implies$
+$\implies 0 < x < y \implies y^b = \left(\frac{y}{x} \cdot x\right)^b = \left(\frac{y}{x}\right)^b x^b > 1 \cdot x^b = x^b$.
+$\implies x^b$ sz. mon. növ.
+$\forall K > 0$, $x^b > K$ ha $x > K^{1/b} \implies \lim_{x \to +\infty} x^b = +\infty$.
+$\forall \varepsilon > 0$, $x^b < \varepsilon$ ha $0 < x < \varepsilon^{1/b} \implies \lim_{x \to 0+0} x^b = 0$.
+T.f.h. $x_0 > 0$ és $0 < \varepsilon < x_0^b \implies mon. \implies A \overset{\text{def.}}{=} (x_0^b - \varepsilon)^{\frac{1}{b}} < x_0 <$
+$< (x_0^b + \varepsilon)^{\frac{1}{b}} \overset{\text{def.}}{=} B \implies A < x < B \implies A^b = x_0^b - \varepsilon < x^b < B^b = x_0^b + \varepsilon \blacksquare$
+
+Page 47
+Logaritmus fv.-ek  $a \neq 1$, $0 < a$
+-47-
+[Diagram of $a^x$ for $a>1$ and for $0<a<1$]
+$a^x$ sz. mon. folyt. $\mathbb{R}$-en, $R(a^x) = (0, +\infty) \implies$
+$f(x) = a^x$-nek $\exists$ folyt. és sz. mon. inverze.
+Jel: $\log_a x$ (vagy $^a\log x$, $\log_a x$), $a$ alapú logaritmus
+(*) $\log_a x = y \iff a^y = x \iff \exp_a y = x$.
+Tul.: 1) $D(\log_a x) = (0, +\infty)$, $R(\log_a x) = \mathbb{R}$,
+2) $\log_a x \in C(0, +\infty)$,
+3) $a > 1 \implies \log_a x$ sz. mon. növ., $0 < a < 1 \implies \log_a x$ sz. mon. csökk
+4) Ha $a > 1$, akkor $\lim_{x \to \infty} \log_a x = \infty$, $\lim_{x \to 0+0} \log_a x = -\infty$.
+Ha $0 < a < 1$, akkor $\lim_{x \to \infty} \log_a x = -\infty$, $\lim_{x \to 0+0} \log_a x = +\infty$.
+[Diagrams of $\log_a x$ for $a>1$ and $0<a<1$]
+Biz.: $a > 1$ eset, $a^K < x = \exp_a(\log_a x) \implies K < \log_a x \implies$
+$\implies \lim_{x \to \infty} \log_a x = +\infty$.
+$0 < x < a^K \implies \log_a x < K \implies \lim_{x \to 0+0} \log_a x = -\infty \blacksquare$
+5) $a > 0$, $a \neq 1, \forall x, y > 0$-ra
+$\log_a (xy) = \log_a x + \log_a y$
+$\log_a (\frac{x}{y}) = \log_a x - \log_a y$
+$\log_a \sqrt[y]{x} = \frac{1}{y} \log_a x$
+$\log_a (\frac{1}{x}) = -\log_a x$
+$\otimes \log_a (x^y) = y \log_a x$
+
+Page 48
+Biz.: Csak $\otimes$-et biz. többi HF / 69 / TK,
+-48-
+HATVÁZ-ra kell visszavez. + (*)
+$a^{\log_a(x^y)} \underset{(*)}{=} x^y \underset{(*)}{=} (a^{\log_a x})^y \underset{\text{HATVÁZ}}{=} a^{y \log_a x} \implies \log_a(x^y) = y \log_a x \blacksquare$
+Volt, hogy $e_n = \left(1+\frac{1}{n}\right)^n$ sz. mon. növ. és $f_m = \left(1+\frac{1}{m}\right)^{m+1}$
+sz. mon. csökk.
+$\left(1+\frac{1}{1}\right)^1 < \left(1+\frac{1}{2}\right)^2 < \dots < \left(1+\frac{1}{m}\right)^m < \dots < \left(1+\frac{1}{n}\right)^n < \dots < \left(1+\frac{1}{m'}\right)^{m'} < \dots$
+$\land \qquad \land \qquad \dots > \left(1+\frac{1}{m}\right)^{m+1} > \dots > \left(1+\frac{1}{n}\right)^{n+1} > \dots > \left(1+\frac{1}{m'}\right)^{m'+1} > \dots$
+$\left(1+\frac{1}{1}\right)^2 > \left(1+\frac{1}{2}\right)^3 > \dots > $
+Áll.: $\forall n,m \in \mathbb{N}$-re $\left(1+\frac{1}{n}\right)^n < \left(1+\frac{1}{m}\right)^{m+1}$.
+Biz.: $\le$ tranzitív + fenti ábra $n = m \quad \land \quad \land$
+$m < n \implies m' > n$
+$\implies \forall m$-re $\left(1+\frac{1}{m}\right)^{m+1}$ f. k.-ja az $(e_n)$-nek, $e_n$ mon. növ.
+$\implies e_n$ konv., hasonlóan $f_m$ konv., $e_n \to e, f_m \to f$.
+$\forall m \quad f_m \ge e_n \quad n \to +\infty$
+$f_m \ge e \quad m \to +\infty \implies \left(1+\frac{1}{1}\right)^2 = 4 = f_1 \ge e$
+$\implies f \ge e$
+$f - e \le f_n - e_n = \left(1+\frac{1}{n}\right)^{n+1} - \left(1+\frac{1}{n}\right)^n = \left(1+\frac{1}{n}\right)^n \cdot \left(\left(1+\frac{1}{n}\right) - 1\right) \le 4 \cdot \frac{1}{n}$
+$\forall n \in \mathbb{N}$-re igaz. $\implies f = e \blacksquare$
+$e \overset{\text{def.}}{=} \lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n = \lim_{n \to \infty} \left(1+\frac{1}{n}\right)^{n+1}$.
+Def.: A $\log_e x$ fv.-t természetes alapú logaritmus-
+nak nev. Jele: $\ln x$ (esetleg $\log x$).
+
+Page 49
+Hiperbolikus fv.-ek   Szinusz hiperbolikus, 
+-49-
+koszinusz hiperbolikus
+$\text{sh} x = \frac{e^x - e^{-x}}{2}$   $\text{ch} x = \frac{e^x + e^{-x}}{2}$   (*)
+$\text{sh}, \text{ch}$ folyt. fv-ek, $\text{sh} x$ ptlan, $\text{ch} x$ ps.,
+$e^x$ sz. mon. növ. $e^{-x}$ sz. m. cs. $\implies \frac{e^x - e^{-x}}{2} = \text{sh} x$ sz. mon. növ.
+$\lim_{x \to \infty} \text{sh} x = \frac{\lim_{x \to \infty} e^x - \lim_{x \to \infty} e^{-x}}{2} = +\infty$
+$\lim_{x \to -\infty} \text{sh} x = -\infty$. Hasonlóan $\lim_{x \to \pm\infty} \text{ch} x = +\infty$, $\text{ch}(0) = 1$.
+$\text{ch}^2 x - \text{sh}^2 x = 1$
+$\left(\frac{e^x + e^{-x}}{2}\right)^2 - \left(\frac{e^x - e^{-x}}{2}\right)^2 = 1$ (egysz.)
+$\implies \forall t \in \mathbb{R}$-re $(\text{ch} t, \text{sh} t)$ az $x^2 - y^2 = 1$, $(x-y)(x+y) = 1$
+egyenletű hiperbolán van, 
+innen a eln.
+($(\cos t, \sin t)$ az $x^2 + y^2 = 1$ körön van)
+[Diagram of hyperbola $x^2 - y^2 = 1$] 
+(Komplex tanban $\cos x = \frac{e^{ix} + e^{-ix}}{2}$, $\sin x = \frac{e^{ix} - e^{-ix}}{2i}$)
+$\text{ch} x \ge 1 > 0$
+$\text{ch} x = \sqrt{1 + \text{sh}^2 x}$, $\text{ch} x > 0$ (nincs $\pm$ a gyökvonásnál)
+$\implies \text{ch} x$ sz. mon. növ. $[0, \infty)$-en, sz. mon. csökk. $(-\infty, 0]$-n
+[Diagram of ch x]  [Diagram of sh x]
+Addíciós képletek: $\text{sh}(x \pm y) = \text{sh} x \text{ch} y \pm \text{ch} x \text{sh} y$
+$\text{ch}(x \pm y) = \text{ch} x \text{ch} y \pm \text{sh} x \text{sh} y$
+Biz! Haszn. (*) és $e^{x+y} = e^x e^y \blacksquare$
+$\implies \text{sh} 2x = 2 \text{sh} x \text{ch} x \dots$ további képl. TK.
+
+Page 50
+tangens és cotangens hiperbolikus
+-50-
+$\text{th} x = \frac{\text{sh} x}{\text{ch} x} = \frac{e^x - e^{-x}}{e^x + e^{-x}}$, $\text{cth} x = \frac{\text{ch} x}{\text{sh} x} = \frac{1}{\text{th} x}$
+HF: $\lim_{x \to -\infty} \text{th} x = -1$, $\lim_{x \to \infty} \text{th} x = 1$, $\lim_{x \to \pm \infty} \text{cth} x = \pm 1$, 
+$\lim_{x \to 0 \pm 0} \text{cth} x = \pm \infty$.
+[Diagram of th x]  [Diagram of cth x]
+$\text{sh} x: \mathbb{R} \to \mathbb{R}$ bijekció inverzét area szinusz
+hiperbolikusnak nev. Jel: $\text{arsh} x$,
+$\text{arsh} x$ sz. mon. növ. és folyt.
+$\text{arsh} x = \ln\left(x + \sqrt{x^2 + 1}\right)$ HF / 69 / TK
+[Diagram of arsh x and sh x]
+$\text{ch} x$ sz. mon. növ. $[0, +\infty)$-en, $R(\text{ch} x) = [1, +\infty)$
+$\text{ch} x \big|_{[0, +\infty)}$ inverzét area koszinusz hiperbolikusnak nev.
+Jel: $\text{arch} x$.
+$\text{arch} x = \ln\left(x + \sqrt{x^2 - 1}\right)$ HF / 69 / TK.
+A $\text{th} x$ inverze az area tangens hiperbolikus, $\text{arth} x$
+$\text{arth}: (-1, 1) \to \mathbb{R}$ folyt. bijekció
+[Diagram of arth x and th x]
+$\text{arth} x = \frac{1}{2} \ln\left(\frac{1+x}{1-x}\right)$
+
+Page 51
+Biz.: $\text{th} x = \frac{\text{sh} x}{\text{ch} x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} = y$
+-51-
+$e^x - e^{-x} = y (e^x + e^{-x}) \implies (1-y) e^x = (y+1) e^{-x} \implies$
+$(1-y)(e^x)^2 = y+1 \implies e^x = \sqrt{\frac{y+1}{1-y}} \implies x = \ln \sqrt{\frac{1+y}{1-y}} = \frac{1}{2} \ln\left(\frac{1+y}{1-y}\right) \blacksquare$
+$\text{arcth} x$ a $\text{cth} x$ inverze Ld. TK. $\blacksquare$
+
+Differenciálszámítás
+$s(t)$ út-idő fv. test pillanatnyi sebessége
+$\lim_{t \to t_0} \frac{s(t) - s(t_0)}{t - t_0} = v(t_0)$, $\frac{s(t) - s(t_0)}{t - t_0}$ átl. seb. $[t_0, t]$-en
+[Diagram of secant and tangent lines on s(t)]
+$\frac{s(t) - s(t_0)}{t - t_0}$ a húr meredeksége
+A határérték az érintő meredeksége.
+Def.: $f$ differenciálható egy $a \in \mathbb{R}$ pontban, 
+ha $\exists \delta_0 > 0$, hogy $B(a, \delta_0) \subset D(f)$ és a
+$\lim_{x \to a} \frac{f(x) - f(a)}{x - a} = f'(a)$ létezik és véges.
+$f'(a)$-t az $f$ $a$-beli differenciálhányadosának, vagy 
+deriváltjának nev.
+Megj.: $\lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$
+Jel.: $f'(a)$, $\dot{f}(a)$, $\left. \frac{df}{dx} \right|_{x=a}$, $\left. \frac{df(x)}{dx} \right|_{x=a}$
+ha $y = f(x)$, $y'(a)$, $\left. \frac{dy}{dx} \right|_{x=a}$
+
+Page 52
+$\frac{f(x) - f(a)}{x - a} = \frac{\Delta f(x)}{\Delta x} = \frac{\Delta y}{\Delta x}$ az $f$ fv. $a$ és $x$ helyekhez
+-52-
+tartozó differenciahányadosának nev. Jel: $\frac{\Delta f(x)}{\Delta x}$, $\frac{\Delta y}{\Delta x}$.
+Def.: Ha $f$ diff. ható $a$-ban, akkor az
+$y = f'(a)(x - a) + f(a)$ egyenest a graph $f$, $(a, f(a))$
+pontbeli érintőjének hívjuk.
+Def.: Az $f$ valós fv. differenciálfüggvényének, 
+ill. derivált fv-nek nev. azt a fv-t, amely azokban
+az $a \in \mathbb{R}$ pontokban ért, ahol $f$ diff. ható és 
+értéke $f'(a)$. Jel.: $f'$, $\dot{f}$, $\frac{df}{dx}$, $y'$, $\dot{y}$, $\frac{dy}{dx}$ ($y = f(x)$)
+Pl.: $f(x) = mx+b$, $f'(x) = \lim_{h \to 0} \frac{m(x+h)+b - (mx+b)}{h} = m$.
+T.: $(x^n)' = n x^{n-1}$ ($n \in \mathbb{N}$).
+Biz.: $\lim_{y \to x} \frac{y^n - x^n}{y - x} = \lim_{y \to x} \frac{y-x}{y-x} (y^{n-1} + y^{n-2}x + \dots + x^{n-1}) = n x^{n-1} \blacksquare$
+T.: Ha $f$ diff. ható $a$-ban, akkor folyt. $a$-ban.
+Biz.: $f(x) - f(a) = \frac{f(x) - f(a)}{x-a} (x-a) \to f'(a) \cdot 0 = 0$ ha $x \to a \blacksquare$
+Diff. $\implies$ Folyt., Folyt. $\not\implies$ Diff. Pl.: [Diagram of y=|x|] $f(x) = |x|$
+$\lim_{x \to 0+0} \frac{f(x) - 0}{x - 0} = 1 \neq \lim_{x \to 0-0} \frac{f(x) - 0}{x - 0} = \lim_{x \to 0-0} \frac{-x}{x} = -1$
+$\exists$ seholse diff. ható folytonos fv. (ld. TK. formula)
+Szőkefalvi-Nagy Béla : Valós fv-ek és fv.sorok
+87-88. o. történet + Biz.
+Ch. Hermite "Rémülettel és borzalommal fordulok
+el ettől a siralmas fekélytől: fv-ek, amelyeknek
+nincs deriváltjuk".
+
+Page 53
+Def.: $f$ jobbról diff.ható $a$-ban, ha értelmezett 
+-53-
+az $a$ egy jobb. kretében és a $\lim_{x \to a+0} \frac{f(x) - f(a)}{x - a}$
+hat. ért. $\exists$ és véges. Jel.: $f'_+(a)$.
+Hasonló def. baloldali deriv. $f'_-(a)$.
+Pl.: $f(x) = |x|$, $f'_+(0) = 1$, $f'_-(0) = -1$.
+Megj.: Nyilván $\exists f'(a) \iff \exists f'_+(a) \land \exists f'_-(a) \land f'_+(a) = f'_-(a)$.
+Differenciálási szabályok:
+T.: Legyen $f$ és $g$ diff. ható $a$-ban.
+Ekkor $cf$, $f \pm g$, $f \cdot g$ is diff. ható $a$-ban és
+1) $(cf)'(a) = c f'(a)$, 2) $(f+g)'(a) = f'(a) + g'(a)$
+3) $(f \cdot g)'(a) = f'(a) g(a) + f(a) g'(a)$,
+Ha $g(a) \neq 0$, akkor $\frac{1}{g}$ és $\frac{f}{g}$ is diff.ható $a$-ban és
+4) $\left(\frac{1}{g}\right)'(a) = -\frac{g'(a)}{g^2(a)}$, 5) $\left(\frac{f}{g}\right)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g^2(a)}$.
+Biz.: 1) $\land$ 2) Áll. a def. és a hat. ért. tul. HF / 69 / TK.
+3) $\lim_{x \to a} \frac{f(x)g(x) - f(a)g(a)}{x - a} = \lim_{x \to a} \frac{f(x)g(x) - f(a)g(x) + f(a)g(x) - f(a)g(a)}{x - a} =$
+$= \lim_{x \to a} g(x) \frac{f(x) - f(a)}{x - a} + \lim_{x \to a} f(a) \frac{g(x) - g(a)}{x - a} = f'(a)g(a) + f(a)g'(a)$
+(g folytonos a-ban így $g(x) \to g(a)$)
+4) $\lim_{x \to a} \frac{\frac{1}{g(x)} - \frac{1}{g(a)}}{x - a} = \lim_{x \to a} \frac{1}{g(x)g(a)} \cdot \frac{g(a) - g(x)}{x - a} = \frac{1}{g^2(a)} (-g'(a))$
+5) 3) $\land$ 4) $f(x) \cdot \frac{1}{g(x)}$-re HF / 69 / TK $\blacksquare$
+
+Page 54
+Közvetett fv. diff.hatóságát szeretnénk
+-54-
+vizsg. Ehhez ST.
+T.: $f$ diff.ható az $a$ helyen $\iff \exists f^*$ az $a$-ban
+folytonos fv. amire $x \in D(f)$-re $f(x) - f(a) = f^*(x)(x-a)$.
+Biz.: ($\implies$) ha $\exists f'(a)$ akkor ha $x \in D(f), x \neq a$
+legyen $f^*(x) = \frac{f(x) - f(a)}{x - a}$, $f^*(a) \overset{\text{def.}}{=} f'(a)$.
+($\impliedby$) Ha $f^*$ folyt. $a$-ban, akkor $\lim_{x \to a} f^*(x) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = f^*(a) = f'(a) \blacksquare$
+T.: Ha $f$ diff.ható az $a$ helyen, $g$ pedig az
+$f(a)$ helyen, akkor $h = g \circ f$ is diff.ható az $a$
+helyen, és $h'(a) = g'(f(a)) \cdot f'(a)$.
+Biz.: Előző T. $\implies x \in D(f), u \in D(g)$-re
+$f(x) - f(a) = f^*(x)(x-a)$,
+$g(u) - g(f(a)) = g^*(u)(u - f(a))$
+$\lim_{x \to a} f^*(x) = f^*(a) = f'(a)$, $\lim_{u \to f(a)} g^*(u) = g^*(f(a)) = g'(f(a))$.
+$h(x) - h(a) = g(f(x)) - g(f(a)) = g^*(f(x))(f(x) - f(a)) =$
+$= \underbrace{g^*(f(x)) f^*(x)}_{\text{h^*(x)}} (x-a) = h^*(x)(x-a)$.
+Mivel $f^*$ folyt. $a$-ban, $f$ folyt. az $a$-ban, $g^*$ folyt.
+$f(a)$-ban $\implies g^* \circ f$ folyt. $a$-ban $\implies h^*$ folyt. $a$-ban
+$\implies h'(a) = h^*(a) = g^*(f(a)) \cdot f^*(a) = g'(f(a)) f'(a) \blacksquare$
+Ez a láncszabály $(g(f(x)))' = g'(f(x)) f'(x)$
+$y = f(x)$, $z = g(y)$, $\frac{dg(f(x))}{dx} = \frac{dz}{dy} \cdot \frac{dy}{dx} = \frac{dz}{dx}$
+
+Page 55
+Pl.: $((x^2+1)^{13})' = ?$  $g(x) = x^{13}$, $f(x) = x^2+1$
+-55-
+$g'(x) = 13 x^{12}$, $f'(x) = 2x$, $g'(f(x)) = 13 (x^2+1)^{12}$,
+$((x^2+1)^{13})' = 13 (x^2+1)^{12} \cdot 2x$
+
+T.: (Inverz fv. diff.szab.) T.f.h. $f$ szig. mon. és 
+folyt $[a,b]$-n is $\exists f'(c) \neq 0$ vmely $c \in (a,b)$-ben.
+Ekkor $f^{-1} = \varphi$ diff.ható a $d = f(c)$ helyen és
+$\varphi'(d) = \frac{1}{f'(c)} = \frac{1}{f'(\varphi(d))}$.
+Biz.: $f^{-1} = \varphi$ folytonos $\implies \lim_{v \to d} \varphi(v) = \varphi(d) = c$ és $v \neq d$
+$\implies \varphi(v) \neq \varphi(d) = c$ a sz. mon. miatt.
+$\lim_{u \to c} \frac{1}{\frac{f(u) - f(c)}{u - c}} = \frac{1}{f'(c)}$, helyettesítsünk $u = \varphi(v)-t \implies$
+$\frac{1}{f'(c)} = \lim_{v \to d} \frac{1}{\frac{f(\varphi(v)) - f(c)}{\varphi(v) - c}} = \lim_{v \to d} \frac{\varphi(v) - c}{f(\varphi(v)) - f(\varphi(d))} = \lim_{v \to d} \frac{\varphi(v) - \varphi(d)}{v - d} = \varphi'(d) \blacksquare$
+Memoriter $y = f(x), z = g(y), \frac{dz}{dx} = \frac{dz}{dy} \cdot \frac{dy}{dx}$, $g(f(x)) = x = z$
+$\frac{dx}{dx} = 1 = \frac{dx}{dy} \cdot \frac{dy}{dx} \implies \frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}$.
+Pl.: $x > 0, \varphi(x) = \sqrt[k]{x}, k \in \mathbb{N}, f(x) = \varphi^{-1}(x) = x^k \mid_{[0, +\infty)}$
+$f'(x) = k x^{k-1}$, $c = \varphi(d) = \sqrt[k]{d}$, $\varphi'(d) = \frac{1}{f'(c)} = \frac{1}{f'(\varphi(d))} = \frac{1}{k (\sqrt[k]{d})^{k-1}} = \frac{1}{k d^{\frac{k-1}{k}}} = \frac{1}{k} d^{\frac{1}{k}-1} \implies (x^{1/k})' = \frac{1}{k} x^{\frac{1}{k}-1}$
+Spec.: $\varphi(x) = \sqrt{x}$, $\varphi'(x) = \frac{1}{2\sqrt{x}}$
+HF / 69 $(x^{\frac{p}{q}})' = \frac{p}{q} x^{\frac{p}{q}-1}$

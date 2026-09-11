@@ -1,0 +1,268 @@
+### Page 1
+
+Mi az analízis? "Differenciál és Integrálszámítás" -1-
+Területszámítás: [circle inscribed in a polygon] "közelítés végtelenül finomodik"
+pillanatnyi sebesség: \Delta s / \Delta t \to ds / dt
+határérték, folytonosság
+görögöknél csírák, XVII-XVIII sz. kalkulus 1665 pestis (Cambridge zárva)
+Newton-Leibniz vita
+Szilárd alapok: XIX-XX sz. Cauchy-Weierstrass-Dedekind
+
+Valós számok (axiomatikus megalapozás később más tárgyban)
+\mathbb{N} = \{1, 2, \dots\} (van aki 0-val kezdi)
+\mathbb{Z}, \mathbb{Q} = \{\frac{p}{q} : p, q \in \mathbb{Z}, q \neq 0\}
+\sqrt{2} \notin \mathbb{Q}, 2 = \frac{p^2}{q^2} \quad 2q^2 = p^2 számelmélet alaptétele \lightning
+(\mathbb{R}, 0, 1, +, \cdot, \le) kétváltozós reláció
+2db konstans 2db kétvált. művelet
+a > b \Leftrightarrow b < a, \quad a \le b \Leftrightarrow a < b \text{ v } a = b
+R_1 \quad \forall a, b \in \mathbb{R} : a < b, a = b, b < a \text{ pontosan egy teljesül} \quad (\text{trichotómia})
+R_2 \quad \forall a, b, c \in \mathbb{R} \quad a < b \land b < c \Rightarrow a < c \quad (\text{tranzitivitás})
+R_3 \quad \forall a, b, c \quad a < b \Rightarrow a + c < b + c
+R_4 \quad \forall a, b \in \mathbb{R} \land \forall c > 0 \quad a < b \Rightarrow ac < bc
+Def.: |x| = \begin{cases} x & \text{ha } x > 0 \\ 0 & \text{ha } x = 0 \\ -x & \text{ha } x < 0 \end{cases}
+T.: (\Delta \text{ egyenlőtlenség}) \quad |a + b| \le |a| + |b|
+Biz.: x \ge 0 \Rightarrow |x| = x, \text{ ha } x < 0, \text{ akkor } |x| = -x > 0 > x \Rightarrow
+\Rightarrow |x| \ge x.
+
+### Page 2
+
+|x| = |-x| \ge -x                                         -2-
+|a| \ge a, \quad |b| \ge b \Rightarrow |a| + |b| \ge a + b
+|a| \ge -a, \quad |b| \ge -b \Rightarrow |a| + |b| \ge -a - b = -(a + b) \Bigg\} \Rightarrow
+|a| + |b| \ge |a + b|.
+Ált.: |a_1 + \dots + a_n| \le |a_1| + \dots + |a_n|
+TIND (teljes indukció) elve. Az állítások egy
+sorozata. Ha A_1 = i és \forall n \in \mathbb{N}-re (A_n \Rightarrow A_{n+1}) = i
+akkor \forall n \in \mathbb{N}-re A_n = i.
+A_n = (|a_1 + \dots + a_{n+1}| \le |a_1| + \dots + |a_{n+1}|)
+A_1 = (|a_1 + a_2| \le |a_1| + |a_2|) = i \checkmark
+Kell \forall n \in \mathbb{N}-re A_n \Rightarrow A_{n+1}
+| \underbrace{a_1 + \dots + a_n}_A + \underbrace{a_{n+1}}_B | \le | \underbrace{a_1 + \dots + a_n}_{|A|} | + \underbrace{|a_{n+1}|}_{|B|} \underset{\text{IND. felt.}}{\le} |a_1| + \dots +
++ |a_n| + |a_{n+1}|
+
+Def.: +\infty, -\infty \notin \mathbb{R} szimbólumok
+\forall x \in \mathbb{R}, -\infty < x < +\infty.
+\overline{\mathbb{R}} = \mathbb{R} \cup \{+\infty\} \cup \{-\infty\} bővített számegyenes.
+Def.: Ha a, b \in \mathbb{R}, \quad a \le b, akkor
+[a, b] = \{x \in \mathbb{R} : a \le x \le b\} zárt int.
+(a, b) = \{x \in \mathbb{R} : a < x < b\} nyílt int.
+Más jel.: [a, b), (a, b].
+(-\infty, a] = \{x \in \mathbb{R} : x \le a\} zárt f. egyenes.
+Más jel. (-\infty, a), [a, +\infty), (a, +\infty).
+
+### Page 3
+
+Def.: T.f.h. H \subset \mathbb{R}. Egy a \in \mathbb{R} szám         -3-
+felső (alsó) korlátja H-nak, ha \forall h \in H-ra
+h \le a, \quad (h \ge a). Ha egy halmaznak van felső
+(alsó) korlátja, akkor felülről (alulról) korlátos-
+nak nevezzük. Ha H a. és f. korl., akkor
+korlátosnak nev.
+Megj.: H korl. \Leftrightarrow \exists K \in \mathbb{R}, \forall h \in H, |h| \le K.
+Biz.: -K \le h \le K \Big\Vert \forall h \in H, m \le h \le M \Rightarrow
+a.k. \quad\quad f.k. \Big\Vert K \overset{def}{=} \max\{|m|, |M|\} jó korlát.
+
+Def.: Ha H \subset \mathbb{R} és \exists M \in H, (m \in H), amire
+\forall h \in H-ra, h \le M \quad (\text{ill. } h \ge m) \text{ telj. akkor}
+M\text{-et (ill. } m\text{-et) a } H \text{ legnagyobb (legkisebb)}
+elemének nev. Jel: \max H, (\min H)
+H maximuma (minimuma).
+Pl.: H = (0, 1], \max H = 1, \min H = N. L.
+
+\max H \text{ (ha létezik) f. korlátja } H\text{-nak.}
+Sőt ha b \in \mathbb{R} \text{ a } H \text{ f.k. akkor } \max H \le b
+\Rightarrow \max H \text{ a } H \text{ legkisebb felső korlátja. (l.k.f.k.)}
+
+Ha H_{\sqrt{2}} = \{x \in \mathbb{Q} : x^2 < 2\} \text{ akkor } H\text{-nak nincs}
+\mathbb{Q}\text{-beli l.k.f.k.-ja.}
+H_{\sqrt{2}}\text{-hez van } \mathbb{Q}\text{-beli f.k.-ja, hiszen } 2 \in \mathbb{Q} \text{ és}
+nyilván ha x > 2, \text{ akkor } x^2 > 4 > 2 \Rightarrow x \notin H_{\sqrt{2}}.
+
+### Page 4
+
+Teljességi tulajdonság/axióma                         -4-
+Ha H \subset \mathbb{R}, H \neq \emptyset \text{ és } H \text{ f. korl., akkor } H\text{-nak van}
+\mathbb{R}\text{-beli l.k.f.k.-ja, ezt a } H \text{ szuprémumának nev.}
+Jel: \sup H. \quad (\text{más eln. felső határ}) \quad (\emptyset = \text{üres halmaz})
+T.: Ha létezik, akkor \sup H egyértelmű.
+Biz.: HF / Gy.
+T.: Ha H \neq \emptyset, H \text{ a. korl., akkor van l.n.a.k.-ja.}
+Biz.: -H = \{-h : h \in H\} \neq \emptyset \quad f.k.
+f.k. tul \Rightarrow M = \sup (-H) \in \mathbb{R}. \text{ Legyen } m = -M.
+\forall h \in H, -h \le M \Rightarrow h \ge -M = m \Rightarrow m \text{ a } H \text{ a.k.-ja.}
+Ha m < m' \text{ és } m' \text{ a } H \text{ a.k.-ja, akkor } \forall h \in H
+m' \le h \Rightarrow -m' \ge -h \Rightarrow -m' \text{ a } -H \text{ f.k.-ja, de}
+m < m' \Rightarrow M = -m > -m' \lightning Ha -H \text{ l.k.f.k.-ja} \rfloor
+Egyezmény Ha H \neq \emptyset \text{ nem f.k., akkor } \sup H = +\infty,
+ha H \neq \emptyset \text{ nem a.k., akkor } \inf H = -\infty.
+\sup \emptyset = -\infty, \inf \emptyset = +\infty.
+Megj.: Ha \exists \max H, \text{ akkor } \max H = \sup H, \text{ de}
+\max (0, 1) = N.L., \text{ de } \sup (0, 1) = 1.
+T.: (Arkhimédész féle tul./ax) \forall x \in \mathbb{R} \exists n \in \mathbb{N}, n > x.
+Biz.: Indirekt. T.f.h. \exists a \in \mathbb{R}, \forall n \in \mathbb{N}, a > n.
+H = \mathbb{N} \neq \emptyset \text{ f.k. } \Rightarrow \exists \sup \mathbb{N} = c \in \mathbb{R} \Rightarrow \forall n \in \mathbb{N} \quad c \ge n
+\Rightarrow c - 1 \ge n - 1 \text{ telj. } n=2, 3, \dots \Rightarrow \forall n \in \mathbb{N} \quad c - 1 \ge n \Rightarrow
+c - 1 \text{ az } \mathbb{N} \text{ f.k., de } c - 1 < c \lightning \quad c = \sup \mathbb{N}. \rfloor
+
+### Page 5
+
+T.: (Cantor-féle tul./Ax) Ha [a_1, b_1] \supset [a_2, b_2] \supset \dots       -5-
+akkor \bigcap_{n=1}^\infty [a_n, b_n] \neq \emptyset.
+Biz.: Nyilván b_1 \ge b_n \ge a_n \quad \forall n \in \mathbb{N}\text{-re } \Rightarrow
+b_1 \text{ a } H = \{a_n : n \in \mathbb{N}\} \neq \emptyset \text{ f.k.-ja. } c \overset{def}{=} \sup H.
+b_1 \ge b_2 \ge b_3 \ge \dots \ge b_k \ge \dots \ge b_n \ge \dots \ge b_{k'} \ge \dots
+IV \quad IV \quad IV \quad \dots \le a_k \le \dots \le a_n \le \dots \le a_{k'} \le \dots
+a_1 \le a_2 \le a_3 \le \dots
+Ha k \le n, akkor b_n \ge a_n \ge a_k \quad ha k' \ge n, akkor
+b_n \ge b_{k'} \ge a_{k'} \Rightarrow b_n \text{ a } H \text{ f.k.-ja } \Rightarrow \forall n \in \mathbb{N}\text{-re}
+b_n \ge c \text{ és } a_n \le c \Rightarrow \forall n \in \mathbb{N}\text{-re } c \in [a_n, b_n] \rfloor
+(T. tul.) \overset{\text{Volt}}{\underset{\text{HF/Gy}}{\Longleftrightarrow}} ((A. tul.) \land (C. tul.))
+többféle axiomatikus felépítés lehetséges.
+Egyenlőtlenségek
+HF/Gy 2^n > n^2 \text{ ha n elég nagy.}
+Számtani-mértani közép közötti egyenlőtlenség
+S = \frac{a_1 + \dots + a_n}{n} \text{ az } a_1, \dots, a_n \text{ számok számtani közepe.}
+Az a_1, \dots, a_n \text{ pozitív számok mértani ill. harmonikus}
+közepe m = \sqrt[n]{a_1 \dots a_n} \text{ ill. } h = \frac{n}{\frac{1}{a_1} + \dots + \frac{1}{a_n}}
+T.: Ha a_1, \dots, a_n \text{ poz. számok, akkor}
+\sqrt[n]{a_1 \dots a_n} \le \frac{a_1 + \dots + a_n}{n} \quad A_n
+\text{egyenlőség acsa ha } a_1 = \dots = a_n.
+
+### Page 6
+
+Biz.: (Cauchy) (Olv. el TK biz.-t is)                -6-
+Trükkös indukció.
+I. A_2 = i, \quad II. A_{2^k} = i \Rightarrow A_{2^{k+1}} = i \quad (\Rightarrow A_{n} = i \text{ ha } n = 2^k)
+III. (A_n = i) \land (l < n) \Rightarrow A_l = i \quad (\Rightarrow \forall n \in \mathbb{N} \quad A_n = i)
+I. A_2 = i
+\sqrt{ab} \le \frac{a+b}{2} \Big\Vert \quad \underset{\Leftarrow}{\dots} \quad ab \le \frac{a^2 + 2ab + b^2}{4} \quad \underset{\Leftarrow}{\dots} \quad 0 \le \frac{a^2 - 2ab + b^2}{4} = \frac{(a-b)^2}{4}
+egyenlőség ha a = b.
+II. T.f.h. A_{2^k} = i, azaz \alpha = \sqrt[2^k]{a_1 \dots a_{2^k}} \le \frac{a_1 + \dots + a_{2^k}}{2^k}
+egyenl. acsa a_1 = \dots = a_{2^k} \text{ és}
+\beta = \sqrt[2^k]{a_{2^k+1} \dots a_{2^{k+1}}} \le \frac{a_{2^k+1} + \dots + a_{2^{k+1}}}{2^k} \quad \text{egyenl. acsa ha} \quad a_{2^k+1} = \dots = a_{2^{k+1}}
+\Rightarrow \sqrt[2^{k+1}]{a_1 \dots a_{2^k} \cdot a_{2^k+1} \dots a_{2^{k+1}}} = \sqrt{\alpha \beta} \le \frac{\alpha + \beta}{2} \le
+\le \frac{1}{2} \frac{a_1 + \dots + a_{2^k} + a_{2^k+1} + \dots + a_{2^{k+1}}}{2^k} = \frac{a_1 + \dots + a_{2^{k+1}}}{2^{k+1}}
+(\text{egyenl. ha } \alpha = \beta \text{ és a korábbiakban is = van})
+III. l < n \quad A_n = i \quad s = \frac{a_1 + \dots + a_l}{l}, \quad m = \sqrt[l]{a_1 \dots a_l}
+Alk. A_n\text{-et } a_1, \dots, a_l, \underbrace{s, \dots, s}_{n-l \text{ db}}\text{-re}
+\sqrt[n]{a_1 \dots a_l \cdot s^{n-l}} \le \frac{a_1 + \dots + a_l + (n-l)s}{n} = \frac{l \cdot s + (n-l)s}{n} = s
+\Rightarrow a_1 \dots a_l \le \frac{s^n}{s^{n-l}} = s^l \Rightarrow \sqrt[l]{a_1 \dots a_l} \le s
+egyenl. ha a_1 = \dots = a_l = s = \dots = s \rfloor
+
+### Page 7
+
+Alk. a_1' = \frac{1}{a_1}, \dots, a_n' = \frac{1}{a_n}\text{-re S-T MT egyenl.}            -7-
+\sqrt[n]{\frac{1}{a_1} \dots \frac{1}{a_n}} \le \frac{\frac{1}{a_1} + \dots + \frac{1}{a_n}}{n} \Rightarrow \underbrace{\sqrt[n]{a_1 \dots a_n}}_m \ge \frac{n}{\underbrace{\frac{1}{a_1} + \dots + \frac{1}{a_n}}_h}
+
+Bernoulli-egyenlőtlenség
+T.: Ha x \ge -1, akkor (1+x)^n \ge 1+nx, \quad n=1, 2, \dots
+Biz.: TIND \quad n=1 \quad (1+x)^1 = 1+x. \checkmark
+T.f.h. n\text{-re igaz. Kell } (n+1)\text{-re.}
+(1+x)^{n+1} = (1+x)(1+x)^n \underset{\text{IND}}{\ge} (1+x)(1+nx) = 1 + (n+1)x + nx^2 \ge
+\ge 1 + (n+1)x \rfloor \quad (\text{Hol haszn. } x \ge -1?)
+
+HF/Gy Ha x \ge -1, r \in \mathbb{Q}, r < 1, akkor (1+x)^r \le 1+rx.
+Ha x \ge -1, r \in \mathbb{Q}, r > 1, akkor (1+x)^r \ge 1+rx.
+Mindkét esetben egyenlőség acsa ha x=0.
+
+Függvények
+Def.: T.f.h. A, B adott halmazok és \forall a \in A
+elemhez hozzá van rendelve egy b \in B elem, akkor
+ezt a hozzárendelést függvénynek nev.
+(van absztraktabb def. is)
+A az f ért.tart. Jel: D(f).
+A C = \{b : \exists a \in A, b = f(a)\} = f(A) az f ért. készl.
+Jel: R(f).
+
+### Page 8
+
+Def.: Ha f: A \to B és a_1, a_2 \in A, a_1 \neq a_2 esetén            -8-
+f(a_1) \neq f(a_2), akkor f injektív. \quad [drawing of injective function]
+
+Def.: Ha f: A \to B és R(f) = B, akkor f
+szürjektív (v. szuperjektív v. ráképezés). \quad [drawing of surjective function]
+Def.: Ha f: A \to B injektív és szürjektív
+akkor f bijektív (kölcsönösen egyértelmű)
+Def.: Ha H \subset A, akkor f(H) = \{f(x) : x \in H\}.
+R(f) = f(A).
+
+Def.: Ha f: A \to B bijektív akkor azt a hozzáren-
+delést, mely minden egyes b \in B = R(f) elemhez azt az a \in A
+elemet rendeli hozzá melyre f(a) = b az f inverzének, f^{-1}\text{-nek}
+nevezzük. D(f^{-1}) = R(f) = B, \quad R(f^{-1}) = D(f) = A és f^{-1}
+is bijektív. Nyilván (f^{-1})^{-1} = f.
+
+Def.: Ha f: A \to B, g: C \to D fv-ek, akkor f és g össze-
+tétele az a h fv., melyre h(a) = g(f(a)) minden olyan
+a \in D(f) = A helyen, melyre f(a) \in C = D(g). Jel: g \circ f.
+Leggyakrabban Y = B = C így f: X \to Y, g: Y \to Z,
+R(f) \subset Y = D(g), g \circ f: X \to Z.
+Nyilván R(g \circ f) \subset R(g).
+
+Def.: Azt az f: A \to A fv-t, melyre \forall a \in A\text{-ra } f(a) = a
+az A halmaz identikus fv-ének nev. és id_A\text{-val}
+jelöljük.
+Megj.: Ha f: A \to B bijektív, akkor f^{-1} \circ f = id_A,
+f \circ f^{-1} = id_B.
+
+### Page 9
+
+HF/Gy T.: Legyenek f: A \to B, g: B \to A, ekkor               -9-
+g = f^{-1} acsa ha (I.) g \circ f = id_A és (II.) f \circ g = id_B.
+Megj.: (I.) \nRightarrow (II.) és (II.) \nRightarrow (I.)
+Pl.: (I.) \nRightarrow (II.) A = B = \mathbb{N}, f(n) = n+1,
+g(n) = \begin{cases} n-1 & \text{ha } n > 2 \\ 1 & \text{ha } n = 1 \end{cases} \quad g(f(n)) = n \quad \forall n \in \mathbb{N}\text{-re, de } f(g(1)) = 2.
+HF/Gy (II.) \nRightarrow (I.)
+
+Def.: n-tagú sorozatnak nev. az \{1, 2, \dots, n\}\text{-en}
+ért. fv-eket. a: \{1, \dots, n\} \to A, jel.: (a(1), a(2), \dots, a(n)),
+(a_1, a_2, \dots, a_n) vagy \{a_i\}_{i=1}^n. Más eln. rendezett n-es.
+n=2 esetén rendezett pár
+
+A-beli rendezett párok halmaza, A \times A az A-nak ön-
+magával vett Descartes szorzata.
+A, B adott halmazok esetén azon a: \{1, 2\} \to A \cup B
+rendezett párok halmazát, melyekre a(1) \in A és a(2) \in B
+az A és B Descartes szorzatának nev. Jel: A \times B
+Formailag (A \times A) \times A \neq A \times (A \times A) de azonosíthatók
+a rendezett hármasokkal A \times A \times A\text{-val.}
+
+Def.: Az \mathbb{N}\text{-en értelmezett fv-eket (végtelen)}
+sorozatoknak nev. a: \mathbb{N} \to A, jel: (a(1), a(2), \dots),
+(a_1, a_2, \dots), \{a_n\}_{n=1}^\infty.
+
+Def.: Relációnak nev az olyan halmazt, melynek
+elemei rendezett párok. Ha R \subset A \times B akkor R
+az A és B feletti reláció. Ha (a,b) \in R, akkor a és
+b az R relációban állnak, ha (a,b) \notin R akkor nem.
+Pl.: (n, m) \in \mathbb{N} \times \mathbb{N} az oszthatósági relációban
+állnak, n osztja m-et, ha n | m.
+
+### Page 10
+
+Def.: (a_n) monoton növekedő ha \forall n \in \mathbb{N}\text{-re}      -10-
+a_n \le a_{n+1}. \quad (\text{mon. csökk. } \ge, \text{ szig. mon. növ. } <,
+\text{sz. m. cs. } >)
+Def.: (a_n) f. korl. ha az \{a_n : n \in \mathbb{N}\} \subset \mathbb{R}
+halmaz az. (Has. def. a. korl., korl.)
+Pl.: a_n = \frac{1}{n} sz. m. cs. és k.
+b_n = (-1)^n k. de nem mon.
+c_n = n sz. m. növ. és a. k. de nem f. k.
+d_n = (-1)^n n nem k. és nem mon.
+a_n \text{"egyre közelebb kerül 0-hoz"}, b_n \text{"ide-oda ugrál"},
+c_n \text{"tagjai minden határon túl nőnek"}
+Áll.: Az e_n = (1+\frac{1}{n})^n sz. mon. növ.
+Biz.: Kell (1+\frac{1}{n})^n < (1+\frac{1}{n+1})^{n+1} \text{ SZÁMT. MÉRT k. egyenl.} \Rightarrow
+\Rightarrow \sqrt[n+1]{(1+\frac{1}{n})^n \cdot 1} < \frac{n(1+\frac{1}{n}) + 1}{n+1} = 1 + \frac{1}{n+1} \rfloor
+
+HF/Gy A d_n = (1+\frac{1}{n})^{n+1} sz. mon. csökk.
+Az e_1 = 2, e_2 = 2,25, \dots, e_{100} = 2,704813829, e_{1000} =
+= 2,716923932, \dots \text{ egyre közelebb kerül az}
+e = 2,7182818\dots \text{ számhoz (Nem biz. csak tapasztalat)}
+1,4, 1,41, 1,414, \dots \text{ egyre közelebb a } \sqrt{2}\text{-höz.}
+Számsorozatok határértéke
+Def.: Az (a_n) határértéke az a \in \mathbb{R} szám, ha
+\forall \varepsilon > 0\text{-hoz } \exists n_\varepsilon \text{ szám, amelyre } \underset{\text{itt } n > n_\varepsilon \text{ is lehet,}}{\underset{\text{van aki } n_0\text{-t szeret}}{\forall n \ge n_\varepsilon\text{-ra}}}
+|a_n - a| < \varepsilon \text{ telj.}
+a_n \in B(a, \varepsilon) = \{x \in \mathbb{R} : |x - a| < \varepsilon\} = (a - \varepsilon, a + \varepsilon)
+\text{az a } \varepsilon\text{-sugarú nyílt krte. Más jel. } U_\varepsilon(a) \text{ umgebung}

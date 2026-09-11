@@ -1,0 +1,200 @@
+Page 21 (-21-):
+Ha $s_n \to s \in \mathbb{R}$, akkor $\sum_{n=1}^\infty a_n$ konv.
+Jel: $\sum_{k=1}^\infty a_k = s$. Ha $s_n$ div., akkor $\sum_{n=1}^\infty a_n$ div.
+Ha $s_n \to +\infty$, akkor jel: $\sum_{n=1}^\infty a_n = +\infty$.
+Cauchy-krit. sorokra T.: $\sum_{n=1}^\infty a_n$ konv. $\Leftrightarrow \forall \varepsilon > 0, \exists n_\varepsilon$ $\forall m \ge n \ge n_\varepsilon$-ra $|\sum_{k=n}^m a_k| < \varepsilon$.
+Biz.: $\sum_{k=n}^m a_k = s_m - s_{n-1}$ alk. a C. krit-ot $s_n$-re $\square$
+T.: Ha $\sum_{k=1}^\infty a_k$ konv., akkor $\lim a_k = 0$.
+Ez nem elégs. volt $\sum_{k=1}^\infty \frac{1}{\sqrt{k}}$ div. de $\frac{1}{\sqrt{k}} \to 0$.
+A sorok indexelését lehet más $n$-től is kezdeni.
+Pl.: $\sum_{n=0}^\infty a_n$, $\sum_{k=10}^\infty a_k$ stb...
+Pl.: mértani sor. $a_n = q^n$, $n = 0, 1, \dots$
+$|q| \ge 1$ esetén $a_n = q^n \not\to 0 \Rightarrow \sum_{n=0}^\infty q^n$ div.
+Ha $|q| < 1$, akkor $\lim s_n = \lim_{n \to \infty} \frac{1-q^{n+1}}{1-q} = \frac{1}{1-q}$.
+Pl.: $\sum_{n=1}^\infty \frac{1}{n^2}$, $\frac{1}{n^2} \le \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}$.
+$\sum_{k=1}^n \frac{1}{k^2} \le 1 + \sum_{k=2}^n \frac{1}{k(k-1)} = 1 + (\frac{1}{1} - \frac{1}{2}) + (\frac{1}{2} - \frac{1}{3}) + \dots + (\frac{1}{n-1} - \frac{1}{n}) = 2 - \frac{1}{n} \Rightarrow s_n = \sum_{k=1}^n \frac{1}{k^2} < 2$, $s_n$ sz. mon. növ. $\land$ f.k. $\Rightarrow \sum_{n=1}^\infty \frac{1}{n^2}$ konv. ($\to \frac{\pi^2}{6}$)
+(teleszkopikus ö.)
+Harmonikus sor $\sum_{n=1}^\infty \frac{1}{n}$. Ez div. $\sum_{n=1}^\infty \frac{1}{n} = +\infty$. Nem telj. a C. krit. Pl.: $\varepsilon = \frac{1}{2}$-hez nincs $n_\varepsilon$ mivel $\forall n_\varepsilon$-ra $\sum_{k=n_\varepsilon+1}^{2n_\varepsilon} \frac{1}{k} \ge n_\varepsilon \cdot \frac{1}{2n_\varepsilon} = \frac{1}{2}$.
+$\sum_{k=1}^n \frac{1}{k}$ sz. mon. növ. nem konv. $\Rightarrow$ nem korl. felülr. $\Rightarrow \to +\infty$ $\square$
+
+Page 22 (-22-):
+Valós függvények
+$f : X \to \mathbb{R}$ valós ért. fv, ha $X \subset \mathbb{R}$ is telj. akkor egyvált. valós fv.
+Def.: Ha $f : X \to Y$ és $A \subset X$, akkor $f$ $A$-ra való megszorítása (leszűkítése) az a $g : A \to Y$ fv, amire $\forall x \in A$-ra $g(x) = f(x)$. Jel: $f|_A$, $f|A$, $f \restriction A$
+Def.: Ha $f : X \to \mathbb{R}$ és $A \subset \mathbb{R}$, akkor $f^{-1}(A) = \{x \in X : f(x) \in A\}$, $A$ ősképe. ($f$-nek nem kell injektívnek lenni)
+Pl.: $f(x) = \sqrt{x}$, $f^{-1}(x) = x^2 |_{[0,+\infty)}$, $g(x) = x^2$, $g^{-1}(\{4, 16\}) = \{2, -2, 4, -4\}$.
+Def.: $f$ grafikonja $\text{graph}(f) = Gr(f) = \{(x, y) : x \in D(f), y = f(x)\} \subset \mathbb{R}^2$. ($f$ görbéje, ábrája)
+Def.: 
+$f \pm g \overset{\text{def.}}{=} x \mapsto (f(x) \pm g(x))$ É.T. $D(f) \cap D(g)$
+$f \cdot g \overset{\text{def.}}{=} x \mapsto (f(x) \cdot g(x))$
+$\frac{f}{g} \overset{\text{def.}}{=} x \mapsto \frac{f(x)}{g(x)}$, $D(\frac{f}{g}) = (D(f) \cap D(g)) \setminus g^{-1}(\{0\})$.
+Elemi fv-ek
+Polinom fv-ek $p(x) = a_n x^n + \dots + a_0$, $a_n \ne 0$ $p$ foka $n$.
+Spec: Ha $c \in \mathbb{R}$ az $x \mapsto c$ fv. állandó fv. ha $c \ne 0$ akkor 0-ad fokú polinom. $p(x) \equiv 0$ (ennek nincs foka).
+Az $cx+b$ alakú fv-ek lin. fv-ele.
+Hatványfv-ek az $x^n$ alakúak.
+Racionális tört fv-ek $R(x) = \frac{p(x)}{q(x)}$, $p, q$ polinomok és $q \not\equiv 0$. Pl.: $f(x) = \frac{1}{x}$, $g(x) = \frac{x^2+5}{x^3-7x+3}$.
+Def.: szignum fv.
+$\text{sgn}(x) = \begin{cases} 1 & \text{ha } x > 0 \\ -1 & \text{ha } x < 0 \\ 0 & \text{ha } x = 0 \end{cases}$ (with graph showing 1, 0, -1)
+
+Page 23 (-23-):
+Def.: egészrész fv. ha $x \in \mathbb{R}$, akkor $[x] = \lfloor x \rfloor =$
+$\overset{\text{def}}{=}$ az a $n \in \mathbb{Z}$, amelyre $n \le x < n+1$.
+Pl.: $[1.2] = 1$, $[-1.2] = -2$ (entier fv.) (small graph of step function)
+Def.: törtrész fv. $\{x\} = x - [x]$ (small graph of sawtooth function)
+Def.: Dirichlet-féle fv.
+$f(x) = \begin{cases} 1 & \text{ha } x \in \mathbb{Q} \\ 0 & \text{ha } x \in \mathbb{R} \setminus \mathbb{Q} \end{cases}$
+(Vannak akiknél fordítva $^0_1$) (graph with dotted lines at y=1 and y=0)
+Globális tulajdonságok:
+Def: Ha $f: X \to \mathbb{R}$ és $x \in D(f) \Leftrightarrow -x \in D(f)$ valamint
+$\forall x \in X = D(f)$-re
+$f(x) = f(-x)$ akkor az $f$ páros
+$f(x) = -f(-x)$ akkor az $f$ páratlan.
+Pl.: $x^2$, $|x|$, $f(x) \equiv 1$ páros, $x^3$ ptlan, $f(x) \equiv 0$ ps. $\land$ ptlan.
+$f: X \to \mathbb{R}$ fv.
+Def.: Ha $\exists p \ne 0$, amire $x \in D(f) \Leftrightarrow x+p \in D(f)$ és
+$\forall x \in D(f)$-re $f(x+p) = f(x)$, akkor $f$ $p$ szerint periodikus.
+Def.: $f: X \to \mathbb{R}$ korl. (a. korl., f. korl.) az $A \subset D(f)$
+halmazon, ha $f(A)$ korl. (a. korl., f. korl.).
+Pl.: $f(x) = \frac{1}{x}$, $A_1 = [1, \infty)$, $A_2 = (0, 1)$.
+Def.: Az $f$ fv. az $A \subset D(f)$-en (monoton) növekedő (ill. csökkenő) ha $\forall x, y \in A$, $x < y$-ra $f(x) \le f(y)$ (ill. $f(x) \ge f(y)$). Ha $f(x) < f(y)$ (ill. $f(x) > f(y)$) is telj., akkor $f$ szigorúan mon. növ. (ill. csökk.).
+Def.: Az $a \in A \subset D(f)$ hely az $f$-nek $A$-ra nézve (abszolút)
+maximumhelye ha $\forall x \in A$-ra $f(x) \le f(a)$. ($f(x) \ge f(a)$ minimum), $f(x) < f(a)$ ha $x \ne a$ sz. max. $f(x) > f(a)$ sz. min.
+
+Page 24 (-24-):
+Egy lokális tulajdonság:
+Def.: Az $a \in \mathbb{R}$ hely az $f$ lok max. helye, ha $\exists \varepsilon > 0$,
+hogy $B(a, \varepsilon) \subset D(f)$ és $a$ az $f$ $B(a, \varepsilon)$-ra vonatk. max. helye. (Has. def. lok. min, szig. lok. max/min.)
+(graph with a plateau and two peaks)
+Konvexitás
+(1) (graph of convex function, húr)
+(2) (graph of function crossing line, húr)
+(3) (graph of concave function, húr)
+3 sz. mon. fv., eltérő grafikonok
+(1) fv $\forall$ ig a húr alatt van
+(2) átmetszi a grafikont a húr
+(3) fv $\forall$ ig a húr felett van.
+Def.: $f$ konvex az $I$ intervallumban, ha $\forall a, b \in I$,
+$a < b$ esetén $f$ az $(a, f(a))$, $(b, f(b))$ pontokon áthaladó
+húr alatt van $[a,b]$-n, azaz $\forall x \in [a, b]$-re
+$f(x) \le f(a) + \frac{f(b)-f(a)}{b-a}(x-a) \overset{\text{def}}{=} h_{a,b}(x)$
+$f(b) + \frac{f(b)-f(a)}{b-a}(x-b)$ másik egyenlet
+$f$ konkáv, ha a húr felett van azaz $\ge$ van $\le$ helyett. $f$ szig kvex, ha $<$ ha $a < x < b$
+$f$ szig kkáv, ha $>$
+
+Page 25 (-25-):
+Áll.: Ha $f$ kvex, akkor $-f$ kkáv.
+Biz.: szorozzunk $(-1)$-gyel. $\square$
+Jensen-egyenlőtlenség
+T.: Az $I$ intervallumon ért. $f$ fv. acsa kvex
+$I$-n, ha $\forall x, y \in I$ és $p, q > 0$, $p+q=1$ számokra
+$f(px+qy) \le p f(x) + q f(y)$.
+(szig. kvexnél = acsa ha $x=y$, Tk $t=p$, $q=1-t$)
+Megj.: T.f.h. $x < y$ (drawing of number line with $x$, $px+qy$, $y$)
+$x = px+qx \le px+qy \le py+qy = y$
+$\frac{px+qy-x}{y-(px+qy)} = \frac{q(y-x)}{p(y-x)} = \frac{q}{p}$ osztó-arány
+Biz.: ($\Rightarrow$) Fölt. $x < y$
+$f(px+qy) \le f(x) + \frac{f(y)-f(x)}{y-x}(px+qy-x) = f(x) + \frac{f(y)-f(x)}{y-x}(q(y-x)) = f(x) + q(f(y)-f(x)) = p f(x) + q f(y)$
+($\Leftarrow$) Ha $x < z < y$, akkor $\underbrace{(\frac{y-z}{y-x})}_{p} x + \underbrace{(\frac{z-x}{y-x})}_{q} y = \frac{yx-zx+zy-xy}{y-x} = z$ és a fenti számolás szerint
+$f(z) \le f(x) + \frac{f(y)-f(x)}{y-x}(z-x) \square$
+(graph showing convex function with $x, px+qy, y$ and corresponding $f(x), p f(x) + q f(y)$)
+
+Page 26 (-26-):
+T.: (Jensen $\le$ több tagra) Az $I$ int-on ért.
+$f$ fv. acsa kvex $I$-n, ha $\forall x_1, \dots, x_n \in I$, és
+$\forall p_1, \dots, p_n > 0$, $p_1 + \dots + p_n = 1$ esetén
+$f(p_1 x_1 + \dots + p_n x_n) \le p_1 f(x_1) + \dots + p_n f(x_n)$.
+Biz.: HF $\square$ TIND
+Ha $p = q = \frac{1}{2}$ akkor a $\forall x, y \in I \quad f(\frac{x+y}{2}) \le \frac{f(x)+f(y)}{2}$
+-nek eleget tevő fv-eket gyengén konvexnek nev.
+kvex $\Rightarrow$ gy. kvex
+$\not\Leftarrow$ Nem triviális olv. el Tk.
+T.: $f$ acsa kvex az $I$ int-on, ha $\forall a \in I$-re az
+$m_a(x) = \frac{f(x)-f(a)}{x-a}$ fv. mon. növ. $I \setminus \{a\}$-n.
+Biz.: ($\Rightarrow$) $f$ kvex $I$-n $\Rightarrow \quad a, x, y \in I$
+(graph with points $a, x, y$) (I.) T.f.h. $a < x < y$
+(*) $f(x) \le \frac{f(y)-f(a)}{y-a}(x-a) + f(a) \quad |(x-a) > 0$
+$\Updownarrow$
+(**) $m_a(x) = \frac{f(x)-f(a)}{x-a} \le \frac{f(y)-f(a)}{y-a} = m_a(y)$
+(II.) $x < y < a$ hasonló HF $\square$
+(III.) $x < a < y$ kis óvatossággal hasonló HF $\square$.
+($\Leftarrow$) Ha $\forall a \in I$-re $m_a(x)$ mon. növ. akkor
+(**) telj ha $a < x < y$, $a, x, y \in I \Rightarrow \quad (** \Rightarrow *)$
+de ez pont a konvexitás. $\square$
+$x^2$ konv. $\mathbb{R}$-en, mivel $m_a(x) = \frac{x^2-a^2}{x-a} = x+a$
+sz. mon. növ.
+
+Page 27 (-27-):
+Legyen $p_1 = \dots = p_n = \frac{1}{n}$, $a_1, \dots, a_n \in \mathbb{R}$ ekkor Jensen $\Rightarrow$
+$f(p_1 a_1 + \dots + p_n a_n) = \left( \frac{a_1 + \dots + a_n}{n} \right)^2 \le p_1 f(a_1) + \dots + p_n f(a_n) = \frac{a_1^2 + \dots + a_n^2}{n}$
+$\Rightarrow \quad \frac{a_1 + \dots + a_n}{n} \le \sqrt{\frac{a_1^2 + \dots + a_n^2}{n}} \leftarrow$ négyzetes közép
+Fv-ek hat. értéke
+Def.: Az $a \in \mathbb{R}$ pontozott $\varepsilon$-sug. kzete: $\dot{B}(a, \varepsilon) = B(a, \varepsilon) \setminus \{a\} = (a-\varepsilon, a) \cup (a, a+\varepsilon)$.
+Pl.: 1) $s(t)$ út-idő fv. Pill. seb. a $t_0$ pontban?
+$f(t) = \frac{s(t)-s(t_0)}{t-t_0}$, $D(f) = D(s) \setminus \{t_0\}$.
+Ha $|t-t_0|$ kicsi akkor $f(t)$ "nagyon közel van" egy bizonyos $v(t_0)$ számhoz.
+Pl.: $s(t) = t^2$
+$f(t) = \frac{t^2-t_0^2}{t-t_0} = \frac{(t-t_0)(t+t_0)}{t-t_0} = (t+t_0) |_{\mathbb{R} \setminus \{t_0\}}$
+$t$ közel $t_0$, $f(t)$ közel $2t_0$.
+2) Pl.: $f(x) = (\text{sgn}(x))^2$, $x_0 = 0$? (graph showing limit is 1) tart 1-hez
+3) Pl.: $f(x) = \{x\}$, $x_0 = 0$ (graph showing limit does not exist) nincs
+
+Page 28 (-28-):
+Def.: Az $f$ fv. $a \in \mathbb{R}$ helyen vett határértéke a $b \in \mathbb{R}$ szám, ha
+I.) $\exists \delta_0 > 0$, hogy $\dot{B}(a, \delta_0) \subset D(f)$ és
+II.) $\forall \varepsilon > 0$-hoz $\exists \delta > 0$, hogy $\forall x \in \dot{B}(a, \delta)$-ra
+$|f(x)-b| < \varepsilon \quad \Leftrightarrow \quad f(x) \in B(b, \varepsilon)$
+$\delta$ értéke függ $\varepsilon$-tól, néha $\delta_\varepsilon$-t írunk, nem egyért.
+Jel: $\lim_{x \to a} f(x) = b$, $f(x) \to b$ ha $x \to a$.
+$f$ tart $b$-hez, ha $x$ tart $a$-hoz,
+$f$ limesze az $a$-ban
+Pl.: $\lim_{x \to 0} (\text{sgn}(x))^2 = 1$, $\lim_{x \to 0} \text{sgn}(x) = \text{N. L.}$
+$\lim_{x \to 5} x = 5$, $\lim_{x \to 0} \{x\} = \text{N. L.}$, $\lim_{x \to \frac{1}{2}} \{x\} = \frac{1}{2}$
+Szemléletes jelentés
+(graph showing $\varepsilon, \delta$ bands)
+$b+\varepsilon$, $b$, $b-\varepsilon$
+$a-\delta$, $a$, $a+\delta$, $a+\delta_0$, $a-\delta_0$
+Pl.: $f(x) = x^3$, $\lim_{x \to 2} f(x) = ?$, sejtés $2^3 = 8$
+$D(f) = \mathbb{R}$, $|x^3-2^3| = |x-2||x^2+2x+4| \le |x-2| (3^2+2\cdot 3+4) = |x-2|\cdot 19$ (with $\uparrow$ ha $|x-2| < 1$, $x \in [1, 3]$) (where $x^2 \le 3^2$, $2x \le 2\cdot 3$)
+$\varepsilon > 0$-hoz $\delta_\varepsilon = \min\{1, \frac{\varepsilon}{19}\}$ Ez tényleg jó:
+$|x^3-2^3| < |x-2|\cdot 19 < \delta_\varepsilon \cdot 19 \le \varepsilon$ ha $x \in \dot{B}(2, \delta_\varepsilon)$
+
+Page 29 (-29-):
+Féloldali hat. érték
+$\text{sgn}(x)$ "jobbról az 1-hez tart" (graph)
+Def.: $f$-nek az $a \in \mathbb{R}$ helyen a jobb o. hat. ért. a $b \in \mathbb{R}$ szám, ha
+I. $\exists \delta_0 > 0$, hogy $(a, a+\delta_0) = \dot{B}(a+0, \delta_0) \subset D(f)$ és
+II. $\forall \varepsilon > 0$-hoz $\exists \delta > 0$, hogy $\forall x \in (a, a+\delta) = \dot{B}(a+0, \delta)$ esetén $|f(x)-b| < \varepsilon \quad \Leftrightarrow \quad (f(x) \in B(b, \varepsilon))$.
+Jel: $\lim_{x \to a+0} f(x) = b \quad \lor \quad \lim_{x \to a+} f(x) = b$
+$f(x) \to b$ ha $x \to a+0$, $f(a+0)$, $f(a+)$.
+Bal o. hat. ért. has $\lim_{x \to a-0} f(x)$.
+T.: $\lim_{x \to a} f(x) = b \Leftrightarrow \lim_{x \to a-0} f(x) = \lim_{x \to a+0} f(x) = b$.
+Biz.: HF $\square$
+Jel: $B(a+0, \delta) = [a, a+\delta)$ más jel $U_\delta(a+0)$, $\dot{U}_\delta(a+0)$
+$B(a-0, \delta)$, $\dot{B}(a-0, \delta)$.
+Egységes definíció séma $\alpha$ lehet $a-0, a, a+0$
+$\beta$ lehet $b \in \mathbb{R}$:
+Def.: $\lim_{x \to \alpha} f(x) = \beta$ ha
+I. $f$ értelmezve van az $\alpha$ egy $\dot{U}_0$ "pontozott" kzetében
+II. $\beta$ bármely $V$ kzetéhez van $\alpha$-nak olyan $\dot{U}$ "pontozott" kzete, hogy $\forall x \in \dot{U}$-ra $f(x) \in V$ teljesül.
+Pl.: $\lim_{x \to a-0} f(x) = b$, $\alpha = a-0$, $\beta = b$
+$\dot{U}_0 = \dot{B}(a-0, \delta_0)$, $V = B(b, \varepsilon)$, $\dot{U} = \dot{B}(a-0, \delta)$
+
+Page 30 (-30-):
+További hat. értékek $\infty$ hat. ért.
+$\frac{1}{x^2} \to +\infty$ ha $x \to 0$ (graph of $1/x^2$)
+$\lim_{x \to a} f(x) = +\infty$, előző séma $\alpha = a$, $\beta = +\infty$,
+$\dot{U}_0 = \dot{B}(a, \delta_0)$, $V = B(+\infty, K) = (K, +\infty)$, $\dot{U} = \dot{B}(a, \delta)$
+azaz $\lim_{x \to a} f(x) = +\infty \Leftrightarrow$ (I.) $\exists \delta_0 > 0, \dot{B}(a, \delta_0) \subset D(f)$
+(II.) $\forall K \in \mathbb{R}, \exists \delta > 0 \quad \forall x \in \dot{B}(a, \delta)$ $f(x) \in B(+\infty, K) \Leftrightarrow f(x) > K$.
+$B(-\infty, K) = (-\infty, K)$-t haszn. $\lim_{x \to \alpha} f(x) = -\infty$ is def.
+$\dot{B}(\pm \infty, K) \overset{\text{def}}{=} B(\pm \infty, K)$
+$\frac{1}{x} \to 0$ ha $x \to +\infty$, hat. ért. a $\pm \infty$-ben is értelmezhető.
+Azaz $\alpha = \pm \infty$ is tekinthető.
+Összesen 15 féle limesz definiálható
+$\alpha$ lehet: $-\infty, a-0, a, a+0, +\infty$
+$\beta$ lehet: $-\infty, b, +\infty$
+Pl.: $\lim_{x \to +\infty} f(x) = b$, $\dot{U}_0 = (K_0, +\infty)$, $V = B(b, \varepsilon)$,
+$\dot{U} = \dot{B}(K, +\infty)$ | $\lim_{x \to +\infty} f(x) = b \Leftrightarrow$
+(I.) $\exists K_0 \in \mathbb{R} \quad B(+\infty, K_0) = (K_0, +\infty) \subset D(f)$
+(II.) $\forall \varepsilon > 0, \exists K \in \mathbb{R}, \forall x \in B(+\infty, K)$-ra (azaz $\forall x > K$-ra) $f(x) \in B(b, \varepsilon)$, azaz $|f(x)-b| < \varepsilon$.

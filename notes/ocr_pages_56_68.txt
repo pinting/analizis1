@@ -1,0 +1,235 @@
+Page 56:
+Heading: Elemi fv-ek deriváltjai
+T.: (a_n x^n + ... + a_0)' = n a_n x^{n-1} + ... + a_1
+Bizi: (a_n x^n + ... + a_0)' = (a_n x^n)' + ... + (a_1 x)' + (a_0)' = a_n (x^n)' + ... + a_1 (x)' + a_0 * 1' = n a_n x^{n-1} + ... + a_1 + 0 |
+
+Trig. fv-ek.
+T.: \lim_{x \to 0} \frac{\sin x}{x} = 1 = \lim_{x \to 0} \frac{\sin x - \sin 0}{x - 0} = \sin'(0).
+Bizi:
+(Diagram with circle, triangle, tangent points O, A, P, B. Angles and lengths: \sin x, \text{tg} x)
+Legyen $0 < x < \frac{\pi}{2}$.
+Box: \sin x < x < \text{tg} x
+Geom. elt. (text beside diagram: konvex sokszögek közül, ha az egyik tart. a másikat akkor a tartalmazó sokszög kerülete nagyobb.)
+=> 1 < \frac{x}{\sin x} < \frac{1}{\cos x} => 1 > \frac{\sin x}{x} > \cos x => 1 ha x \to 0
+=> \lim_{x \to 0+0} \frac{\sin x}{x} = 1
+\frac{\sin(-x)}{-x} = \frac{\sin x}{x} => \lim_{x \to 0-0} \frac{\sin x}{x} = \lim_{(-x) \to 0+0} \frac{\sin(-x)}{(-x)} = 1 |
+T.: \lim_{x \to 0} \frac{\cos x - 1}{x} = 0 = \lim_{x \to 0} \frac{\cos x - \cos 0}{x - 0} = \cos'(0).
+Bizi: \frac{\cos x - 1}{x} = - \frac{2 \sin^2 \frac{x}{2}}{x} = \left( -\sin\frac{x}{2} \right) \cdot \frac{\sin\frac{x}{2}}{\frac{x}{2}} \to 0 ha x \to 0 |
+(Arrows pointing to terms: -\sin(x/2) \to 0, \frac{\sin(x/2)}{x/2} \to 1)
+
+Page 57:
+T.: \sin' x = \cos x, \forall x \in \mathbb{R}
+Bizi: \lim_{h \to 0} \frac{\sin(x+h) - \sin x}{h} = \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h} =
+= \lim_{h \to 0} \cos x \cdot \frac{\sin h}{h} + \lim_{h \to 0} \sin x \frac{\cos h - 1}{h} = \cos x + 0 |
+T.: \cos' x = -\sin x, \forall x \in \mathbb{R}.
+B.: (\cos x)' = (\sin(\frac{\pi}{2}-x))' = \cos(\frac{\pi}{2}-x) \cdot (-1) = -\sin x |
+T.: \text{tg}' x = \frac{1}{\cos^2 x}, \text{ctg}' x = -\frac{1}{\sin^2 x}.
+B.: (\text{tg} x)' = \left( \frac{\sin x}{\cos x} \right)' = \frac{\sin' x \cos x - \sin x \cos' x}{\cos^2 x} = \frac{\cos^2 x - \sin x (-\sin x)}{\cos^2 x} = \frac{\cos^2 x + \sin^2 x}{\cos^2 x} = \frac{1}{\cos^2 x} | (\text{ctg} x)' HF! (64) |
+T.: Ha \phi(x) = \arcsin x, akkor -1 < x < 1 esetén
+\phi'(x) = \frac{1}{\sqrt{1-x^2}}.
+Bizi: f(x) = \sin x | [-\frac{\pi}{2}, \frac{\pi}{2}] sz. mon. inverz deriv. T. alk.
+f'(c) = \cos c | (-\frac{\pi}{2}, \frac{\pi}{2}), x = f(c)
+\phi'(x) = \frac{1}{f'(c)} = \frac{1}{f'(\phi(x))} = \frac{1}{\cos(\arcsin x)} = \frac{1}{\sqrt{1 - \sin^2(\arcsin x)}} = \frac{1}{\sqrt{1-x^2}} |
+T.: \phi = \arccos x, -1 < x < 1 esetén \phi'(x) = \frac{-1}{\sqrt{1-x^2}}.
+Bizi: (\arccos x)' = \left( \frac{\pi}{2} - \arcsin x \right)' |
+T.: (\text{arctg} x)' = \frac{1}{1+x^2}.
+Bizi: \text{tg} x sz. mon. növ (-\frac{\pi}{2}, \frac{\pi}{2})-en és itt \text{tg}' x = \frac{1}{\cos^2 x} \neq 0
+(\text{arctg} x)' = \frac{1}{\frac{1}{\cos^2(\text{arctg} x)}} = \cos^2(\text{arctg} x) = \frac{1}{1+\text{tg}^2(\text{arctg} x)} = \frac{1}{1+x^2}
+( \cos^2 x = \frac{1}{1+\text{tg}^2 x} = \frac{1}{1+\frac{\sin^2 x}{\cos^2 x}} = \frac{\cos^2 x}{\cos^2 x+\sin^2 x} ) |
+
+Page 58:
+T.: \lim_{x \to -\infty} (1 + \frac{1}{x})^x = \lim_{x \to \infty} (1 + \frac{1}{x})^x = \lim_{n \to \infty} (1 + \frac{1}{n})^n = e.
+Bizi: T.f.h. x_n \to +\infty, n_k \le x_n < n_k + 1, n_k \in \mathbb{N}, n_k \to \infty
+(1 + \frac{1}{n_k+1})^{n_k} < (1 + \frac{1}{x_n})^{x_n} < (1 + \frac{1}{n_k})^{n_k+1}
+|| a_k || b_k
+\lim_{k \to \infty} a_k = \lim_{k \to \infty} (1 + \frac{1}{n_k+1})^{n_k+1} \cdot (1 + \frac{1}{n_k+1})^{-1} = e
+\lim_{k \to \infty} b_k = \lim_{k \to \infty} (1 + \frac{1}{n_k})^{n_k} \cdot (1 + \frac{1}{n_k}) = e
+=> \forall x_n \to +\infty sorozatra (1 + \frac{1}{x_n})^{x_n} \to e => (1 + \frac{1}{x})^x \to e ha x \to +\infty
+(1 - \frac{1}{n})^{-n} = (\frac{n-1}{n})^{-n} = (\frac{n}{n-1})^n = (1 + \frac{1}{n-1})^{n-1} \cdot (1 + \frac{1}{n-1}) \to e ha n \to +\infty
+ezt haszn. az előzőhöz hasonlóan
+\forall x_n \to -\infty sorozatra (1 + \frac{1}{x_n})^{x_n} \to e => (1 + \frac{1}{x})^x \to e ha x \to -\infty. |
+T.: \forall b \in \mathbb{R}-re \lim_{x \to -\infty} (1 + \frac{b}{x})^x = \lim_{x \to \infty} (1 + \frac{b}{x})^x = e^b.
+Bizi: b=0 TRIVI. b>0 összetett fv. hat. ért. T =>
+=> \lim_{x \to \infty} (1 + \frac{b}{x})^x = \lim_{x \to \infty} \left( (1 + \frac{b}{x})^{\frac{x}{b}} \right)^b = \lim_{u \to \infty} ((1 + \frac{1}{u})^u)^b = e^b (x \to \infty \implies \frac{x}{b} \to \infty)
+x \to -\infty, b < 0 esetek HF! (64) |
+T.: \lim_{t \to 0} (1+t)^{\frac{1}{t}} = e.
+Bizi: x = \frac{1}{t} helyettesítéssel \lim_{t \to 0+0} (1+t)^{\frac{1}{t}} = \lim_{x \to +\infty} (1+\frac{1}{x})^x = e,
+hasonlóan t \to 0-0 esetén |
+
+Page 59:
+T.: \lim_{h \to 0} \frac{\log_a(1+h) - \log_a(1)}{h} = \log_a e = \log_a'(1)
+Bizi: \lim_{h \to 0} \frac{\log_a(1+h)}{h} = \lim_{h \to 0} \log_a (1+h)^{\frac{1}{h}} = \log_a (\lim_{h \to 0} (1+h)^{\frac{1}{h}}) = \log_a e. | (\log_a folyt.)
+T.: Ha a>0, a \neq 1, akkor \log_a x \forall x>0-ra diff.ható
+és (\log_a x)' = \frac{\log_a e}{x} (x>0).
+Bizi: \frac{\log_a y - \log_a x}{y - x} = \frac{1}{x} \frac{\log_a(\frac{y}{x}) - \log_a 1}{\frac{y}{x} - 1} \to \log_a e \frac{1}{x}
+(y \to x => y/x \to 1. Let h = y/x - 1 \to 0, y/x = 1+h)
+T.: (\log x)' = \frac{1}{x}, (\log_a x)' = \frac{1}{(\log a) x}.
+B.: \log_e e = 1, \log_a e = \frac{\log e}{\log a} (a^{\log_a e} = e => \log_a a^{\log_a e} = \log_a e) |
+T.: Ha a>0, akkor a^x diff.ható \mathbb{R}-en és (a^x)' = (\log a) a^x. Nevezetesen (e^x)' = e^x.
+Bizi: a=1 TRIVI, 0<a<1 hasonló, T.f.h. 1<a.
+a^x szig. mon. növ. folyt., inverze \log_a x diff.ható.
+f(x) = \log_a x, \phi(x) = a^x, \phi'(x) = \frac{1}{f'(\phi(x))} = \frac{1}{\frac{1}{\log a \cdot a^x}} = \log a \cdot a^x |
+T.: \forall a \in \mathbb{R}-re, x>0-ra x^a diff.h. és (x^a)' = a x^{a-1}.
+B.: (x^a)' = (e^{a \log x})' = (e^{a \log x})' \cdot \frac{a}{x} = a x^{a-1} | (with arrow to e^{a \log x} showing it is x^a)
+
+Page 60:
+Pl.: (x^x)' = (e^{x \log x})' = e^{x \log x} (\log x + 1) = x^x (\log x + 1)
+A differenciálszámítás alkalmazásai
+Def.: f (szig.) lok. növ. az a \in \mathbb{R} helyen, ha
+\exists \delta > 0, hogy (a-\delta, a+\delta) \subset D(f) és \forall x \in (a-\delta, a)-ra
+f(x) \le f(a) (f(x) < f(a)), \forall x \in (a, a+\delta)-ra
+f(a) \le f(x) (f(a) < f(x)).
+Has. def. f (szig.) lok. csökk.
+(Diagram showing local increase)
+Megj.: Ha f (szig.) mon. növ. (c, d)-n, akkor \forall a \in (c, d)-re f (szig.) lok. növ. (\delta = \min (a-c, d-a) > 0 jó)
+(A megfordítás is igaz \forall a \in [c,d], (S.I.7.4.))
+Pl.: a) f(x) = { \frac{1}{x}, x \neq 0; 0, x=0 } szig. lok. nő a 0-ban.
+(Diagram of 1/x modified at 0)
+b) f(x) = { x \sin^2 \frac{1}{x}, x \neq 0; 0, x=0 }
+(Diagram of x sin^2(1/x))
+f lok. nő 0-ban, de a 0 egyetlen vezetőben sem monoton.
+
+Page 61:
+T.: T.f.h. f diff.ható a-ban. Ekkor
+1) ha f lok. nő a-ban, akkor f'(a) \ge 0,
+2) ha f lok. csökk. a-ban, akkor f'(a) \le 0,
+3) ha f-nek lok. szélső ért. van a-ban, akkor f'(a) = 0.
+Bizi: 1) x \in \dot{B}(a, \delta)-ra \frac{f(x) - f(a)}{x - a} \ge 0 \implies f'(a) \ge 0
+2) - || - \le 0 \implies f'(a) \le 0.
+3) T.f.h. a-ban lok. max. van, ekkor
+\forall x \in (a, a+\delta)-ra \frac{f(x) - f(a)}{x - a} \le 0 \implies f'(a) \le 0,
+\forall x \in (a-\delta, a)-ra - || - \ge 0 \implies f'(a) \ge 0 |
+3)-at szélső ért. ker. haszn.
+Mi mondható a szig. esetekben? Adjunk (ellen) példákat. HF! (65).
+Megfordítás?
+1), 2) f(x) = x^2, f'(0) = 0, f nem lok. növ.
+3) f(x) = x^3, f'(0) = 0, f-nek nincs sz. ért.
+T.: Ha f diff.ható a-ban és
+1) f'(a) > 0 \implies f szig. lok. nő a-ban.
+2) f'(a) < 0 \implies f szig. lok. csökk. a-ban.
+Bizi 1) (2) hasonló, vagy -f) f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} > 0
+\implies \exists \delta > 0, \forall x \in \dot{B}(a, \delta)-ra \frac{f(x) - f(a)}{x - a} > 0 \implies
+\implies f szig. lok. nő |
+Ez sem fordítható meg: f(x) = x^3 sz. lok. nő 0-ban, de f'(0) = 0.
+
+Page 62:
+Középérték tételek:
+T.: (Rolle) Ha f \in C[a,b] és diff.ható (a,b)-ben, valamint f(a) = f(b), akkor \exists c \in (a,b), hogy f'(c) = 0.
+Bizi: Ha f(x) \equiv f(a), akkor f'(c) = 0 \forall c \in (a,b).
+Ha \exists x \in (a,b) f(x) > f(a) (az f(x) < f(a) eset has.) akkor f az [a,b]-n vett maximumát (f \in C[a,b]) egy c \in (a,b) pontban veszi fel \implies f'(c) = 0 |
+T.: (Lagrange) Ha f \in C[a,b] és diff.ható (a,b)-ben, akkor \exists c \in (a,b), hogy f'(c) = \frac{f(b) - f(a)}{b - a}.
+Megj.: Rolle spec. eset. (Diagram)
+Bizi: g(x) = f(x) - (x-a) \frac{f(b) - f(a)}{b - a}, g(a) = g(b) = = f(a), g'(c) = 0, f'(c) - \frac{f(b) - f(a)}{b - a} = 0 |
+T.: (Cauchy) Ha f,g \in C[a,b], f,g diff.h. (a,b)-n és \forall x \in (a,b)-re g'(x) \neq 0, akkor \exists c \in (a,b), melyre
+\frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}
+Megj.: g(x) = x Lagrange spec. eset.
+Bizi: h(x) = f(x) - (g(x) - g(a)) \frac{f(b) - f(a)}{g(b) - g(a)}
+(g(b) - g(a) \neq 0 mat. különben Rolle \implies g'(c) = 0 lenne egy c \in (a,b)-re)
+további véve HF! (64) |
+
+Page 63:
+Def.: A g: I \to \mathbb{R} fv. Darboux tulajdonságú az I int-on, ha \forall a,b \in I, a<b-re \forall d, g(a) és g(b) közötti értékhez \exists c \in (a,b), hogy g(c) = d.
+Megj.: f \in C(I) \implies f Darboux (with crossed out \implies back)
+Def.: f diff.ható [a,b]-n, ha \exists f_+'(a), f_-'(b) és \forall c \in (a,b)-re f'(c).
+T. (Darboux) Ha f diff.ható [a,b]-ben akkor f' minden értéket felvesz f_+'(a) és f_-'(b) között.
+=> Ha f diff.ható I-n akkor f' Darboux tul. I-n.
+(Diagrams showing tangents)
+B.: T.f.h. f_+'(a) < f_-'(b) és f_+'(a) < d < f_-'(b).
+Legyen g(x) = f(x) - dx. g \in C[a,b]. Legyen c a g minimumhelye [a,b]-n. g_+'(a) < 0 \implies \exists \delta > 0, hogy \forall x \in (a, a+\delta)-ra \frac{g(x) - g(a)}{x - a} < 0 \implies g(x) < g(a) \implies c \neq a
+Hasonlóan g_-'(b) > 0 \implies c \neq b. \implies c \in (a,b) \implies
+\implies g'(c) = 0 = f'(c) - d \implies f'(c) = d |
+Mj.: Ha f' \in C[a,b], akkor f'-re a Bolzano Darbouxt. elég lenne.
+Pl.: f(x) = { x^2 \sin \frac{1}{x}, x \neq 0; 0, x=0 }
+(Diagram of x^2 sin(1/x))
+Ekkor f'(x) = { 2x \sin \frac{1}{x} - \cos \frac{1}{x}, x \neq 0; 0, x=0 }
+f' \notin C(\mathbb{R}), de Darboux.
+
+Page 64:
+Pl.: \exists ? f, amire f'(x) = \text{sgn} x.
+Válasz: nem, mivel \text{sgn}(x) nem Darboux.
+Monotonitási feltételek
+T.: Legyen f \in C[a,b], diff.h. (a,b)-n. Ekkor
+1) f mon. nő (csökk.) [a,b]-n \iff \forall x \in (a,b), f'(x) \ge 0 (\le 0).
+Bizi: 1) \implies \forall c \in (a,b)-ben f lok. nő \implies f'(c) \ge 0.
+\impliedby Lagrange, Indirekt t.f.h. a \le x_1 < x_2 \le b, f(x_1) > f(x_2) \implies
+\implies \frac{f(x_2) - f(x_1)}{x_2 - x_1} < 0 \implies \exists c \in (x_1, x_2), f'(c) < 0 \lightning |
+T.: Ha f \in C[a,b], f diff.ható (a,b)-n és f' \equiv 0 \implies f \equiv C, C \in \mathbb{R}.
+Bizi: f' \ge 0, f' \le 0 \implies f mon nő és csökk. \implies áll. |
+T.: T.f.h. f \in C[a,b], f diff.h. (a,b)-n. Ekkor
+1) \forall x \in (a,b), f'(x) > 0 (< 0) \implies f szig. mon. nő (csökk.) [a,b]-n.
+Bizi: Lagrange \implies \frac{f(x_2) - f(x_1)}{x_2 - x_1} = f'(c) > 0. |
+M.: Nincs \impliedby. pl. f(x) = x^3 sz. m. növ. \mathbb{R}-en, f'(0) = 0 |
+T.: T.f.h. f \in C[a,b], f diff.h. (a,b)-n. Ekkor f szig. mon [a,b]-n \iff \forall x \in (a,b), f'(x) \ge 0 és nincs olyan [c,d] \subset [a,b], c<d int. ahol f'(x) = 0.
+Bizi: f sz. mon. nő \impliedby f mon. nő és nincs olyan int. amin konstans \iff tétel áll. |
+
+Page 65:
+Szélsőérték-feladatok
+Pl.: Írjunk az egység sugarú gömbbe maximális térfogatú hengert.
+(Diagram of cylinder in sphere)
+h^2 + r^2 = 1, r^2 = 1 - h^2
+V = r^2 \pi \cdot 2h = 2\pi h(1 - h^2)
+h \in [0, 1]
+Ker. meg. V(h) = 2\pi h(1 - h^2) = 2\pi(h - h^3) absz. maximumát a [0,1]-en.
+V'(h) = 2\pi(1 - 3h^2), V'(h) = 0 ha 1 - 3h^2 = 0, h = \pm \frac{1}{\sqrt{3}}
+h \in [0, 1] így h = \frac{1}{\sqrt{3}} az egyetlen (0,1)-beli pont, ahol V'(h) = 0. V(0) = V(1) = 0. V(h) folyt. (diff.h.) [0,1]-en \implies felv. a maximumát \implies V(\frac{1}{\sqrt{3}}) > 0 \implies h = \frac{1}{\sqrt{3}} a mo.
+Áll.: Ha f \in C[a,b], diff.h. (a,b)-n és f'(x) = 0 az x_1, x_2, \dots, x_n \in [a,b] pontokban, akkor f maximuma az [a,b]-n megegyezik \max\{ f(a), f(b), f(x_1), \dots, f(x_n) \}-nel. (min esetén \min \{ \} -t kell venni.) Végpontok!!!
+Pl.: f(h) = h - h^3 a [-10, 10]-en. f'(h) = -3h^2 + 1, h_1 = \frac{1}{\sqrt{3}}, h_2 = -\frac{1}{\sqrt{3}}, f(\frac{1}{\sqrt{3}}) = \frac{1}{\sqrt{3}} - (\frac{1}{\sqrt{3}})^3, f(-\frac{1}{\sqrt{3}}) = -\frac{1}{\sqrt{3}} - (-\frac{1}{\sqrt{3}})^3
+f(-10) = -10 + 1000, f(10) = 10 - 1000, f \max. \sim 990, \min \sim -990.
+Mi a teendő ha az int. nem zárt?
+Ekkor az absz. max./mini nem felt. létezik:
+
+Page 66:
+Pl.: f(h) = h - h^3 a [-1, +\infty)-en.
+Haszn. a mon. tételeket és/vagy a "végpontokban" vizsg. hat. értékeket.
+f'(h) = -3h^2 + 1
+(Graph showing a parabola opening downwards with roots at -1/\sqrt{3} and 1/\sqrt{3})
+Table:
+h | h < -1/\sqrt{3} | -1/\sqrt{3} | -1/\sqrt{3} < h < 1/\sqrt{3} | 1/\sqrt{3} | 1/\sqrt{3} < h | f' Darboux nincs ugrás.
+f'(h) | - | 0 | + | 0 | -
+f | (down arrow) | lok. min. | (up arrow) | lok. max. | (down arrow)
+
+f(-1) = 0, f(1/\sqrt{3}) = 1/\sqrt{3} - (1/\sqrt{3})^3 > 0 \implies f-nek az 1/\sqrt{3}-ban [-1, +\infty)-re vonatk. absz. max. helye van.
+(x \in [-1, -1/\sqrt{3}] - on f(x) \le f(-1) = 0).
+-1/\sqrt{3}-ban csak lok. min. van, mivel \lim_{x \to +\infty} f(x) = -\infty. |
+(Diagram showing cubic curve with roots and extrema)
+T.: T.f.h. f diff.h. B(a, \delta)-ban és
+f'(x) \le 0 ha a-\delta < x < a és f'(x) \ge 0 ha a < x < a+\delta
+Ekkor f-nek lok. minimuma van a-ban.
+( < és > esetén szig. lok. min. )
+( \ge és \le lok. max. )
+( > és < szig. lok. max. )
+(small diagram showing arrow down then up -> min)
+
+Page 67:
+Magasabb rendű deriváltak
+Def.: Ha f' diff.ható a-ban, akkor (f')'(a)-t az f a-beli második deriváltjának nev. Jel: f''(a), f^{(2)}(a) vagy \ddot{f}(a), \frac{d^2f}{dx^2}\big|_{x=a}, y''(a), ...
+Indukcióval:
+Def.: Ha f k-adik deriváltját f^{(k)} jelöli és f^{(k)} diff.ható a-ban, akkor (f^{(k)})'(a)-t az f a-beli (k+1)-edik deriváltjának nev. Jel: f^{(k+1)}(a),
+Az f^{(k)}(a) más jel: \frac{d^k f}{dx^k}\big|_{x=a}, y^{(k)}(a), \frac{d^k y}{dx^k}\big|_{x=a} ...
+T.: Legyen f diff.ható a egy kzetében és t.f.h. \exists f''(a). Ekkor
+1) f'(a) = 0, f''(a) > 0 \implies a az f szig. lok. min. (small convex curve drawn)
+2) < \implies max. (small concave curve drawn)
+Bizi: 1) f''(a) > 0 \implies f' szig. lok. nő a-ban \implies \exists \delta > 0
+f'(x) < f'(a) = 0 ha x \in (a-\delta, a) és f'(x) > f'(a) = 0 ha x \in (a, a+\delta) \implies a az f szig. lok. min. |
+Ált. változat: TK + HF. f 2k-szor diff.h. f'(a) = ... = f^{(2k-1)}(a) = 0 és f^{(2k)}(a) > 0 \implies a az f sz. lok. min.
+Megj: f''(a) = 0 esetén az előző tétel nem dönt:
+f_1(x) = x^3, f_2(x) = x^4, f_3(x) = -x^4.
+
+Page 68:
+T.: Ha f és g is n-szer diff.h. a-ban, akkor f+g és f \cdot g is az és
+1) (f+g)^{(n)} = f^{(n)} + g^{(n)}
+2) (f \cdot g)^{(n)} = \sum_{k=0}^{n} \binom{n}{k} f^{(k)} g^{(n-k)} Leibniz szab. (f^{(0)} \stackrel{\text{def.}}{=} f)
+Bizi 1) TRIV. HF. |
+2) T.IND. n=1 esetén (f \cdot g)' = f'g + fg'.
+T.f.h. n-re igaz, ekkor
+(f \cdot g)^{(n+1)} = ((f \cdot g)^{(n)})' = \left( \sum_{k=0}^{n} \binom{n}{k} f^{(k)} g^{(n-k)} \right)' =
+= \binom{n}{0} (g^{(n+1)} f^{(0)} + g^{(n)} f^{(1)}) + \binom{n}{1} (g^{(n)} f^{(1)} + g^{(n-1)} f^{(2)}) + \dots +
++ \binom{n}{n} (g^{(1)} f^{(n)} + g^{(0)} f^{(n+1)}) = \binom{n}{0} g^{(n+1)} f^{(0)} +
++ \left( \binom{n}{0} + \binom{n}{1} \right) g^{(n)} f^{(1)} + \dots + \left( \binom{n}{k-1} + \binom{n}{k} \right) g^{(n+1-k)} f^{(k)} + \dots +
++ \binom{n}{n} g^{(0)} f^{(n+1)} = \binom{n+1}{0} g^{(n+1)} f^{(0)} + \dots + \binom{n+1}{k} g^{(n+1-k)} f^{(k)} +
++ \binom{n+1}{n+1} g^{(0)} f^{(n+1)} |
+Példák magasabb deriv.:
+f(x) = x^n, f'(x) = n x^{n-1}, f''(x) = n(n-1) x^{n-2} \dots
+f^{(k)}(x) = n(n-1) \dots (n-k+1) x^{n-k} (k \le n) (INDUKCIÓ!!)
+f^{(n)}(x) = n(n-1) \dots (n-n+1) x^{n-n} = n!
+f^{(k)}(x) \equiv 0 ha k > n,

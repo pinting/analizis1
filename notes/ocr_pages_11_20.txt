@@ -1,0 +1,264 @@
+--- Page 11 ---
+Jel.: $\lim_{n \to \infty} a_n = a$, $a_n \to a$ ha $n \to +\infty$, $a_n \to a$, $\lim a_n = a$
+Ha $(a_n)$-nek van véges hat. értéke, akkor konvergens.
+Ha $(a_n)$ nem konv., akkor divergens.
+Pl.: $\lim_{n \to \infty} \frac{(-1)^n}{2 \cdot n} = 0$, $n_\varepsilon = ?$ ha $\varepsilon = 0,01$, HF / 64
+$n_\varepsilon$ nem egyért.!
+$\lim_{n \to \infty} (-1)^n \cdot n = N.L.$
+$a_n = n$ div., $(-1)^n$ div. (bizöket def-ből)
+T.: A köv. két áll ekvivalens:
+A $a_n \to a$ ha $n \to +\infty$
+B $\forall \varepsilon > 0$-hoz az $(a_n)$-nek csak véges sok (indexű) tagja nincs $B(a,\varepsilon)$-ban.
+Biz.: A $\Rightarrow$ B $\varepsilon > 0$ adott. $a_n \to a$ def-ből, $a_n \in B(a,\varepsilon)$
+ha $n \ge n_\varepsilon$ legf. $n_\varepsilon - 1$ tag nincs $B(a,\varepsilon)$-ban.
+B $\Rightarrow$ A $\varepsilon > 0$ adott. B $\Rightarrow$ véges sok olyan n-van, amire $a_n \notin B(a,\varepsilon)$ legyen $n_\varepsilon$ ezek mindegyikénél nagyobb $\Rightarrow \forall n \ge n_\varepsilon$ $a_n \in B(a,\varepsilon)$. $\square$
+T.: (egyértelműség) Ha $a_n \to a$ és $a_n \to b$ akkor $a = b$.
+Biz.: HF / 64
+T.: $a_n \to a \Rightarrow (a_{n+1} - a_n) \to 0$.
+Biz.: $a_n \to a \Rightarrow \forall \varepsilon' > 0$ $\exists n_{\varepsilon'}$ hogy $\forall n \ge n_{\varepsilon'}$-re
+$|a_n - a| < \varepsilon'$, ha $n \ge n_{\varepsilon'}$ akkor $|a_n - a| < \varepsilon'$, $|a_{n+1} - a| < \varepsilon' \Rightarrow$
+$|a_{n+1} - a_n| = |a_{n+1} - a + a - a_n| \le |a_{n+1} - a| + |a_n - a| < 2\varepsilon'$.
+Ha $\varepsilon$ adott vál. $\varepsilon' = \frac{\varepsilon}{2}$-hez $n_{\varepsilon'}$-t az $a_n \to a$-ban
+ez jó $\varepsilon$-hoz az $(a_{n+1} - a_n) \to 0$-hoz. $\square$
+
+--- Page 12 ---
+HF / 64 $a_{n+1} - a_n \to 0 \not\Rightarrow a_n$ konv.
+Def.: Ha adott $(a_n)$ és $n_1 < n_2 < \dots < n_k < \dots$, $\{n_1, n_2, \dots\} \subset \mathbb{N}$, akkor a $b_k = a_{n_k}$ ($k=1, \dots$) sorozatot az $(a_n)$ részsorozatának nev.
+Pl.: $a_n = (-1)^n$, $n_1=2, n_2=4, \dots, n_k=2k$
+$b_k = a_{n_k} = a_{2k} = (-1)^{2k} = 1$ egy r. sorozat
+$(a_n)$ div., de $(a_{n_k})$ konv.
+T.: Ha $a_n \to a$, akkor tetsz. $a_{n_k}$ r. sorozatra $a_{n_k} \to a$.
+Biz.: $\forall \varepsilon > 0$-ra $(a_n)$-nek csak véges sok tagja nincs $B(a,\varepsilon)$-ban $\Rightarrow$ $(a_{n_k})$-nak is. $\square$
+T.: Ha $a_n \le b_n$, $a_n \to a$, $b_n \to b$, akkor $a \le b$.
+Biz.: Indirekt. T.f.h. $b < a$, $\varepsilon \doteq \frac{a-b}{2} > 0$.
+Vál. $n_{\varepsilon, 1}$-et és $n_{\varepsilon, 2}$-t, hogy
+(I) $\forall n \ge n_{\varepsilon, 1}$-re $|a_n - a| < \varepsilon$, (II) $\forall n \ge n_{\varepsilon, 2}$-re $|b_n - b| < \varepsilon$
+$n_\varepsilon \doteq \max\{n_{\varepsilon, 1}, n_{\varepsilon, 2}\}$. Ha $n \ge n_\varepsilon$ akkor (I) $\cap$ (II) $\Rightarrow$
+$\Rightarrow a_n > a - \varepsilon = a - \frac{a-b}{2} = \frac{a+b}{2} \land b_n < b + \varepsilon = b + \frac{a-b}{2} = \frac{a+b}{2}$
+$\Rightarrow a_n > \frac{a+b}{2} > b_n$ $\unicode{x21af}$ $a_n \le b_n$. $\square$
+!!! $\forall n \in \mathbb{N}$, $a_n < b_n$, $a_n \to a$, $b_n \to b \not\Rightarrow a < b$
+Pl.: $a_n = \frac{1}{2n}$, $b_n = \frac{1}{n}$. (Persze $a \le b$ köv.)
+HF / 64 $a_n \to a \Leftrightarrow a_n - a \to 0$, $a_n \to 0 \Leftrightarrow |a_n| \to 0$.
+T.: Ha $a_n \to a$, akkor $(a_n)$ korlátos.
+Biz.: $\varepsilon = 1$, $B(a,1)$-en kívül csak véges sok tag van. $\exists K_0$, hogy ezek absz. ért. $< K_0$.
+$K \doteq \max(K_0, |a|+1)$. $\square$
+
+--- Page 13 ---
+$(-1)^n$ korl. de nem konv. !!!
+T.: Ha $(a_n)$ mon. növ. és f. korl., akkor
+$a_n \to a = \sup\{a_n : n \in \mathbb{N}\} \in \mathbb{R}$.
+Biz.: Legyen $\varepsilon > 0$. $a$ az $(a_n)$ l. k. f. k.-ja $\Rightarrow$
+$\exists n_\varepsilon$, amire $a_{n_\varepsilon} > a - \varepsilon$. $(a_n)$ mon. növ. $\Rightarrow$
+$\forall n \ge n_\varepsilon$-ra $a_n \ge a_{n_\varepsilon} > a - \varepsilon$, nyilván $a \ge a_n \Rightarrow$
+$\forall n \ge n_\varepsilon$-ra $a_n \in B(a,\varepsilon)$. $\square$
+Pl.: $a_n = n$ v. $b_n = \sqrt{n}$ nem korl. mon. növ.
+A "$+\infty$-hez tartanak".
+Def.: Az $a_n$ hat. ért. $+\infty$ ha $\forall K \in \mathbb{R}$-hez $\exists n_K$,
+hogy $\forall n \ge n_K$-ra $a_n > K$.
+$(K, +\infty) \doteq B(+\infty, K)$, $a_n \in B(+\infty, K)$ a $+\infty$ K-körzete.
+Jel.: $\lim_{n \to \infty} a_n = +\infty$, $a_n \to +\infty$ ha $n \to +\infty$.
+$(a_n)$ a $+\infty$-hez divergál.
+Has. def. (HF / 64) $\lim_{n \to \infty} a_n = -\infty$,
+$(-\infty, K) = B(-\infty, K)$.
+Sorozatok osztályozása:
+konv. $a_n \to a \in \mathbb{R}$ } van hat. értéke
+div. $a_n \to +\infty$
+     $a_n \to -\infty$
+     $(a_n)$ nem tart sehova (oszcillálva div.)
+$\forall (a_n)$-re pontosan az egyik telj.
+T.: A köv. áll. ekv.:
+A $\lim_{n \to \infty} a_n = +\infty$
+B $\forall K \in \mathbb{R}$-re az $(a_n)$-nek csak véges sok tagja kisebb egyenlő K-nál (azaz nincs $B(+\infty, K)$-ban).
+Biz.: HF / 64
+
+--- Page 14 ---
+Def.: Ha adott $(a_n)$ és $f : \mathbb{N} \to \mathbb{N}$ bijekció,
+akkor a $b_n = a_{f(n)}$ sorozatot az $(a_n)$ átrendezésének
+nev. Pl.: $a_1, a_2, a_3, a_4, a_5 \dots$
+          $\searrow \nearrow \searrow \nearrow$
+          $b_1, b_2, b_3, b_4, b_5 \dots$
+T.: Ha $a_n \to \alpha \in \overline{\mathbb{R}}$ és $(b_n)$ a köv. négy eljárás
+véges sokszori alk. keletk. $(a_n)$-ből, akkor $b_n \to \alpha$.
+(I) az átr. (II) bizonyos (akár $\infty$ sok) tag véges sokszori megism. (III) véges sok tag hozzávétele, (IV) véges sok tag elhagyása.
+Biz.: HF / 64 $\square$
+A hat. ért. tul.
+T.: (Rendőr elv) (Csendőr szabály)
+Ha $\forall n \ge n_0$ $a_n \le b_n \le c_n$ és $\lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$,
+akkor $\lim_{n \to \infty} b_n = a$.
+Biz.: $\varepsilon > 0$ adott. $\exists n_{\varepsilon, 1}, n_{\varepsilon, 2}$, hogy
+$\forall n \ge n_{\varepsilon, 1}$-re $|a_n - a| < \varepsilon$ és $\forall n \ge n_{\varepsilon, 2}$-re $|c_n - a| < \varepsilon$.
+$n_\varepsilon \doteq \max\{n_{\varepsilon, 1}, n_{\varepsilon, 2}, n_0\}$
+$\forall n \ge n_\varepsilon$-ra $a - \varepsilon < a_n \le b_n \le c_n < a + \varepsilon \Rightarrow$
+$\forall n \ge n_\varepsilon$-ra $|b_n - a| < \varepsilon$. $\square$
+T.: Ha $\forall n \ge n_0$-ra $a_n \le b_n$ és $a_n \to +\infty$, akkor $b_n \to +\infty$.
+Biz.: HF / 64 $\square$
+Alk.: $\lim_{n \to \infty} \sqrt[n]{2^n + n^2} = ?$ volt $2^n \ge n^2$ ha $n \ge 5$
+$\sqrt[n]{2^n} = 2 \le \sqrt[n]{2^n + n^2} \le \sqrt[n]{2 \cdot 2^n} = \sqrt[n]{2} \cdot 2$.
+$\downarrow \quad \downarrow \quad \downarrow$
+2 \quad 2 \quad 2
+
+--- Page 15 ---
+Def.: $(a_n), (b_n)$ adottak akkor $(a_n + b_n)$
+az összegük, $(a_n \cdot b_n)$ a szorzatuk és ha $\forall n$-re
+$b_n \neq 0$ akkor $(\frac{a_n}{b_n})$ a hányadosuk.
+T.: Ha $a_n \to a \in \mathbb{R}$, $b_n \to b \in \mathbb{R}$, akkor
+(I) $a_n + b_n \to a + b$, (II) $a_n b_n \to ab$
+(III) ha $\forall n \in \mathbb{N}$-re $b_n \neq 0$ és $b \neq 0$, akkor $\frac{a_n}{b_n} \to \frac{a}{b}$.
+(IV) ha $a_n \to 0$ és $(b_n)$ korl. $\Rightarrow a_n b_n \to 0$.
+Biz.: (I) $\land$ (IV) HF / 64.
+(II) $a_n \to a \land b_n \to b \Rightarrow (a_n), (b_n)$ korl.
+Vál $K$-t, hogy $\forall n$-re $|a_n| \le K$, $|b_n| \le K$
+$\varepsilon > 0$ adott. Vál. $n_\varepsilon$-t, hogy $|a| \le K$, $|b| \le K$
+$\forall n \ge n_\varepsilon$ $|a_n - a| < \varepsilon$ és $|b_n - b| < \varepsilon \Rightarrow$
+$|a_n b_n - ab| = |a_n b_n - a_n b + a_n b - ab| = |a_n(b_n - b) + b(a_n - a)| \le$
+$\le |a_n| |b_n - b| + |b| |a_n - a| < K \cdot \varepsilon + K \cdot \varepsilon = 2K\varepsilon$ azaz
+$\tilde{\varepsilon} = 2K\varepsilon$-hoz jó $n_\varepsilon$ az $a_n b_n \to ab$-hez. Vagy jó $\frac{\varepsilon}{2K}$-hoz. $\square$
+(III) Áll.: $\frac{1}{b_n} \to \frac{1}{b}$ (ebből és (II)-ből $\frac{a_n}{b_n} = a_n \cdot \frac{1}{b_n} \to a \cdot \frac{1}{b} = \frac{a}{b}$)
+Biz.: $\varepsilon > 0$ adott. Vál $n_\varepsilon$-t, hogy $\forall n \ge n_\varepsilon$-ra $|b_n - b| < \varepsilon$
+és $|b_n - b| < \frac{|b|}{2} = \varepsilon' > 0$
+$\Downarrow$
+$|b_n| > \frac{|b|}{2}$
+$|\frac{1}{b_n} - \frac{1}{b}| = |\frac{b - b_n}{b_n b}| = \frac{|b - b_n|}{|b_n \cdot b|} \le \frac{2\varepsilon}{|b|^2}$ ha $n \ge n_\varepsilon$ $\square$
+T.: $a_n \to +\infty \land (b_n)$ a. korl. $\Rightarrow a_n + b_n \to +\infty$.
+Biz.: $\forall n \in \mathbb{N}$, $b_n \ge K_0$. $K$ adott, $\exists n_K$ $\forall n \ge n_K$
+$a_n > K - K_0 \Rightarrow a_n + b_n > K + K_0 \square$
+$\Rightarrow (a_n \to +\infty \land b_n \to b) \Rightarrow a_n + b_n \to +\infty$   $(+\infty + a = +\infty)$.
+$(a_n \to +\infty \land b_n \to +\infty) \Rightarrow a_n + b_n \to +\infty$ $(+\infty + +\infty = +\infty)$
+$\uparrow$ miért lesz a. k.
+
+--- Page 16 ---
+$a_n \to +\infty \land b_n \to -\infty$ nincs tétel krit. hat. ért.
+Pl. $a_n = n, b_n = -n$, $a_n + b_n \to 0$
+$a_n = n, b_n = (-1)^n 2n$, $a_n + b_n$ oszc. div
+$a_n = 2n, b_n = -n$, $a_n + b_n \to +\infty$ ...
+T.: Ha $a_n \to a > 0$ és $b_n \to \pm\infty$, akkor $a_n b_n \to \pm\infty$.
+Biz.: HF / 64
+$a_n \to 0, b_n \to +\infty$ esetén $a_n b_n$ kritikus    HF / 64
+T.: $a_n \to \infty \Rightarrow \frac{1}{a_n} \to 0$. Biz.: HF / 64.
+T.: $a_n \to 0$ és $a_n \neq 0 \Rightarrow \frac{1}{|a_n|} \to +\infty$. Biz.: HF / 64
+$\lim (a_n + b_n)$
+$a_n \rightarrow \backslash b_n \rightarrow$ | $b$ | $+\infty$ | $-\infty$
+$a$ | $a+b$ | $+\infty$ | $-\infty$
+$+\infty$ | $+\infty$ | $+\infty$ | kr.
+$-\infty$ | $-\infty$ | kr. | $-\infty$
+$\lim a_n b_n$
+$a_n \rightarrow \backslash b_n \rightarrow$ | $b>0$ | $0$ | $b<0$ | $+\infty$ | $-\infty$
+$a>0$ | $ab$ | $0$ | $ab$ | $+\infty$ | $-\infty$
+$0$ | $0$ | $0$ | $0$ | kr. | kr.
+$a<0$ | $ab$ | $0$ | $ab$ | $-\infty$ | $+\infty$
+$+\infty$ | $+\infty$ | kr. | $-\infty$ | $+\infty$ | $-\infty$
+$-\infty$ | $-\infty$ | kr. | $+\infty$ | $-\infty$ | $+\infty$
+--------------------------------------------------------------------------------
+Lemma: Minden sorozatnak $\exists$ mon. r. sorozata.
+Biz.: $(a_k)$ csúcs elem, ha $\forall m \ge k$-ra $a_m \le a_k$.
+a) Ha $\infty$ sok csúcs van, akkor $a_{k_1}, a_{k_2}, \dots$ csúcsok
+egy r. sorozata $\Rightarrow a_{k_1} \ge a_{k_2} \ge \dots$ mon. cs.
+b) Ha véges sok csúcs van, akkor $\exists s_1$ $\forall m \ge s_1$ $a_m$ nem csúcs
+$\Rightarrow \exists m' > m$ $a_{m'} > a_m$. Legyen $k_1 = s_1 \Rightarrow \exists k_2 > k_1$,
+$a_{k_2} > a_{k_1}$, $\exists k_3 > k_2$, $a_{k_3} > a_{k_2}$ $\dots \square$
+Bolzano-Weierstrass tétel: $\forall$ korl. sorozatnak $\exists$
+konv. r. sorozata.
+Biz.: Fenti L. $\Rightarrow \exists$ korl. mon. r. sorozat ez korábbi
+T. szerint konv. $\square$
+
+--- Page 17 ---
+T.: Ha $(a_n)$ f. / (a.) nem korl. $\Rightarrow \exists +\infty$-hez
+($(-\infty)$-hez) div. r. sorozata. Biz.: HF / 64.
+Cauchy krit.: $a_n = 1 + \frac{1}{\sqrt{2}} + \dots + \frac{1}{\sqrt{n}} = \sum_{k=1}^n \frac{1}{\sqrt{k}}$, $a_n$ div.
+$a_n \ge n \cdot \frac{1}{\sqrt{n}} = \sqrt{n}$, de $a_{n+1} - a_n = \frac{1}{\sqrt{n+1}} \to 0$   $\nwarrow$ jelölés
+$a_{n+1} - a_n \to 0 \not\Rightarrow$ $(a_n)$ konv.
+T.: $(a_n)$ acsa konv. ha $\forall \varepsilon > 0$-hoz $\exists n_\varepsilon$, hogy
+$\forall n,m \ge n_\varepsilon$-ra $|a_n - a_m| < \varepsilon$.
+Biz.: ($\Rightarrow$) $a_n \to a \in \mathbb{R} \Rightarrow \forall \varepsilon > 0, \exists n_\varepsilon, \forall n \ge n_\varepsilon$
+$|a_n - a| < \frac{\varepsilon}{2} \Rightarrow \forall n,m \ge n_\varepsilon, |a_n - a_m| = |a_n - a + a - a_m| \le$
+$\le |a_n - a| + |a - a_m| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon$. $\square$
+($\Leftarrow$) $\varepsilon_0 = 1$-hez $\exists n_1$, hogy $\forall n,m \ge n_1$-re $|a_n - a_m| < 1 \Rightarrow$
+$\forall m \ge n_1$-re $|a_{n_1} - a_m| < 1 \Rightarrow K = \max\{|a_{n_1}|+1, |a_1|, \dots, |a_{n_1-1}|\}$
+az $(a_n)$ korl. BW tétel $\Rightarrow \exists$ $(a_{n_k})$ konv. r. sorozat,
+$a_{n_k} \to a \in \mathbb{R}$, $k \to +\infty$.
+adott $\varepsilon > 0$-hoz $\exists k_\varepsilon$ $\forall k \ge k_\varepsilon$-ra $|a_{n_k} - a| < \varepsilon$.
+$\exists n_\varepsilon$, hogy $\forall n,m \ge n_\varepsilon$-ra $|a_n - a_m| < \varepsilon$.
+Vál $k$-t, hogy $a_k \ge n_\varepsilon$ és $k \ge k_\varepsilon$.
+$\Rightarrow \forall n \ge n_\varepsilon$-ra $|a_n - a| \le |a_n - a_{n_k}| + |a_{n_k} - a| < 2\varepsilon$. $\square$
+HF / 64. T. f. h. $|a_{n+1} - a_n| \le \frac{1}{2^n}$. Biz. be. $(a_n)$ konv.
+Megszámlálható halmazok
+Def.: A megsz. végtelen ha elemei sorozatba
+rendezhetőek, azaz $\exists f : \mathbb{N} \to A$ bijekció,
+$a_n = f(n)$.
+
+--- Page 18 ---
+Def.: A megsz. ha véges, vagy megsz. végtelen.
+T.: $\mathbb{Q}$ megsz. végtelen.
+Biz.: Az n-ik lépésben soroljuk föl azon
+$[-n,n]$-be eső legf. n nevezőjű törteket,
+amiket még korábban nem soroltunk föl.
+[-1, 1] -1, 0, 1
+[-2, 2] -2, $-\frac{3}{2}, -\frac{1}{2}, \frac{1}{2}, \frac{3}{2}$, 2
+$\vdots$
+a sorozat $-1, 0, 1, -2, -\frac{3}{2}, -\frac{1}{2}, \frac{1}{2}, \frac{3}{2}, 2, \dots$
+         1. menet       2. menet
+másik biz.:
+$0 \rightarrow 1 \rightarrow 2 \rightarrow 3 \rightarrow 4 \dots$
+$\swarrow \nearrow \swarrow \nearrow$
+$-1, -2, -3, -4 \dots$
+$\downarrow \nearrow \swarrow$
+$\frac{1}{2}, \frac{3}{2}, \frac{5}{2}, \frac{7}{2} \dots$
+$-\frac{1}{2}, -\frac{3}{2}, -\frac{5}{2}, -\frac{7}{2} \dots$
+$\vdots$
+
+Def.: $\alpha \in \mathbb{C}$ algebrai, ha gyöke egy nem azonosan
+0 egész ehós polinomnak. Pl.: $\sqrt{2}$, $x^2-2=0$
+T.: Az alg. számok halmaza megsz.
+Biz.: HF / 64.
+Egy szám transzcendens ha nem alg. Pl.: $\pi, e$
+T.: $\mathbb{R}$ nem megsz. vést. ($\Rightarrow \exists$ transzcendens szám)
+Biz.: Indirekt. T. f. h. $\mathbb{R} = \{c_n : n \in \mathbb{N}\}$.
+Vál $a_1 < b_1$-et, hogy $c_1 \notin [a_1, b_1]$.
+
+--- Page 19 ---
+Vál $a_1 \le a_2 < b_2 \le b_1$-et, hogy $c_2 \notin [a_2, b_2]$
+$\vdots$    (kép: számegyenes, $c_1, a_1, c_2, a_2, b_1$)
+Vál $a_{n-1} \le a_n < b_n \le b_{n-1}$-et, hogy $c_n \notin [a_n, b_n]$
+Cantor tul. /ax $\Rightarrow \exists c \in \bigcap_{n=1}^\infty [a_n, b_n]$. $\forall n$-re
+$c \in [a_n, b_n]$, $c_n \notin [a_n, b_n]$, $\forall n$-re $c_n \neq c$ $\unicode{x21af}$
+Tk. további biz. olv. el.
+T.: $\mathbb{R} \setminus \mathbb{Q}$ nem megsz. Biz.: HF / 64.
+Def.: A és B ekvivalens (azonos számosságú)
+halmazok, ha $\exists \varphi : A \to B$ bijekció.
+Jel.: $A \sim B$ (ez ekv. rel. $A \sim A$, $A \sim B \Leftrightarrow B \sim A$,
+                           $A \sim B, B \sim C \Rightarrow A \sim C$)
+A megsz. vést. $\Leftrightarrow A \sim \mathbb{N}$
+A kontinuum számosságú $\Leftrightarrow A \sim \mathbb{R}$.
+T.: $\mathbb{R} \setminus \mathbb{Q} \sim \mathbb{R}$. Biz.: HF / 64.
+Sorozatok limesz superiora és inferiora
+Def.: T. f. h. $(a_n)$ tetsz. valós sorozat.
+$M_n = \sup \{a_k : k = n, n+1, \dots\} \in \overline{\mathbb{R}}$ és
+$m_n = \inf \{a_k : k = n, n+1, \dots\} \in \overline{\mathbb{R}}$.
+$\forall n$-re $M_{n+1} \le M_n$ és $m_{n+1} \ge m_n \Rightarrow \exists \lim_{n \to \infty} M_n \doteq$
+$\doteq \limsup_{n \to \infty} a_n = \overline{\lim}_{n \to \infty} a_n \in \overline{\mathbb{R}}$ és $\exists \lim_{n \to \infty} m_n \doteq \liminf_{n \to \infty} a_n =$
+$= \underline{\lim}_{n \to \infty} a_n \in \overline{\mathbb{R}}$.
+Nyilván $\underline{\lim} a_n = - \overline{\lim} (-a_n)$.
+$\forall n \in \mathbb{N}$ $m_n \le M_n \Rightarrow \underline{\lim} a_n \le \overline{\lim} a_n$.
+
+--- Page 20 ---
+Pl.: 1. $\overline{\lim} (-1)^n = 1$, $\underline{\lim} (-1)^n = -1$
+2. Ha $(q_n)$ a $[0,1] \cap \mathbb{Q}$ egy sorozatba rendezése,
+akkor $\overline{\lim} q_n = 1$, $\underline{\lim} q_n = 0$.
+T.: $\lim_{n \to \infty} a_n = a \in \overline{\mathbb{R}} \Leftrightarrow \overline{\lim}_{n \to \infty} a_n = \underline{\lim}_{n \to \infty} a_n = a$.
+Biz.: HF / 64. $\square$
+Def.: Az $a \in \overline{\mathbb{R}}$ szám az $(a_n)$ sűrűsödési értéke,
+ha $\exists$ olyan $n_k$ r. sorozat, hogy $a_{n_k} \to a$.
+Pl.: $(q_n)$ s. értékei $[0,1]$ összes pontja,
+     $(-1)^n$-é $\{-1, 1\}$
+T.: Ha $\lim_{n \to \infty} a_n = a \in \overline{\mathbb{R}}$, akkor
+$a = \max \{x \in \overline{\mathbb{R}} : x \text{ az } (a_n) \text{ sorozat sűrűsödési értéke}\}$.
+Biz.: HF / 64. $\square$
+Végtelen sorok
+$a_n = \frac{1}{2^n}$ új sorozat $s_n = \frac{1}{2} + \frac{1}{4} + \dots + \frac{1}{2^n} = \frac{1}{2}(1 + \dots + \frac{1}{2^{n-1}}) =$
+$= \frac{1}{2} \left( \frac{1 - \frac{1}{2^n}}{1 - \frac{1}{2}} \right) = \sum_{k=1}^n a_k$.
+$s_n$ konv. $s_n \to 1$, $s = \sum_{k=1}^\infty a_k$.
+Def.: $n \ge m$ esetén $\sum_{k=m}^n a_k = a_m + \dots + a_n$, $\sum_{k=n}^n a_k \doteq a_n$.
+Def.: Rendeljük hozzá az $(a_n)$ sorozathoz az
+$s_n = \sum_{k=1}^n a_k$ ú. n. részletösszegek sorozatát.
+Ezt $a_1 + a_2 + \dots$-vel, vagy $\sum_{k=1}^\infty a_k$-val jelöljük.
+E kifejezést végtelen sornak, vagy sornak nev.

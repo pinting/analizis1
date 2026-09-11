@@ -1,0 +1,235 @@
+- 31 -
+Def.: Ha $\alpha \in \overline{\mathbb{R}}$ és $A \subset \mathbb{R}$, akkor $\alpha$ az $A$ torlódási pontja ha az $\alpha$ $\forall U$ kzetében $A$-nak végtelen sok pontja van.
+Def.: T.f.h. $\alpha \in \overline{\mathbb{R}}$ az $A$ torl. pontja. Az $f$ fv. hat. értéke az $A$-ra szorítkozva $\gamma \in \overline{\mathbb{R}}$ ha $A \subset D(f)$ és $\gamma$ $\forall V$ kzetéhez $\exists$ az $\alpha$ $\dot{U}$ pontozott kzete, hogy $\forall x \in \dot{U} \cap A$-ra $f(x) \in V$.
+Jel: $\lim\limits_{\substack{x \to \alpha \\ x \in A}} f(x) = \gamma$
+Megj.: Ha $\alpha = a \in \mathbb{R}$ és $A = (a, a+\delta_0]$ ($\delta_0 > 0$), akkor $\lim\limits_{x \to a+0} f(x) = \gamma \Leftrightarrow \lim\limits_{\substack{x \to a \\ x \in A}} f(x) = \gamma$
+Ha $f(x) = D(x)$ Dirichlet fv., akkor $\forall c \in \mathbb{R}$-re
+$\lim\limits_{\substack{x \to c \\ x \in \mathbb{Q}}} D(x) = 1$, $\lim\limits_{\substack{x \to c \\ x \in \mathbb{R} \setminus \mathbb{Q}}} D(x) = 0$
+ÁTVITELI ELV
+Pl.: $\lim\limits_{x \to 2} x^2 = 4$, $a_n = 2 + \frac{1}{n}$, $\lim\limits_{n \to \infty} \left(2 + \frac{1}{n}\right)^2 = 4$
+Pl.: $\lim\limits_{n \to \infty} \left\{ \frac{1}{n} \right\} = 0$, $u_n = \frac{1}{n}$, $u_n \to 0$, de $\lim\limits_{x \to 0} \{x\} = \text{N.L.}$
+Pl.: Ha $f(x) = D(x)$, $\lim\limits_{n \to \infty} D\left(\frac{1}{n}\right) = 1$, de $\lim\limits_{x \to 0+0} D(x) = \text{N.L.}$
+T.: T.f.h. hogy $\exists \alpha$-nak olyan $\dot{U}$ pontozott kzete, hogy $\dot{U} \subset D(f)$. Ekkor $\lim\limits_{x \to a} f(x) = \gamma \Leftrightarrow$
+$\forall$ olyan $a_n \to \alpha$ sorozatra, melyre $a_n \in \dot{U}$ ($n=1, \dots$) teljesül, hogy $f(a_n) \to \gamma$.
+
+- 32 -
+Biz.: A többi eset has. $\alpha = a \in \mathbb{R}$, $\gamma = b \in \mathbb{R}$ eset:
+1. $A \Rightarrow B$ T.f.h. $\lim\limits_{x \to a} f(x) = b$, $a_n \to a$, $a_n \in \dot{U} = \dot{B}(a, \delta_0)$
+$\Rightarrow \forall \varepsilon > 0, \exists \delta > 0$, hogy $\forall x \in \dot{B}(a, \delta)$-ra $|f(x) - b| < \varepsilon$.
+Mivel $a_n \to a$, $a_n \neq a$ ezért $\exists n_{\delta}$, hogy $0 < |a_n - a| < \delta$
+ha $n \ge n_{\delta} \Rightarrow a_n \in \dot{B}(a, \delta)$ ha $n \ge n_{\delta} \Rightarrow |f(a_n) - b| < \varepsilon$
+ha $n \ge n_{\delta} \Rightarrow f(a_n) \to b$. (B tagadása)
+2. $B \Rightarrow A \Leftrightarrow A \lor \overline{B} \Leftrightarrow \overline{A} \lor \overline{B} \Leftrightarrow \overline{A} \Rightarrow \overline{B}$ Kontrapozíció elve
+T.f.h. $f(x) \not\to b$ ha $x \to a$.
+$\Rightarrow \exists \varepsilon > 0$, amire $\forall \delta > 0$-ra $\exists x \in \dot{B}(a, \delta)$, hogy $|f(x) - b| \ge \varepsilon$.
+$\Rightarrow \forall n \in \mathbb{N}$-re, $\delta_n = \frac{1}{n}$-hez $\exists a_n \in \dot{B}(a, \delta_n)$, hogy $|f(a_n) - b| \ge \varepsilon$.
+$\Rightarrow a_n \to a$, $a_n \neq a$, ha $n$ elég nagy $a_n \in \dot{U}$, de $f(a_n) \not\to b$.
+Jól haszn. annak megmutatására, hogy bizonyos hat. ért. $\nexists$.
+Sorozatos tételek "átvihetők" fv. hat. ért-re.
+Hat. ért. és műveletek!
+Ha $\lim\limits_{x \to \alpha} f(x) = b$, $\lim\limits_{x \to \alpha} g(x) = c$, akkor
+(i) $\lim\limits_{x \to \alpha} (f(x) + g(x)) = (\lim\limits_{x \to \alpha} f(x)) + (\lim\limits_{x \to \alpha} g(x)) = b + c$
+(ii) $\lim\limits_{x \to \alpha} f(x)g(x) = bc$
+(iii) ha $c \neq 0$, akkor $\lim\limits_{x \to \alpha} \frac{f(x)}{g(x)} = \frac{b}{c}$.
+Biz.: Átv. elv. visszavisz sorozatos tételekre.
+(i) $\land$ (iii) HF 1.64.
+(ii) $\forall a_n \to \alpha$, $a_n \in \dot{U}$-ra $f(a_n) \to b$, $g(a_n) \to c$
+Sorozatos T. $\Rightarrow f(a_n)g(a_n) \to bc$ (Átv. elv. visszafele)
+
+- 33 -
+Hat. érték és kompozíció
+T.: T.f.h. $\lim\limits_{x \to \alpha} g(x) = \gamma \in \overline{\mathbb{R}}$, $g(x) \neq \gamma$ az $\alpha$ vmely $\dot{U}$ p. kzetében és $\lim\limits_{t \to \gamma} f(t) = \beta$
+ekkor $\lim\limits_{x \to \alpha} f(g(x)) = \beta$.
+Biz.: $\forall a_n \to \alpha$, $\{a_n : n=1,2,\dots\} \subset \dot{U}$ sorozatra
+$g(a_n) = t_n \neq \gamma$, továbbá $t_n \to \gamma$. $\lim\limits_{t \to \gamma} f(t) = \beta \Rightarrow$
+$\Rightarrow \lim\limits_{n \to \infty} f(t_n) = \beta = \lim\limits_{n \to \infty} f(g(a_n))$ Átv. ELV. $\Rightarrow \lim\limits_{x \to \alpha} f(g(x)) = \beta$
+Megj.: $\infty + \infty = \infty$, $\infty \cdot a = \infty$ ($a>0$), $\frac{1}{\infty} = 0$ stb.
+Sorozatos tételek átvihetők hat. ért. továbbra is ig.
+Folytonosság
+Def.: $f$ folytonos az $a \in \mathbb{R}$ helyen, ha
+$\lim\limits_{x \to a} f(x) = f(a)$.
+$\Updownarrow$
+$f$ értelmezve van $a$ egy kzetében és $\forall \varepsilon > 0, \exists \delta > 0$, hogy $\forall x \in B(a, \delta)$-ra $|f(x) - f(a)| < \varepsilon$.
+Ha $a \in A \subset D(f)$ az $A$ torl. pontja, akkor $f$ folyt. $a$-ban $A$-ra szorítkozva, ha $\lim\limits_{\substack{x \to a \\ x \in A}} f(x) = f(a)$.
+Def.: $f$ jobbról folyt. $a$-ban, ha $\lim\limits_{x \to a+0} f(x) = f(a)$.
+(bal) $a-0$
+
+- 34 -
+T.: $f$ folyt. az $a$-ban $\Leftrightarrow$ $f$ j-ról és b-ről is folyt $a$-ban.
+Biz.: HF 1.69.
+Def.: $f$ folyt. az $(\alpha, \beta)$-n ha $\forall x \in (\alpha, \beta)$ pontban az. $\left(\alpha = \begin{cases} -\infty \\ a \in \mathbb{R} \end{cases}, \beta = \begin{cases} b \in \mathbb{R} \\ +\infty \end{cases}\right)$
+Jel.: $f \in C(\alpha, \beta)$.
+Def.: $f$ folyt. $[a, b]$-n ha $a$-ban j-ról, $b$-ben b-ről és $(a, b)$-n folyt.
+Jel: $f \in C[a, b]$.
+Pl.: $f(x) = c$ $\mathbb{R}$-en folyt., $f(x) = D(x)$ (Dirichlet) sehol se, $f(x) = [x]$ folyt $[0, 1/2]$-en, nem folyt. $[0, 1]$-en (szakad)
+A hat. ért. tételek $\Rightarrow$
+T.: $f, g$ folyt. az $a \in \mathbb{R}$ pontban $\Rightarrow f+g, f \cdot g$ is az, továbbá ha $g(a) \neq 0$, akkor $f/g$ is az.
+Köv.: Mivel $c$ és $x$ folyt. $\Rightarrow$ polinomok $\Rightarrow$ rac. tört fv-ek az É.T.-uk $\forall$ pontjában folyt.
+T.: Ha $\lim\limits_{\substack{x \to \alpha \\ x \in A}} f(x) = b < c = \lim\limits_{\substack{x \to \alpha \\ x \in A}} g(x)$, akkor $\exists$ az $\alpha$-nak $\dot{U}$ p. kzete, hogy $\forall x \in \dot{U} \cap A$-ra $f(x) < g(x)$.
+Biz.: HF 1.64 $\varepsilon = \frac{c-b}{2} \dots$
+T.: Ha $\exists \lim\limits_{x \to \alpha} f(x) = b$, $\lim\limits_{x \to \alpha} g(x) = c$ és $\exists$ az $\alpha$-nak $\dot{U}$ p. kzete, hogy $f(x) \le g(x)$, akkor $b \le c$.
+
+- 35 -
+Biz.: $x_n \in \dot{U}$, $x_n \to \alpha \Rightarrow f(x_n) \le g(x_n)$
+$\downarrow \quad \quad \downarrow$
+$b \quad \quad c$
+Köv.: Ha $f$ folyt $a$-ban, $f(a) > 0 \Rightarrow \exists \delta > 0, \forall x \in B(a, \delta)$ $f(x) > 0$.
+Ha $\delta > 0$ és $\forall x \in \dot{B}(a, \delta)$ $f(x) \ge 0 \Rightarrow f(a) \ge 0$.
+ÁTVITELI ELV
+T.: T.f.h $f$ értelmezett az $a \in \mathbb{R}$ egy kzetében
+$f$ folyt. $a$-ban $\Leftrightarrow \forall a_n \to a$ sorozatra $f(a_n) \to f(a)$
+Ha $f$ folyt. akkor $\lim$ és $f$ felcserélhető!
+Pl.: $\lim\limits_{n \to \infty} \left(2 + \frac{1}{n}\right)^3 = \left(\lim\limits_{n \to \infty} 2 + \frac{1}{n}\right)^3 = 8$.
+De! $\lim\limits_{n \to \infty} \left\{ 1 - \frac{1}{n} \right\} = 1 \neq \left\{ \lim\limits_{n \to \infty} \left( 1 - \frac{1}{n} \right) \right\} = 0$.
+Az átv. elves hat. ért. tételek $\Rightarrow$
+T.: Ha $\lim\limits_{x \to \alpha} g(x) = b$ és $f$ folyt. $b$-ben $\Rightarrow$
+$\Rightarrow \lim\limits_{x \to \alpha} f(g(x)) = f(b)$. ($\alpha = a-0, a, a+0$)
+Köv.: Ha $g$ folyt. $a$-ban és $f$ folyt $g(a)$-ban, akkor $f \circ g$ folyt. $a$-ban.
+$C[a, b]$-beli fv-ek tul.
+T.: Ha $f \in C[a, b]$ akkor $f$ korl $[a, b]$-n.
+Biz.: Indirekt. $f$ nem korl. $\Rightarrow \forall n \in \mathbb{N}$-re $\exists x_n \in [a, b]$, $|f(x_n)| > n$. B.W. Tétel $(x_n)$-hez $\exists x_{n_k} \to c \in [a, b]$ r. sorozata. $f \in C[a, b] \Rightarrow f(x_{n_k}) \to f(c)$
+$\lightning \ |f(x_{n_k})| > n_k$
+
+- 36 -
+T.: (Weierstrass) Ha $f \in C[a, b]$, akkor $f$-nek van maximuma és minimuma $[a, b]$-ben.
+Biz.: Ind. $\sup R(f) = M \in \mathbb{R}$. T.f.h. $\forall x \in [a, b]$
+$f(x) < M \Rightarrow g(x) \overset{\text{def.}}{=} \frac{1}{M - f(x)} \in C[a, b]$ előző T. $\Rightarrow$
+$\exists K > 0 \ \forall x \in [a, b] \ \ |g(x)| \le K \Rightarrow \frac{1}{M - f(x)} \le K \Rightarrow$
+$\Rightarrow M - f(x) \ge \frac{1}{K} \Rightarrow f(x) \le M - \frac{1}{K} \lightning \ M = \sup R(f)$
+T.: (Bolzano-Darboux) Ha $f \in C[a, b]$, akkor $f$ felvesz $\forall$ $f(a)$ és $f(b)$ közötti $c$ értéket.
+Biz.: T.f.h. $f(a) < f(b), f(a) < c < f(b)$
+$H \overset{\text{def.}}{=} \{x \in [a, b] : f(x) \le c\}$
+$a \in H \land b$ a $H$ f.k.
+$\gamma \overset{\text{def.}}{=} \sup H$
+$\forall n \in \mathbb{N}$-re $\exists x_n \in [\gamma - \frac{1}{n}, \gamma] \cap [a, b]$, hogy $f(x_n) \le c$.
+$f$ folyt. $\Rightarrow f(x_n) \to f(\gamma) \Rightarrow f(\gamma) \le c < f(b) \Rightarrow \gamma \neq b$.
+$H$ def. $\Rightarrow x \in (\gamma, b) \Rightarrow f(x) > c \Rightarrow \lim\limits_{x \to \gamma+0} f(x) = f(\gamma) \ge c$.
+$\Rightarrow f(\gamma) = c$
+$\Rightarrow$ T.: Ha $a \ge 0$ és $k \in \mathbb{N} \Rightarrow \exists b \in \mathbb{R} \ b^k = a$, azaz $\exists \sqrt[k]{a}$.
+Biz.: $f(x) = x^k \in C[0, a+1]$, $f(0) = 0$, $f(a+1) = (a+1)^k \ge a+1 > a$, B.D.T. $\Rightarrow \exists b \in [0, a+1]$, $b^k = f(b) = a$.
+T.: $f \in C[a, b] \Rightarrow R(f) = $ egyetlen pont, vagy korl. zárt. int.
+Biz.: W.T. + B.D.T. $R(f) = [\min\limits_{x \in [a, b]} \{f(x)\}, \max\limits_{x \in [a, b]} \{f(x)\}]$
+
+- 37 -
+T.: Ha $I$ intervallum (zárt v. nyílt f. nyílt \dots) és $f \in C(I)$, akkor $f(I)$ is intervallum.
+Biz.: $\alpha = \inf \{f(x) : x \in I\}$, $\beta = \sup \{f(x) : x \in I\}$
+$\alpha < a < b < \beta, \exists x, y \in I$
+$\alpha < f(x) < a < b < f(y) < \beta$
+B.D.T. $\Rightarrow (a, b) \subset f(I) \Rightarrow (\alpha, \beta) \subset f(I) \subset [\alpha, \beta]$
+Pl.: $I = (-1, 1)$, $f(x) = x^2$, $f(I) = [0, 1)$
+$I = (0, 1)$, $f(x) = 1/x$, $f(I) = (1, +\infty)$.
+T.: Ha $f$ sz. mon. növ. $\land f \in C[a, b]$, akkor
+a) $R(f) = [f(a), f(b)]$, b) $\exists f^{-1}$,
+c) $f^{-1}$ sz. mon növ. $[f(a), f(b)]$-n
+d) $f^{-1} \in C[f(a), f(b)]$.
+Megj.: Has. T. sz.m.cs. fv-re, vált. nyílt int. ért. fv-re.
+Biz.: a), b), c) HF 1.64.
+d) Legyen $f(a) < y < f(b)$, $f^{-1}(y) = x \in (a, b)$.
+Legyen $0 < \varepsilon < \min(x-a, b-x)$ (ez tölthető)
+$\Rightarrow a < x-\varepsilon < x < x+\varepsilon < b$ és $f(x) = y$
+$\Rightarrow f(a) < f(x-\varepsilon) < y < f(x+\varepsilon) < f(b)$.
+$\Rightarrow$ Ha $f(x-\varepsilon) < t < f(x+\varepsilon)$, akkor
+$c$ szerint
+$f^{-1}(f(x-\varepsilon)) = x-\varepsilon < f^{-1}(t) < x+\varepsilon =$ 
+$= f^{-1}(f(x+\varepsilon))$
+$\delta_{\varepsilon} \overset{\text{def.}}{=} \min \{ f(x+\varepsilon) - y, y - f(x-\varepsilon) \}$
+
+- 38 -
+Szakadási helyek
+Def.: T.f.h. $\exists \delta_0 > 0$, $\dot{B}(a, \delta_0) \subset D(f)$, ha $f$ nem folyt. $a$-ban, akkor $a$ szakadási hely.
+i) Ha $\exists \lim\limits_{x \to a} f(x) = b \in \mathbb{R}$, akkor az $a$ pontban $f$-et $b$-nek (át)definiálva $f$ folytonossá tehető $\Rightarrow$ a-ban megszüntethető szakadási hely.
+ii) Ha $\nexists \lim\limits_{x \to a} f(x)$ de $\exists \lim\limits_{x \to a-0} f(x) = f(a-0) \in \mathbb{R}$ és $\exists \lim\limits_{x \to a+0} f(x) = f(a+0) \in \mathbb{R}$ akkor $f$ ugrik $a$-ban.
+Az i) $\lor$ ii) szak. helyek az elsőfajú szak. helyek.
+iii) Ha a szak. hely nem elsőfajú, akkor másodf.
+Pl.: $\frac{1}{x} \lor \{\frac{1}{x}\}$ a 0-ban.
+T.: Ha $f$ mon. $(c, d)$-n és $a \in (c, d)$, akkor $\exists \lim\limits_{x \to a-0} f(x) = f(a-0)$ és $\exists \lim\limits_{x \to a+0} f(x) = f(a+0)$.
+Biz.: Felt. $f$ mon. növ és $f(a-0)$-t bit.
+$b \overset{\text{def.}}{=} \sup \{f(x) : x < a\}$. Legy. $\varepsilon > 0$, $\exists x_1 < a$, $f(x_1) > b-\varepsilon$.
+$\delta \overset{\text{def.}}{=} a - x_1$, $f$ mon. növ. $\Rightarrow \forall x \in (x_1, a) = (a-\delta, a)$-re
+$b-\varepsilon < f(x_1) \le f(x) \le b \Rightarrow f(a-0) = b$
+$\Rightarrow$ Mon fv.-nek csak elsőfajú szak helye lehet.
+T.: Ha $f$ mon. $(c, d)$-n akkor itt legt. megsz. sok elsőf. szak. helytől eltek. folyt.
+Biz.: a szak hely, $\exists r(a) \in \mathbb{Q} \cap (f(a-0), f(a+0))$
+ha $a' \neq a$ szak. hely akkor $r(a') \neq r(a)$
+
+- 39 -
+Konvexitás és folyt.
+$h_{a,b}(x) \overset{\text{def.}}{=} f(a) + \frac{f(b) - f(a)}{b - a}(x - a)$
+$h_{a,b}(a) = f(a)$, $h_{a,b}(b) = f(b)$
+$h_{a,b}(x)$ lin. folytonos fv.
+L.: T.f.h. $f$ kvex $I$-n, $a, b \in I$, $a < b$ és $x \in I \setminus [a, b]$. Ekkor $f(x) \ge h_{a,b}(x)$.
+Biz.: (Vázlat) Volt, hogy $m_a(x) = \frac{f(x) - f(a)}{x - a}$ mon növ.
+$\Rightarrow x > b \Rightarrow m_a(x) \ge m_a(b) = \frac{f(b) - f(a)}{b - a} \Rightarrow h_{a,b}(x) \le h_{a,x}(x) = f(x)$
+Sz. kvex esetben $f(x) > h_{a,b}(x)$
+T.: Ha $f$ kvex az $I$ nyílt int-on, akkor $f \in C(I)$.
+Biz.:
+T.f.h. $c \in I$, vál. $a, b \in I$, $a < c < b$
+$x \in (c, b) \Rightarrow h_{a,c}(x) \le f(x) \le h_{c,b}(x)$
+$\downarrow \quad \uparrow \text{Lem.} \quad \downarrow \quad \downarrow \text{(ha } x \to c+0\text{)}$
+$f(c) \quad \quad f(c) \quad f(c)$
+$h_{a,c}(c) \quad \text{rendőr elv.} \quad h_{c,b}(c)$
+($c-0$ eset hasonló).
+Megj.: $I$ nyíltsága kell. 
+Volt: $f$ sz. kvex $I$-n, ha $\forall a, b \in I$, $f\left(\frac{a+b}{2}\right) \le \frac{f(a) + f(b)}{2}$
+kvex $\Rightarrow$ sz. kvex., sz. kvex $\not\Rightarrow$ kvex, de ha $f$ folyt. akkor sz kvex $\Rightarrow$ kvex.
+
+- 40 -
+Trigonometrikus fv.-ek.
+A körív hosszúságának pontos def. nem egyszerű ld. TK. mi most szemléletből elfogadjuk.
+Def.: Tetsz $x \in [0, 2\pi)$-re mérjük fel az $x$ hosszúságú körívet a $K$ egységkörre (pozitív irányba). Az így kapott $P$ pont első koordinátáját $\cos x$-szel a második koordinátáját $\sin x$-szel jelöljük.
+Ha $x \in \mathbb{R}$ és $2k\pi \le x < 2(k+1)\pi$ ($k \in \mathbb{Z}$) akkor
+$\sin x = \sin(x - 2k\pi)$, $\cos x = \cos(x - 2k\pi)$. ($k = [\frac{x}{2\pi}]$)
+$\cos(k\pi) = (-1)^k$, $\sin(k\pi) = 0$ $k \in \mathbb{Z}$,
+$\cos(x + 2\pi) = \cos x$, $\sin(x + 2\pi) = \sin x$
+$\cos$ mon. csökk. $[0, \pi] + 2k\pi$-n, mon. növ. $[-\pi, 0] + 2k\pi$-n
+Piti tétel $\sin^2 x + \cos^2 x = 1$
+$\cos(-x) = \cos x$, $\sin(-x) = -\sin x$
+$Q$ és $Q'$ tkr. képek, mindkét ábrán
+$\cos(\frac{\pi}{2} - x) = \sin x$
+$\sin(\frac{\pi}{2} - x) = \cos x$ (ebből jönnek a $\sin$ mon. intervallumai)
+Addíciós képletek:
+$\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y \Rightarrow \sin 2x = 2 \sin x \cos x$
+$\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y \Rightarrow \cos 2x = \cos^2 x - \sin^2 x = 2\cos^2 x - 1$
+$\Rightarrow \cos^2 x = \frac{1 + \cos 2x}{2}$, $\sin^2 x = \frac{1 - \cos 2x}{2}$
+További képletek TK + Fv. tábla
+Nekünk most csak a
+$\bigotimes \sin x - \sin y = 2 \sin \frac{x-y}{2} \cos \frac{x+y}{2}$ kell.
+Nyilván $-1 \le \sin x, \cos x \le 1$
+
+- 41 -
+T.: a) $x > 0 \Rightarrow \sin x < x$,
+b) $x \neq 0 \Rightarrow |\sin x| < |x|$
+Biz.: a) $x \ge \frac{\pi}{2}$ esetén $\frac{\pi}{2} > 1 \ge \sin x$,
+ha $x < \frac{\pi}{2}$, akkor
+$2 \sin x < |Q-P| + |Q'-P| \le 2x$
+$\uparrow$ két pont között a legrövidebb az egyenes út (ívhossz def.)
+b) a) $\Rightarrow |\sin(-x)| = |\sin x| < |-x| = |x|$
+T.: $\forall x, y \in \mathbb{R}$-re i) $|\sin x - \sin y| \le |x - y|$
+ii) $|\cos x - \cos y| \le |x - y|$
+Biz.: i) $|\sin x - \sin y| \overset{\bigotimes}{=} 2|\sin(\frac{x-y}{2})||\cos(\frac{x+y}{2})| \le 2|\frac{x-y}{2}| \cdot 1 = |x-y|$
+ii) köv. $\cos x = \sin(\frac{\pi}{2} - x)$-ből és i)-ből
+$\Rightarrow \sin x, \cos x \in C(\mathbb{R})$, $\varepsilon > 0$-hoz $\delta_{\varepsilon} = \varepsilon$ jó.
+Def.: $\tan x \overset{\text{def.}}{=} \frac{\sin x}{\cos x}$, $\cot x \overset{\text{def.}}{=} \frac{\cos x}{\sin x}$
+T.: $\tan x$ folyt $\mathbb{R} \setminus \{ \frac{\pi}{2} + k\pi : k \in \mathbb{Z} \}$-n
+$\cot x$ folyt $\mathbb{R} \setminus \{ k\pi : k \in \mathbb{Z} \}$-n.
+Trig. fv-ek inverzei
+$\sin x, \cos x, \tan x, \cot x$ periodikusak $\Rightarrow$ nem invertálh.
+$\sin x |_{[-\frac{\pi}{2}, \frac{\pi}{2}]}$, $\tan x |_{(-\frac{\pi}{2}, \frac{\pi}{2})}$ sz. mon. növ.
+$\cos x |_{[0, \pi]}$, $\cot x |_{(0, \pi)}$ sz. mon. csökk.
+
+- 42 -
+$\Rightarrow$ a megf. int-okon vannak folytonos és sz. monoton inverzeik.
+Jel.: $\arcsin x : [-1, 1] \to [-\frac{\pi}{2}, \frac{\pi}{2}]$
+$\arccos x : [-1, 1] \to [0, \pi]$
+$\arctan x : \mathbb{R} \to (-\frac{\pi}{2}, \frac{\pi}{2})$
+$\text{arccot } x : \mathbb{R} \to (0, \pi)$
+$\left\} \text{árkusz v. ciklometrikus fv.-ek.}\right.$
+Ábrák
+$\arccos x = \frac{\pi}{2} - \arcsin x$ mivel $\cos(\frac{\pi}{2} - \arcsin x) = \sin(\arcsin x) = x$
+$\text{arccot } x = \frac{\pi}{2} - \arctan x$ has. biz.
+Hatványozás
+Jel.: $\underbrace{a \cdots a}_{n-\text{szer}} = a^n$
+Áll.: $0 < a < b \Rightarrow \forall n \in \mathbb{N}$-re $a^n < b^n$.
+Biz.: T.I. n=1-re igaz. Ha $0 < a^{n-1} < b^{n-1} \Rightarrow$
+$a \cdot a^{n-1} < a \cdot b^{n-1} < b \cdot b^{n-1}$
+Volt korábban, hogy $\forall a > 0, a \in \mathbb{R} \ \exists b \in \mathbb{R} \ b^k = a$, $b = \sqrt[k]{a}$ a fenti szig. mon. miatt $\sqrt[k]{a}$ egyért.

@@ -1,0 +1,335 @@
+Page 069:
+-69-
+f(x) = x \cdot |x|, \lim_{h \to 0} \frac{f(h)-f(0)}{h} = \frac{h|h|}{h} = 0 \Rightarrow f'(0) = 0
+f(x) = \begin{cases} x^2 & \text{ha } x \ge 0 \\ -x^2 & \text{ha } x < 0 \end{cases} \Rightarrow f'(x) = 2 \cdot |x|
+f''(x) = \begin{cases} 2 & \text{ha } x > 0 \\ -2 & \text{ha } x < 0 \end{cases} \quad f''(0) \text{ N.L.}
+\hline
+\hline
+\text{Konvexitás}
+\underline{T.:} \text{ T.f.h. } f \text{ diff. ható az } I \text{ int-on.}
+(i) f \text{ acsa konvex (ill. kkáv) } I\text{-n, ha } f' \text{ mon. növ.} \\
+\text{(ill. csökk.) } I\text{-n.}
+(ii) f \text{ acsa sz. kvex (ill. sz. kkáv) } I\text{-n, ha } f' \\
+\text{sz. mon. növ. (ill. sz. mon. csökk.) } I\text{-n.}
+\underline{\text{Biz.:}} ( (i) \Rightarrow ) \text{ T.f.h. } f \text{ kvex } I\text{-n, } a,b \in I, \; a < b
+\text{volt: } F(x) = \frac{f(x)-f(a)}{x-a} \text{ mon. növ. } I \setminus \{a\}\text{-n.}
+[Diagram of a convex function secant]
+\Rightarrow x < b, \; x \neq a, \text{ akkor}
+\otimes \quad \frac{f(x)-f(a)}{x-a} = F(x) \le F(b) = \frac{f(b)-f(a)}{b-a}
+\downarrow \text{ ha } x \to a
+f'(a) \le \frac{f(b)-f(a)}{b-a}
+\text{Ha } a < x, \text{ akkor}
+\otimes\otimes \quad \frac{f(b)-f(a)}{b-a} = G(a) \le G(x) = \frac{f(x)-f(b)}{x-b} = \frac{f(b)-f(x)}{b-x}
+\downarrow \text{ ha } x \to b
+f'(b)
+\Rightarrow \text{Ha } a,b \in I, \; a < b \Rightarrow f'(a) \le f'(b) \Rightarrow f' \text{ mon. növ.}
+
+Page 070:
+-70-
+( (i) \Leftarrow ) \text{ T.f.h. } f' \text{ mon. növ. } I\text{-n, } a,b \in I, \; a < b, \\
+a < x < b \text{ tetsz.}
+[Diagram of convex function with secant and tangents]
+\text{Lagrange k.t. } \Rightarrow \exists u \in (a,x), \; v \in (x,b) \text{ és}
+f'(u) = \frac{f(x)-f(a)}{x-a}
+f'(v) = \frac{f(b)-f(x)}{b-x}
+u < v \Rightarrow f'(u) \le f'(v) \text{ (} f' \text{ mon. növ.) } \Rightarrow
+\frac{f(x)-f(a)}{x-a} \le \frac{f(b)-f(x)}{b-x}
+\frac{f(x)(b-x) + f(a)(x-a)}{(x-a)(b-x)} \le \frac{f(a)(b-x) + f(b)(x-a)}{(x-a)(b-x)}
+\Rightarrow f(x) \le f(a) + \frac{f(b)-f(a)}{b-a}(x-a)
+\Rightarrow f \text{ kvex.} \rfloor
+\text{Kkáv. hasonló, szig. eset apró módosítás} \rfloor
+\text{Monotonitási tételeket } f'\text{-re alk.:}
+\underline{T.:} \text{ T.f.h. } f \text{ 2x diff.h. } I\text{-n. Ekkor}
+f \text{ kvex. } \Leftrightarrow f'' \ge 0,
+f \text{ kkáv. } \Leftrightarrow f'' \le 0,
+f'' > 0 \Rightarrow f \text{ szig. kvex.}
+f'' < 0 \Rightarrow f \text{ szig. kkáv.}
+\underline{\text{Megj.:}} \quad f \text{ szig. kvex } \not\Rightarrow f'' > 0.
+f(x) = x^4, \quad f'(x) = 4x^3, \quad f''(x) = 12x^2
+\uparrow \text{ szig. mon. növ. } \Rightarrow f \text{ szig. kvex.}
+
+Page 071:
+-71-
+\underline{Pl.:} \quad f(x) = \sin x, \quad f'(x) = \cos x, \quad f''(x) = -\sin x
+\Rightarrow f \text{ szig. kkáv. } [0, \pi] + 2k\pi\text{-n, szig. kvex } [\pi, 2\pi] + 2k\pi\text{-n.}
+\underline{HF.:} \text{ Többi trig. fv. konvexitásának vizsg.}
+\hline
+\hline
+f(x) = \log x, \quad f'(x) = \frac{1}{x}, \quad f''(x) = -\frac{1}{x^2} < 0 \quad \Rightarrow
+\log x \quad \text{kkáv.}
+\hline
+\hline
+\text{Jensen } \le \Rightarrow \quad a,b,p,q > 0, \; \frac{1}{p} + \frac{1}{q} = 1,
+\log\left( \frac{1}{p}a^p + \frac{1}{q}b^q \right) \ge \frac{1}{p}\log a^p + \frac{1}{q}\log b^q = \log ab
+\Rightarrow \underline{T.:} \text{ Ha } a,b,p,q > 0, \; \frac{1}{p} + \frac{1}{q} = 1, \text{ akkor } ab \le \frac{a^p}{p} + \frac{b^q}{q}.
+\Rightarrow
+\underline{T.:} \text{ (Hölder egyenlőtlenség) Ha } p,q > 0, \; \frac{1}{p} + \frac{1}{q} = 1 \text{ és}
+a_k \ge 0, b_k \ge 0, \; k=1,\dots,n, \text{ akkor}
+a_1b_1 + \dots + a_nb_n \le \underbrace{\sqrt[p]{a_1^p + \dots + a_n^p}}_{A} \cdot \underbrace{\sqrt[q]{b_1^q + \dots + b_n^q}}_{B}
+\underline{\text{Biz.:}} \quad \frac{a_k}{A} \frac{b_k}{B} \le \frac{1}{p} \frac{a_k^p}{A^p} + \frac{1}{q} \frac{b_k^q}{B^q} \quad \text{(előző T. } \sum_k \text{)}
+\frac{1}{AB}(a_1b_1 + \dots + a_nb_n) \le \frac{1}{p} \frac{a_1^p + \dots + a_n^p}{A^p} + \frac{1}{q} \frac{b_1^q + \dots + b_n^q}{B^q} = \frac{1}{p} + \frac{1}{q} = 1
+\text{Spec. eset: Cauchy-Buniakovszkij: Ha } a_k, b_k \ge 0, \text{ akkor}
+a_1b_1 + \dots + a_nb_n \le \sqrt{a_1^2 + \dots + a_n^2} \sqrt{b_1^2 + \dots + b_n^2}
+\text{Vektorok skaláris szorzata } \le \| \underline{a} \| \| \underline{b} \|
+\underline{a} \circ \underline{b}
+
+Page 072:
+-72-
+\underline{T.:} \text{ T.f.h. } f \text{ diff.h. az } I \text{ int-on.}
+f \text{ acsa kvex ha bmely } I\text{-beli pontban húzott}
+\text{érintő az } f \text{ grafikonja alatt halad. \checkmark}
+\underline{\text{Biz.:}} ( \Rightarrow ) \text{ } f \text{ kvex és diff.h. korábbi T. } \otimes \text{ és } \otimes\otimes
+\text{szerint } a < b \Rightarrow f'(a) \le \frac{f(b)-f(a)}{b-a} \le f'(b)
+a < x \Rightarrow f'(a)(x-a) + f(a) \le f(x) \quad \text{ (} b=x \text{)}
+x < a \Rightarrow \frac{f(a)-f(x)}{a-x} \le f'(a) \quad \text{ (} a=b, \; x=a \text{)}
+\Rightarrow f(a)-f(x) \le f'(a)(a-x) \Rightarrow f(x) + f'(a)(x-a) \le f(x) \quad [?]
+( \Leftarrow ) \text{ T.f.h. } a,b \in I, \; a < b. \text{ A feltételből}
+f(b) \ge f(a) + f'(a)(b-a) \Rightarrow \frac{f(b)-f(a)}{b-a} \ge f'(a)
+f(a) \ge f(b) + f'(b)(a-b) \Rightarrow \frac{f(b)-f(a)}{b-a} \le f'(b)
+\Rightarrow f'(a) \le f'(b) \Rightarrow f' \text{ mon. növ. } \Rightarrow f \text{ kvex.} \rfloor
+\underline{\text{Def.:}} \text{ Az } a \text{ pont az } f \text{ fv. inflexiós helye, ha}
+f\text{-nek létezik a (véges, vagy végtelen) deriváltja}
+a\text{-ban és } \exists \delta > 0, \text{ hogy } f \text{ kvex } (a-\delta, a]\text{-n és}
+\text{kkáv } [a, a+\delta)\text{-n, vagy fordítva.}
+\underline{\text{Pl.:}} \quad a \quad 0 \text{ infl. pontja az } f(x) = x^3\text{-nak és } g(x) = \sqrt[3]{x}\text{-nek is.}
+\text{(Az infl. pont. def. nem telj. egységes (S1. 237. o.}
+\text{I. 7. 38.)}
+
+Page 073:
+-73-
+\underline{T.:} \text{ Ha } f \text{ 2x diff.h. az } a\text{-ban és } a \text{ az } f \text{ infl.}
+\text{pontja, akkor } f''(a) = 0.
+\underline{\text{Biz.:}} \quad f \text{ kvex } (a-\delta, a]\text{-n} \Rightarrow f' \nearrow
+\quad f \text{ kkáv } [a, a+\delta)\text{-n} \Rightarrow f' \searrow
+\Rightarrow a \text{ az } f'\text{-nek max. helye } \Rightarrow f''(a) = 0, \text{ másik eset has.} \rfloor
+\underline{T.:} \text{ Ha } f \text{ 2x diff.h. az } a\text{-ban, } f''(a) = 0 \text{ és } f''
+\text{előjelet vált az } a\text{-ban, azaz itt } f'' \text{ lok. növ. v. csökk.,}
+\text{akkor az } a\text{-ban } f\text{-nek infl. pontja van.}
+\underline{\text{Biz.:}} \quad \text{ lok. növ. eset, } f'' \le 0 \text{ } (a-\delta, a]\text{-n } \Rightarrow \text{itt } f
+\text{kkáv, } f'' \ge 0 \text{ } [a, a+\delta)\text{-n } \Rightarrow f \text{ itt kvex és } \exists f'(a)
+\underline{T.:} \text{ Ha } f \text{ 3x diff.h. } a\text{-ban, } f''(a) = 0 \text{ és } f'''(a) \neq 0,
+\text{akkor } f\text{-nek } a\text{-ban infl. pontja van.}
+\underline{\text{Biz.:}} \quad f'''(a) > 0 \Rightarrow f'' \text{ szig. lok. növ. } a\text{-ban, előző T. \checkmark}
+\text{(< csökk.)}
+f(x) = x^5 \text{ infl. pont 0-ban, } f'''(0) = 0, \; f^{(4)}(0) = f^{(3)}(0) = 
+= f^{(4)}(0) = 0 \quad \wedge \quad f^{(5)}(0) \neq 0.
+\underline{T.:} \text{ T.f.h. } f \quad (2k+1)\text{-szer diff.h. } a\text{-ban } (k \ge 1).
+i) \text{ Ha } f''(a) = \dots = f^{(2k)}(a) = 0 \text{ és } f^{(2k+1)}(a) \neq 0, \text{ akkor}
+\quad a \text{ az } f \text{ infl. pontja.}
+ii) \text{ Ha } f''(a) = \dots = f^{(2k-1)}(a) = 0 \text{ és } f^{(2k)}(a) \neq 0, \text{ akkor}
+\quad f \text{ az } a \text{ egy közetében szig kvex. (v. kkáv.).}
+\underline{\text{Biz.:}} \text{ TK } \rfloor
+
+Page 074:
+-74-
+\underline{\text{Teljes fv. vizsgálat}}
+1) D(f)
+2) f \text{ folyt. pontjainak halmaza.}
+3) f \text{ hat. ért. a szak. pontokban és } \pm \infty\text{-ben.}
+4) \text{monotonitási intervallumok.}
+5) \text{lokális és globális szélsőért. helyek, sz. értékek.}
+6) \text{konvexitási intervallumok.}
+7) \text{inflexiós pontok.}
+8) \text{További tulajdonságok: párosság, periodikusság,}
+\text{aszimptoták (függőleges és "ferde")}
+\underline{\text{Def.:}} \text{ Ha } \lim_{x \to \infty} (f(x) - (ax+b)) = 0 \text{ akkor az } ax+b \text{ fv.}
+\text{az } f \text{ aszimptotája a } +\infty\text{-ben. (Has. def. } -\infty\text{-ben)}
+\underline{\text{Pl.:}} \quad f(x) = e^{-x} + x + 5\text{-re } \lim_{x \to \infty} (f(x) - x - 5) = 0, \; y = x+5
+\text{aszimptota a } +\infty\text{-ben.}
+[Diagram of a curve approaching a slant asymptote]
+\overline{f(x) = \text{arctg } x, \; y = -\frac{\pi}{2} \text{ a } -\infty\text{-ben, } y = \frac{\pi}{2} \text{ a } +\infty\text{-ben aszimpt.}
+\underline{\text{Példák:}} \quad x^{2n} e^{-x^2} \quad \text{TK. ( } n=0 \text{ és } n \in \mathbb{N} \text{ esetek)}
+\text{Önállóan, majd megnézve.}
+\underline{\text{Pl.:}} \text{ Agnesi görbe (witch of Agnesi, la versiera (turn)}
+\text{di (Maria) Agnesi, avversiera (female devil),}
+\text{la sorcière d'Agnesi)}
+[Diagram of the Witch of Agnesi curve]
+f(x) = \frac{1}{1+x^2}
+D(f) = \mathbb{R}, \; f \in C(\mathbb{R}), \; \lim_{x \to \infty} f(x) = \lim_{x \to -\infty} f(x) = 0, \; y=0
+\text{egyenes aszimptota a } \pm \infty\text{-ben,}
+f(x) \text{ páros}
+
+Page 075:
+-75-
+f'(x) = \frac{-2x}{(1+x^2)^2}, \quad f''(x) = \frac{-2(1+x^2)^2 + 2x \cdot 2(1+x^2) \cdot 2x}{(1+x^2)^4} = 
+= \frac{-2(1+x^2) + 8x^2}{(1+x^2)^3} = \frac{6x^2-2}{(1+x^2)^3}
+f'(x) = 0 \text{ ha } x = 0, \quad f''(x) = 0 \text{ ha } 6x^2-2 = 0, \; x^2 = \frac{1}{3}, \; x = \pm \frac{1}{\sqrt{3}}
+[Table for function analysis]
+X | -\infty < x < -\frac{1}{\sqrt{3}} | -\frac{1}{\sqrt{3}} | -\frac{1}{\sqrt{3}} < x < 0 | 0 | 0 < x < \frac{1}{\sqrt{3}} | \frac{1}{\sqrt{3}} | \frac{1}{\sqrt{3}} < x < \infty
+f' | + | + | + | 0 | - | - | -
+f'' | + | 0 | - | - | - | 0 | +
+f | \nearrow \cup | \text{infl.} | \nearrow \cap | \text{lok. max.} | \searrow \cap | \text{infl.} | \searrow \cup
+f \text{ sz. mon. növ } (-\infty, 0]\text{-n, csökken } [0, +\infty)\text{-en}
+f \text{ szig. kvex } (-\infty, -\frac{1}{\sqrt{3}}]\text{-on és } [\frac{1}{\sqrt{3}}, \infty)\text{-en}
+\text{szig. kkáv. } [-\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}]\text{-on.}
+f \text{ maximumát a 0-ban veszi föl, } f(0) = 1,
+\text{(absz.) mini nincs}
+\text{infl. pontok } -\frac{1}{\sqrt{3}} \text{ és } \frac{1}{\sqrt{3}}
+f(x) > 0 \quad \forall x \in \mathbb{R}
+\text{ábra:}
+[Graph of Witch of Agnesi, marked points at x = \pm 1/\sqrt{3} and y-intercept at 1]
+
+Page 076:
+-76-
+\underline{\text{L'Hospital (L'Hôpital) szabály}}
+(Guillaume-François-Antoine Marquis de l'Hôpital,
+Marquis de Sainte-Mesme, Comte d'Entremont, Seigneur
+d'Oucques-la-Chaise \dots
+Johann Bernoulli. (ha Daniel Bernoulli, féltékenység
+University of Paris tud. verseny holtverseny, kitiltás otthonról))
+\underline{T.:} \text{ Legyen } f \text{ és } g \text{ diff. ható egy } \dot{U}(a)\text{-ban,}
+\text{itt } g \neq 0, \; g' \neq 0, \text{ továbbá vagy}
+(1) \lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0, \text{ vagy}
+(2) \lim_{x \to a} |g(x)| = \infty.
+\text{Ekkor, ha } \lim_{x \to a} \frac{f'(x)}{g'(x)} = A, \text{ akkor } \lim_{x \to a} \frac{f(x)}{g(x)} = A.
+\underline{\text{Megj.:}} \quad a = -\infty, a-0, a, a+0, +\infty, \quad A = -\infty, b, +\infty.
+\underline{\text{Biz.:}} \text{ Spec. eset. } a = a+0, \; A = b \in \mathbb{R}, \quad (1) \text{ eset}
+\forall \varepsilon > 0, \; \exists \delta > 0, \quad \forall x \in (a, a+\delta)\text{-ra } \left| \frac{f'(x)}{g'(x)} - b \right| < \frac{\varepsilon}{2}.
+\text{Legyen } \quad a < y < x < a+\delta, \text{ Cauchy középért. tétel}
+\frac{f(x)-f(y)}{g(x)-g(y)} = \frac{f'(c)}{g'(c)} \in \left(b-\frac{\varepsilon}{2}, b+\frac{\varepsilon}{2}\right), \quad y \to a+0 \text{ esetén}
+\downarrow \quad \quad \quad \quad \quad f(y) \to 0, \; g(y) \to 0
+\frac{f(x)}{g(x)} \in \left[b-\frac{\varepsilon}{2}, b+\frac{\varepsilon}{2}\right] \Rightarrow \frac{f(x)}{g(x)} \to b. \rfloor
+\underline{\text{HF.:}} \text{ Próbáljuk a többi esetet biz.}
+\underline{\text{Pl.:}} \quad \lim_{x \to 0+0} x \log x = \lim_{x \to 0+0} \frac{\log x}{\frac{1}{x}} = \lim_{x \to 0+0} \frac{\frac{1}{x}}{-\frac{1}{x^2}} = \lim_{x \to 0+0} -x = 0
+\lim_{x \to 0+0} x^x = \lim_{x \to 0+0} e^{x \log x} = e^0 = 1
+
+Page 077:
+-77-
+\lim_{x \to 0} \frac{\cos x - 1}{x^2} = \lim_{x \to 0} \frac{-\sin x}{2x} = \lim_{x \to 0} -\frac{\cos x}{2} = -\frac{1}{2}
+\uparrow \text{ (itt nem kell újabb L'Hospital, de azzal is megy.)}
+\underline{\text{Taylor polinomok}}
+\text{Ha } f \text{ diff. ható az } a\text{-ban, akkor a}
+[Diagram of a function and its tangent line]
+T_1(x) = f(a) + f'(a)(x-a)
+\text{érintővel közelítettük } f\text{-et.}
+\Rightarrow \text{Ha } f \text{ } n\text{-szer diff.h. az } a
+\text{pontban, akkor a } T_n(x) = f(a) + f'(a)(x-a) + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n
+\text{ú.n. } n\text{-edik Taylor polinom olyan polinom, melyre}
+T_n^{(k)}(a) = f^{(k)}(a) \text{ telj. } \forall k \le n\text{-re.}
+\text{Sőt ha egy legf. } n\text{-ed fokú } p(x) \text{ polinomra}
+\lim_{x \to a} \frac{f(x) - p(x)}{(x-a)^n} = 0, \text{ akkor } \quad p(x) = T_n(x) \quad \text{(Biz.: ld. TK.)}
+\underline{T.:} \text{ (Taylor formula) T.f.h. } f \quad (n+1)\text{-szer diff. ható}
+\text{az } [a,x]\text{-en. Ekkor } \exists c \in (a,x), \text{ hogy}
+f(x) = \underbrace{\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k}_{T_n(x)} + \underbrace{\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}}_{\text{Lagrange maradéktag}} \quad \otimes
+\text{és } \exists d \in (a,x)
+f(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k + \underbrace{\frac{f^{(n+1)}(d)}{n!}(x-d)^n(x-a)}_{\text{Cauchy-féle maradéktag}} \quad \otimes\otimes
+\text{Hasonló érv. } (x,a]\text{-n is.}
+
+Page 078:
+-78-
+\underline{\text{Biz.:}} \quad t \in [a,x]\text{-re} \quad (x \text{ rögz.})
+R(t) = \left[ f(t) + \frac{f'(t)}{1!}(x-t) + \dots + \frac{f^{(n)}(t)}{n!}(x-t)^n \right] - f(x)
+R(x) = 0
+R'(t) = f'(t) + \left[ \frac{f''(t)}{1!}(x-t) - f'(t) \right] + \dots + \left[ \frac{f^{(n)}(t)}{(n-1)!}(x-t)^{n-1} - \frac{f^{(n-1)}(t)}{(n-2)!}(x-t)^{n-2} \right] + \left[ \frac{f^{(n+1)}(t)}{n!}(x-t)^n - \frac{f^{(n)}(t)}{(n-1)!}(x-t)^{n-1} \right] =
+= \frac{f^{(n+1)}(t)}{n!}(x-t)^n
+h(t) = (x-t)^{n+1} \text{ Cauchy k.ért. tétel } R\text{-re és } h\text{-ra}
+\exists c \in (a,x), \text{ hogy}
+\frac{R(a)}{(x-a)^{n+1}} = \frac{R(x)-R(a)}{h(x)-h(a)} = \frac{R'(c)}{h'(c)} = \frac{R'(c)}{-(n+1)(x-c)^n} =
+= - \frac{\frac{f^{(n+1)}(c)}{n!}(x-c)^n}{(n+1)(x-c)^n} \quad [?]
+\Rightarrow R(a) = - \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1} \Rightarrow \otimes \rfloor
+\otimes\otimes \text{ biz. HF/GY/TK der. L.k. tételt } R\text{-re. } \rfloor
+n=2 \text{ esetén}
+f(x) = f(a) + f'(a)(x-a) + \frac{f^{(2)}(c)}{2!}(x-a)^2
+\underline{\text{Def.:}} \text{ Ha } f \text{ az } a \text{ helyen diff.ható, akkor a lineáris}
+dl(h) = f'(a) \cdot h \text{ fv-t az } f \text{ differenciáljának nev.}
+\text{Fizikában: } f(a+h) - f(a) \approx f'(a)h
+\underline{\text{Pl.:}} \quad \sin x \approx x \text{ ha } x \text{ kicsi ( } \Leftarrow \sin x - \sin 0 \approx \cos(0) \cdot x \text{ )}
+
+Page 079:
+-79-
+\underline{\text{Lemma}} \text{ Ha } a, x \in \mathbb{R} \text{ és } I \text{ az } a \text{ és } x \text{ által}
+\text{határolt zárt intervallum továbbá } f \text{ az } I \text{ minden}
+\text{pontjában akárhányszor diff.ható és } \exists M, \text{ hogy}
+y \in I, \; n \in \mathbb{N} \text{ esetén } |f^{(n)}(y)| \le M, \text{ akkor}
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n.
+\underline{\text{Biz.:}}
+f(x) = T_n(x) + \frac{f^{(n+1)}(c_n)}{(n+1)!}(x-a)^{n+1}, \quad \text{ahol } c_n \in I.
+|f(x) - T_n(x)| = \left| \frac{f^{(n+1)}(c_n)}{(n+1)!}(x-a)^{n+1} \right| \le \frac{M}{(n+1)!}|x-a|^n \to 0 \quad \text{ha } n \to \infty
+\text{(Féls. } \lim_{n \to \infty} \frac{k^n}{n!} = 0 \text{ ha } k \in \mathbb{R} \text{ tetsz, ami pl. köv. abból,}
+\text{hogy } n! > n^{n/2} \text{ ha } n \text{ elég nagy HF. 64. és így}
+\frac{k^n}{n!} < \frac{k^n}{n^{n/2}} = \left(\frac{k}{\sqrt{n}}\right)^n \to 0.)
+\underline{\text{Köv.:}} \text{ Ha } I \text{ az } x \text{ és } a \text{ által határolt intervallum,}
+\text{akkor } \left| (e^x)^{(n)} \right| \le \max(e^0, e^x) = M.
+\text{Előző tétel } \Rightarrow \quad e^x = \sum_{n=0}^{\infty} \frac{e^0}{n!}x^n = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \dots
+e = e^1 = \sum_{n=0}^{\infty} \frac{1}{n!} \text{ jól konvergál.}
+\underline{\text{Mivel}} \quad \left| (\sin x)^{(n)} \right| \le 1, \quad \left| (\cos x)^{(n)} \right| \le 1 \quad \forall x \in \mathbb{R}\text{-re, így}
+\sin x = \sum_{n=0}^{\infty} \frac{\sin^{(n)}(0)}{n!}x^n = \frac{\sin 0}{0!} + \frac{\cos 0}{1!}x + \frac{-\sin 0}{2!}x^2 + \frac{-\cos 0}{3!}x^3 + \dots = 
+= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}
+\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \dots = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}
+
+Page 080:
+-80-
+\underline{\text{HF.:}} \quad \text{sh } x = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \dots
+\text{ch } x = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \dots
+\underline{\text{Hatványsorok:}}
+\underline{\text{Def.:}} \text{ Ha } x_0 \in \mathbb{R} \text{ és } a_n \in \mathbb{R} \quad (n=0,1,\dots) \text{ akkor a}
+\sum_{n=0}^{\infty} a_n(x-x_0)^n \quad \text{(függvény) sort } x_0 \text{ körüli hatványsor-}
+\text{nak nev.}
+\underline{\text{Pl.:}} \quad \sum_{n=0}^{\infty} x^n, \quad x_0 = 0 \text{ Maclaurin sor, } \sum_{n=0}^{\infty} \frac{x^n}{n!} = e^x
+\parallel
+\frac{1}{1-x} \quad \text{ha } -1 < x < 1.
+\underline{\text{Differenciálegyenletek}}
+A t_0 = 0 \text{ időpillanatban } h_0 \text{ magasságból, nyugalomból}
+\text{induló szabadon eső test sebességét a } v(t) = -gt
+\text{egyenlet adja meg. Milyen magasan van a } t_1 \text{ időpillanat-}
+\text{ban? } \frac{dh(t)}{dt} = \dot{h}(t) = h'(t) = -gt.
+\text{Adott a } h'(t) = -gt \text{ ú.n. differenciálegyenlet.}
+\text{Keressük azokat a } h \text{ diff.ható fv-eket, melyek eleget}
+\text{tesznek neki.}
+\text{Próbálgatással (jövő félévben integrálással):}
+h_1(t) = -\frac{gt^2}{2} \text{ egy mego. } \left( -\frac{gt^2}{2} \right)' = -gt.
+C' = 0 \Rightarrow -\frac{gt^2}{2} + C, \; C \in \mathbb{R} \text{ is mego.}
+\underline{\text{Áll.:}} \text{ A } h'(t) = -gt \text{ u.e. összes mego-ja } h(t) = -\frac{gt^2}{2} + C
+\text{alakú, } C \in \mathbb{R}.
+
+Page 081:
+-81-
+\underline{\text{Biz.:}} \text{ Legyen } f(t) \text{ egy tetsz. mego. ekkor}
+(f(t)-h_1(t))' = f'(t) - h_1'(t) = -gt - (-gt) = 0 \quad \forall t\text{-re}
+\Rightarrow f(t) - h_1(t) = C \Rightarrow f(t) = h_1(t) + C. \rfloor
+\text{Mivel } h(0) = h_0 \quad \text{(kezdeti érték probléma) így}
+h(0) = -\frac{g \cdot 0^2}{2} + C = h_0 \Rightarrow h_0 = C \quad \text{azaz}
+h(t) = -\frac{gt^2}{2} + h_0
+\hline
+\text{Gyakran pl. népesség növ. modellekben, radioaktív}
+\text{bomlásnál a változás sebessége arányos a}
+\text{jelenlévő "anyag" mennyiségével.}
+\text{Anyagmennyiség } t \text{ időpillanatban: } f(t).
+\text{Diff. egyenlet: } \quad f' = k \cdot f, \quad k \in \mathbb{R} \text{ konstans}
+\underline{\text{Áll.:}} \text{ Ha } f \text{ diff. ható az } I \text{ int-on és } \forall t \in I\text{-re}
+f'(t) = k \cdot f(t), \text{ akkor } f(t) = C_0 \cdot e^{kt}, \text{ ahol } C_0 \in \mathbb{R}.
+\underline{\text{Biz.:}} \quad f'(t) = (C_0 e^{kt})' = C_0 \cdot k \cdot e^{kt} = k f(t) \quad \text{azaz}
+f \text{ tényleg mego.}
+\text{Csak ez van: Legyen } g(t) = f(t) e^{-kt} \quad \text{segédfv.}
+\text{ekkor } g'(t) = \underbrace{f'(t)}_{k \cdot f(t)} e^{-kt} + f(t) (-k) e^{-kt} = 0 \quad \forall t \in I
+\Rightarrow \exists C_0 \in \mathbb{R}, \quad C_0 = g(t) = f(t) e^{-kt} \Rightarrow f(t) = C_0 e^{kt} \rfloor
+k > 0 \text{ növekedés, } k < 0 \text{ csökkenés.}
+\text{Pl. radioaktív bomlás}
+C_{14} \text{ izotóp } C_{12}\text{-vé bomlik. Felezési idő } T=5700 \text{ év.}
+k = ?
+
+Page 082:
+-82-
+f(t) = C_{14} \text{ mennyisége}
+f(t_0) \Rightarrow \frac{1}{2} f(t_0) = f(t_0 + 5700)
+f(t) = C_0 e^{kt} \quad C_0 \neq 0 \text{ felt.}
+\frac{1}{2} C_0 e^{kt_0} = C_0 \cdot e^{k(t_0+5700)} \Rightarrow \frac{1}{2} = e^{k \cdot 5700}
+k = \frac{\log \frac{1}{2}}{5700} = \frac{-\log 2}{T}.
+\text{Hány \% } C_{14} \text{ bomlik el 2000 év alatt?}
+\frac{f(t_0 + 2000)}{f(t_0)} = \frac{C_0 e^{-\frac{\log 2}{5700}(t_0 + 2000)}}{C_0 e^{-\frac{\log 2}{5700}t_0}} = e^{-\frac{\log 2 \cdot 2000}{5700}} = 0,784 \dots
+\approx 21,6\% \text{ bomlik el.}
+\hline
+\hline
+\text{Newton fűtési/hűtési törvénye}
+\text{Egy állandó } T_{\infty} \text{ hőmérsékletű szobába helyezett } T_0 \text{ hml-etű}
+\text{tárgy hmlet vált. sebessége arányos a hmlet. különbséggel.}
+T'(t) = k (T(t) - T_{\infty}), \quad f(t) = T(t) - T_{\infty}
+f'(t) = k f(t), \quad f(t) = C_0 e^{kt} \quad \underbrace{f(0)}_{T(0)} = T_0 - T_{\infty} = C_0
+T(t) = T_{\infty} + (T(0) - T_{\infty}) e^{kt} \quad k < 0.
+\underline{\text{Pl.:}} \quad \text{Forró 100 }^\circ\text{C-os leves a 20 }^\circ\text{C-os szobában.}
+\text{1 perc múlva 95 }^\circ\text{C-os. Milyen meleg 10 perc múlva?}
+\text{Mikor lesz 45 }^\circ\text{C-os?}
+T_0 = T(0) = 100, \quad T_{\infty} = 20, \quad T(t) = 20 + 80 \cdot e^{kt}
+T(1) = 20 + 80 \cdot e^k = 95, \quad e^k = \frac{75}{80}, \quad k = \log\left(\frac{75}{80}\right) \approx -0,064538521\dots
+T(10) = 20 + 80 \cdot e^{10k} \approx 61,55 \text{ }^\circ\text{C}
+45 = 20 + 80 \cdot e^{kt}, \quad e^{kt} = \frac{25}{80}, \quad t = \frac{\log \frac{25}{80}}{k} \approx 18,02 \text{ perc}
