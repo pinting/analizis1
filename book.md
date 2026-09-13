@@ -564,52 +564,7 @@ What exactly *is* $|a + b|$? Depending on whether the inside is positive or nega
 
 In every possible universe, $|a + b|$ is less than or equal to $|a| + |b|$. ∎
 
-### 4.5 The Reverse Triangle Inequality
-
-Sometimes we need to know the *minimum* possible difference between things, rather than the maximum. We use a clever spin-off called the Reverse Triangle Inequality.
-
-> ***Corollary 4.5 (Reverse Triangle Inequality).***
-> *For all real numbers $a$ and $b$:*
->
-> $\big| |a| - |b| \big| \le |a - b|$
-
-**Conversational Commentary:** 
-This looks messy with all those bars, but it's just the Triangle Inequality in disguise. It says that the difference between the *magnitudes* of $a$ and $b$ can never be larger than the distance between $a$ and $b$ themselves.
-
-**Proof:**
-We will use a clever algebraic trick. We want to apply the regular Triangle Inequality, so we need to write $a$ as a sum. Notice that $a = (a - b) + b$. That’s undeniably true, right? The $-b$ and $+b$ cancel out.
-
-Let's plug that sum into the regular Triangle Inequality:
-> $|a| = |(a - b) + b|$
-Now treat $(a - b)$ as the first piece, and $b$ as the second piece:
-> $|(a - b) + b| \le |a - b| + |b|$
-
-So, we have:
-> $|a| \le |a - b| + |b|$
-
-Now, subtract $|b|$ from both sides to get:
-> $|a| - |b| \le |a - b|$    (Keep this safe, it's Half 1)
-
-Now, let's do the exact same trick, but swap $a$ and $b$. Start with $b = (b - a) + a$:
-> $|b| = |(b - a) + a| \le |b - a| + |a|$
-
-Subtract $|a|$ from both sides:
-> $|b| - |a| \le |b - a|$
-
-Remember from earlier that distance is symmetric: the distance from $b$ to $a$ is the same as $a$ to $b$. So, $|b - a| = |a - b|$. Let's substitute that in:
-> $|b| - |a| \le |a - b|$
-
-Multiply the whole thing by $-1$ (remember that multiplying an inequality by a negative number flips the inequality sign $\le$ to $\ge$!):
-> $-(|b| - |a|) \ge -|a - b|$
-> $-|a - b| \le |a| - |b|$    (Keep this safe, it's Half 2)
-
-Combine Half 1 and Half 2 together:
-> $-|a - b| \le |a| - |b| \le |a - b|$
-
-This tells us that the number $(|a| - |b|)$ is squeezed between $-|a - b|$ and $+|a - b|$. By the definition of absolute value, this exactly means:
-> $\big| |a| - |b| \big| \le |a - b|$ ∎
-
-### 4.6 Mathematical Induction
+### 4.5 Mathematical Induction
 
 So far, we know the triangle inequality holds for TWO numbers ($|a + b| \le |a| + |b|$). But what if we have three numbers? Or a hundred numbers? We want to prove it works for *any* amount of numbers. To do this, we need a powerful logical tool.
 
@@ -663,11 +618,11 @@ Look closely at that final result. That is *exactly* the original formula, but w
 
 By the principle of induction, the formula holds for all natural numbers. ∎
 
-### 4.7 The Generalized Triangle Inequality
+### 4.6 The Generalized Triangle Inequality
 
 Now we are equipped to expand the triangle inequality to cover as many numbers as we want!
 
-> ***Theorem 4.6 (Generalized Triangle Inequality).***
+> ***Theorem 4.5 (Generalized Triangle Inequality).***
 > *For any amount $n$ of real numbers $a_1, a_2, ..., a_n$:*
 >
 > $|a_1 + a_2 + ... + a_n| \le |a_1| + |a_2| + ... + |a_n|$
@@ -715,15 +670,12 @@ By the domino effect of mathematical induction, this generalized rule holds for 
 
 **4.2.** Prove: for all $x \in \mathbb{R}$, $|x|^2 = x^2$. *Is the converse true?*
 
-**4.3.** Prove the **reverse triangle inequality** directly (without using the forward triangle inequality): $\big| |a| - |b| \big| \le |a - b|$ for all $a, b \in \mathbb{R}$.
+**4.3.** Use mathematical induction to prove: for all natural numbers $n$, $n < 2^n$.
 
-**4.4.** Use mathematical induction to prove: for all natural numbers $n$, $n < 2^n$.
+**4.4.** Use mathematical induction to prove: for all natural numbers $n$, $1^2 + 2^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$.
 
-**4.5.** Use mathematical induction to prove: for all natural numbers $n$, $1^2 + 2^2 + ... + n^2 = \frac{n(n+1)(2n+1)}{6}$.
+**4.5.** When does equality hold in the triangle inequality $|a + b| \le |a| + |b|$? Prove your answer.
 
-**4.6.** When does equality hold in the triangle inequality $|a + b| \le |a| + |b|$? Prove your answer.
-
-**4.7.** Use the triangle inequality to show that for all $a, b \in \mathbb{R}$: $|a - b| \ge |a| - |b|$.
 
 
 ---
@@ -1855,6 +1807,184 @@ Thus, by definition, $(a_{n+1} - a_n) \to 0$. $\square$
 
 > [!WARNING]
 > *Important Note:* The converse of this theorem is generally **false**! If the steps between consecutive terms shrink to 0 ($a_{n+1} - a_n \to 0$), it does *not* guarantee that $(a_n)$ is convergent. For example, $a_n = \sqrt{n}$ diverges to infinity, but its step size $a_{n+1} - a_n = \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \to 0$. Always remember: shrinking step sizes do not guarantee a finite limit!
+
+### 12.2 Subsequences, Order, and Boundedness
+
+Before we can build the big machinery, we need three "housekeeping" theorems. They are easy, but we will lean on them constantly.
+
+**Theorem 12.2.1 (Subsequences inherit the limit)**
+If $a_n \to a$, then *every* subsequence also converges to the same $a$: $a_{n_k} \to a$.
+
+*Proof.* Use the "finitely many exceptions" view from Theorem 12.1.2. Pick any margin $\varepsilon > 0$. Only finitely many terms of $(a_n)$ sit outside the neighborhood $B(a, \varepsilon)$. A subsequence is built only from terms of the original sequence, so it certainly cannot contain *more* rogue terms than the original did. So it too has only finitely many terms outside $B(a,\varepsilon)$, which is exactly what convergence to $a$ means. $\square$
+
+*Why you should care:* This gives you a fantastic tool for proving a sequence **diverges**. If you can find two subsequences that head to two different places, the full sequence cannot have a limit at all. For example, in $b_n = (-1)^n$, the even-indexed terms are all $1$ and the odd-indexed terms are all $-1$. Two subsequences, two different limits, so $(b_n)$ diverges. Done.
+
+**Theorem 12.2.2 (Limits preserve $\le$)**
+Suppose $a_n \le b_n$ for every $n$, and suppose $a_n \to a$ and $b_n \to b$. Then $a \le b$.
+
+*Proof by contradiction.* Suppose instead that $b < a$. Then the gap $a - b$ is positive, so we are allowed to choose the margin
+$$ \varepsilon = \frac{a-b}{2} > 0 $$
+which is exactly half the gap. Pick thresholds $n_{\varepsilon,1}$ and $n_{\varepsilon,2}$ so that $|a_n - a| < \varepsilon$ past the first, and $|b_n - b| < \varepsilon$ past the second, and let $n_\varepsilon$ be the larger of the two so both are true at once. For $n \ge n_\varepsilon$:
+$$ a_n > a - \varepsilon = a - \frac{a-b}{2} = \frac{a+b}{2}, \qquad b_n < b + \varepsilon = b + \frac{a-b}{2} = \frac{a+b}{2} $$
+Read that carefully: $a_n$ is above the midpoint and $b_n$ is below it, so $a_n > b_n$. But we were promised $a_n \le b_n$ for every $n$. Contradiction. $\square$
+
+> [!WARNING]
+> **Strict inequalities do NOT survive the limit.** You might hope that $a_n < b_n$ for all $n$ would give $a < b$. It does not — you only get $a \le b$. Counterexample: let $a_n = \frac{1}{2n}$ and $b_n = \frac{1}{n}$. Every single term satisfies $a_n < b_n$, yet both limits are $0$, so $a = b$. Taking a limit can squeeze a strict gap shut.
+
+**Theorem 12.2.3 (Convergent $\implies$ bounded)**
+If $(a_n)$ converges, then $(a_n)$ is bounded.
+
+*Proof.* Apply Theorem 12.1.2 with the specific margin $\varepsilon = 1$. Only finitely many terms live outside the neighborhood $B(a, 1)$. Those finitely many rogue terms have a largest absolute value; call it $K_0$. Every other term is inside $B(a,1)$, so its absolute value is below $|a| + 1$. Therefore the single number
+$$ K = \max\{K_0,\ |a| + 1\} $$
+bounds the entire sequence: $|a_n| \le K$ for all $n$. $\square$
+
+> [!WARNING]
+> **The converse is false.** Bounded does *not* imply convergent. Once again, $b_n = (-1)^n$ is perfectly bounded but never settles down. (Repairing this gap is precisely the job of the Bolzano-Weierstrass theorem in the next chapter.)
+
+### 12.3 The Monotone Convergence Theorem
+
+Here is where the Completeness Axiom from Chapter 6 finally pays off. Until now, completeness has been an abstract promise about suprema. We are about to convert it into a concrete, extremely practical fact about sequences.
+
+The intuition is almost physical. Picture a sequence that only ever climbs upward, but sits underneath a ceiling it may never break through. It cannot go down. It cannot escape upward. It has nowhere else to go — it *must* pile up against some specific height. And completeness guarantees that "specific height" is a genuine real number, not a hole.
+
+**Theorem 12.3.2 (Monotone Convergence Theorem)**
+If $(a_n)$ is monotonically increasing and bounded above, then it converges, and its limit is exactly the supremum of its terms:
+$$ \lim_{n \to \infty} a_n = \sup\{a_n : n \in \mathbb{N}\} \in \mathbb{R} $$
+Symmetrically, a monotonically decreasing sequence that is bounded below converges to the infimum of its terms.
+
+*Proof.*
+The set of terms $\{a_n : n \in \mathbb{N}\}$ is non-empty (it has $a_1$ in it) and bounded above (that is our hypothesis). So the **Completeness Axiom** hands us a real number
+$$ a = \sup\{a_n : n \in \mathbb{N}\} $$
+Now we must show the sequence actually converges to this $a$. Let $\varepsilon > 0$ be any margin.
+
+Here is the key move, and it is worth savoring. The number $a$ is the *least* upper bound. So the slightly smaller number $a - \varepsilon$ is **not** an upper bound — if it were, $a$ would not have been the least one. "Not an upper bound" means some term of the sequence pokes above it. So there exists an index $n_\varepsilon$ with
+$$ a_{n_\varepsilon} > a - \varepsilon $$
+
+Now we cash in the monotonicity. The sequence never goes back down, so every later term is at least as big:
+$$ a_n \ge a_{n_\varepsilon} > a - \varepsilon \qquad \text{for all } n \ge n_\varepsilon $$
+And since $a$ is an upper bound, we also have $a_n \le a$ for every $n$. Putting both halves together, for every $n \ge n_\varepsilon$:
+$$ a - \varepsilon < a_n \le a < a + \varepsilon $$
+which says precisely that $|a_n - a| < \varepsilon$. That is the definition of $a_n \to a$. $\square$
+
+*Why this theorem is a workhorse:* Notice what it lets you do. You can prove a sequence converges **without ever computing or even guessing its limit**. You only have to check two easy things: it goes one way, and it is fenced in. In Chapter 19 we will use exactly this to prove that Euler's number $e$ exists, and in Chapter 14 to prove that $\sum \frac{1}{n^2}$ converges.
+
+### 12.4 Infinite Limits and the Classification of Sequences
+
+Some sequences do not converge, but they still fail to converge in a very *organized* way. Take $a_n = n$ or $b_n = \sqrt{n}$. These climb forever without a ceiling. Saying merely "they diverge" throws away useful information — they clearly march off toward $+\infty$ rather than bouncing around. Let us make that precise.
+
+**Definition 12.4.1 (Divergence to infinity)**
+A sequence $(a_n)$ has limit $+\infty$ if for **every** real number $K$ — no matter how enormous — there exists a threshold $n_K$ such that for all $n \ge n_K$:
+$$ a_n > K $$
+We write $\lim_{n \to \infty} a_n = +\infty$, or $a_n \to +\infty$.
+
+Compare this with the ordinary definition and notice the pattern. For a finite limit, the challenger hands you a tiny $\varepsilon$ and you must eventually stay *within* $\varepsilon$ of the target. For $+\infty$, the challenger hands you a huge $K$ and you must eventually stay *above* $K$. It is the same game with a different notion of "close to the target."
+
+We can even make the analogy literal by defining a neighborhood of infinity:
+$$ B(+\infty, K) = (K, +\infty) $$
+Then both definitions read identically: "eventually, every term lands inside the given neighborhood of the target." The definition of $a_n \to -\infty$ is the mirror image, using $B(-\infty, K) = (-\infty, K)$.
+
+> **Careful with words.** A sequence tending to $+\infty$ is still called **divergent**, because "convergent" is reserved for a *finite* limit. But it does have a limit in the extended real line $\bar{\mathbb{R}}$. Saying "it diverges to $+\infty$" keeps both facts straight.
+
+**The complete classification.** Every real sequence falls into exactly one of four boxes:
+
+| Behaviour | Name | Has a limit in $\bar{\mathbb{R}}$? |
+|---|---|:---:|
+| $a_n \to a \in \mathbb{R}$ | **convergent** | yes (finite) |
+| $a_n \to +\infty$ | divergent | yes ($+\infty$) |
+| $a_n \to -\infty$ | divergent | yes ($-\infty$) |
+| goes nowhere, oscillates | divergent | no |
+
+The classic inhabitant of the last box is $(-1)^n$; the classic inhabitant of the third is $-n$.
+
+### 12.5 The Squeeze Theorem and the Algebra of Limits
+
+Computing limits straight from the $\varepsilon$-definition every single time would be exhausting. The two tools in this section are what make limits practical.
+
+**Theorem 12.5.1 (Squeeze Theorem / *Rendőrelv*)**
+Suppose that from some index $n_0$ onwards we have
+$$ a_n \le b_n \le c_n $$
+and suppose the two outer sequences converge to the *same* limit: $\lim a_n = \lim c_n = a$. Then the trapped middle sequence has no choice: $\lim b_n = a$.
+
+*Where the Hungarian name comes from:* In Hungarian this is the *rendőrelv*, the "policeman principle." If two policemen are escorting a prisoner between them, and both policemen walk into the station, the prisoner goes into the station too. He is not consulted.
+
+*Proof.* Let $\varepsilon > 0$. Choose $n_{\varepsilon,1}$ so that $|a_n - a| < \varepsilon$ beyond it, and $n_{\varepsilon,2}$ so that $|c_n - a| < \varepsilon$ beyond it. Take
+$$ n_\varepsilon = \max\{n_{\varepsilon,1},\ n_{\varepsilon,2},\ n_0\} $$
+so that all three conditions hold simultaneously. Then for every $n \ge n_\varepsilon$:
+$$ a - \varepsilon < a_n \le b_n \le c_n < a + \varepsilon $$
+Read only the outermost parts of that chain: $a - \varepsilon < b_n < a + \varepsilon$, i.e. $|b_n - a| < \varepsilon$. $\square$
+
+**Worked example.** Compute $\lim_{n \to \infty} \sqrt[n]{2^n + n^2}$.
+Directly, this looks unpleasant. But we showed earlier that $2^n \ge n^2$ once $n \ge 5$. So for large $n$ we can trap the expression:
+$$ 2 = \sqrt[n]{2^n} \le \sqrt[n]{2^n + n^2} \le \sqrt[n]{2^n + 2^n} = \sqrt[n]{2 \cdot 2^n} = \sqrt[n]{2} \cdot 2 $$
+The left policeman is the constant $2$. The right policeman is $2\sqrt[n]{2}$, which tends to $2 \cdot 1 = 2$. Both walk to $2$, so the answer is $2$.
+
+**Theorem 12.5.2 (Algebra of Limits)**
+Suppose $a_n \to a \in \mathbb{R}$ and $b_n \to b \in \mathbb{R}$. Then:
+1. $a_n + b_n \to a + b$
+2. $a_n b_n \to ab$
+3. If $b_n \neq 0$ for all $n$ and $b \neq 0$, then $\dfrac{a_n}{b_n} \to \dfrac{a}{b}$
+4. If $a_n \to 0$ and $(b_n)$ is merely **bounded** (it need not converge at all!), then $a_n b_n \to 0$
+
+*Proof of (2), the product rule.* Both sequences converge, so by Theorem 12.2.3 both are bounded; pick a single $K$ with $|a_n| \le K$ and $|b_n| \le K$ for all $n$ (which also forces $|a| \le K$ and $|b| \le K$). Let $\varepsilon > 0$ and choose $n_\varepsilon$ past which both $|a_n - a| < \varepsilon$ and $|b_n - b| < \varepsilon$.
+
+The obstacle is that $a_nb_n - ab$ mixes both errors together. The standard fix is the **add-and-subtract trick**: insert a term that acts as a stepping stone.
+$$ |a_n b_n - ab| = |a_n b_n \underbrace{- a_n b + a_n b}_{\text{a clever zero}} - ab| = |a_n(b_n - b) + b(a_n - a)| $$
+Now the triangle inequality separates the two errors cleanly:
+$$ \le |a_n||b_n - b| + |b||a_n - a| < K\varepsilon + K\varepsilon = 2K\varepsilon $$
+Since $K$ is a fixed constant and $\varepsilon$ was arbitrary, we can make this as small as we please (formally: to hit a target margin $\tilde\varepsilon$, run the argument with $\varepsilon = \tilde\varepsilon / 2K$ from the start). $\square$
+
+*Proof sketch of (3), the quotient rule.* It is enough to show $\frac{1}{b_n} \to \frac{1}{b}$, since then part (2) finishes the job via $\frac{a_n}{b_n} = a_n \cdot \frac{1}{b_n}$. The danger is a denominator collapsing toward zero, so we first fence it away from zero: choose $n_\varepsilon$ so that past it we have *both* $|b_n - b| < \varepsilon$ and $|b_n - b| < \frac{|b|}{2}$. That second condition forces $|b_n| > \frac{|b|}{2}$, so the denominator can never get dangerously small. Then
+$$ \left|\frac{1}{b_n} - \frac{1}{b}\right| = \frac{|b - b_n|}{|b_n||b|} \le \frac{\varepsilon}{\frac{|b|}{2}|b|} = \frac{2\varepsilon}{|b|^2} $$
+and since $|b|$ is a fixed non-zero constant, this shrinks to $0$ with $\varepsilon$. $\square$
+
+*A remark on part (4).* This one is genuinely useful and slightly surprising: $(b_n)$ is allowed to be as badly behaved as it likes, so long as it stays bounded. For instance $\frac{(-1)^n}{n} \to 0$, because $\frac{1}{n} \to 0$ and $(-1)^n$ is bounded — even though $(-1)^n$ has no limit whatsoever.
+
+**Extending to infinite limits.** These rules mostly survive when limits are infinite. For example, if $a_n \to +\infty$ and $(b_n)$ is bounded below, then $a_n + b_n \to +\infty$. (Proof: if $b_n \ge K_0$ always, then to beat a target $K$ just push $a_n$ past $K - K_0$.) This justifies the informal shorthand $+\infty + a = +\infty$ and $+\infty + \infty = +\infty$.
+
+### 12.6 Indeterminate Forms: Where the Rules Break
+
+Some combinations of infinite limits simply have **no** general answer. These are the **indeterminate** (or *critical*) forms, and misunderstanding them is the single most common source of wrong answers in calculus.
+
+Consider $a_n \to +\infty$ and $b_n \to -\infty$. What is $\lim(a_n + b_n)$? There is no answer, because *every* behaviour is achievable:
+
+- $a_n = n$, $b_n = -n$: the sum is constantly $0$, so it tends to $0$.
+- $a_n = 2n$, $b_n = -n$: the sum is $n$, so it tends to $+\infty$.
+- $a_n = n$, $b_n = (-1)^n 2n$: the sum oscillates wildly and has no limit.
+
+Same "$\infty - \infty$" shape, three completely different outcomes. The shape alone tells you nothing; you must look at the actual sequences.
+
+Here are the full rulebooks. "**crit.**" marks a cell where no general rule exists.
+
+**Limit of a sum,** $\lim(a_n + b_n)$:
+
+| $a_n \to$ \ $b_n \to$ | $b$ | $+\infty$ | $-\infty$ |
+|---|---|---|---|
+| $a$ | $a+b$ | $+\infty$ | $-\infty$ |
+| $+\infty$ | $+\infty$ | $+\infty$ | **crit.** |
+| $-\infty$ | $-\infty$ | **crit.** | $-\infty$ |
+
+**Limit of a product,** $\lim(a_n b_n)$:
+
+| $a_n \to$ \ $b_n \to$ | $b > 0$ | $0$ | $b < 0$ | $+\infty$ | $-\infty$ |
+|---|---|---|---|---|---|
+| $a > 0$ | $ab$ | $0$ | $ab$ | $+\infty$ | $-\infty$ |
+| $0$ | $0$ | $0$ | $0$ | **crit.** | **crit.** |
+| $a < 0$ | $ab$ | $0$ | $ab$ | $-\infty$ | $+\infty$ |
+| $+\infty$ | $+\infty$ | **crit.** | $-\infty$ | $+\infty$ | $-\infty$ |
+| $-\infty$ | $-\infty$ | **crit.** | $+\infty$ | $-\infty$ | $+\infty$ |
+
+Two more handy facts that are *not* critical: if $a_n \to \pm\infty$ then $\frac{1}{a_n} \to 0$; and if $a_n \to 0$ with $a_n \neq 0$, then $\frac{1}{|a_n|} \to +\infty$.
+
+The indeterminate cases are not a defect in the theory — they are the interesting cases. Much of Chapter 26 (L'Hôpital's Rule) exists solely to resolve them.
+
+### 12.7 Exercises
+
+1. Prove part (1) of Theorem 12.5.2 (the sum rule) directly from the $\varepsilon$-definition. *(Hint: aim for $\frac{\varepsilon}{2}$ in each half and add.)*
+2. Prove part (4) of Theorem 12.5.2. *(Hint: if $|b_n| \le K$, then $|a_nb_n| \le K|a_n|$.)*
+3. Use the Squeeze Theorem to compute $\lim_{n\to\infty} \frac{\sin n}{n}$.
+4. Use the Monotone Convergence Theorem to show that the sequence defined by $a_1 = 1$ and $a_{n+1} = \sqrt{2 + a_n}$ converges. *(Hint: show by induction that it increases and stays below $2$. Then find the limit by solving $L = \sqrt{2+L}$.)*
+5. Give three pairs of sequences, all of the indeterminate form $0 \cdot \infty$, whose products tend to $0$, to $5$, and to $+\infty$ respectively.
+
 
 
 ---
