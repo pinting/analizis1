@@ -1,0 +1,68 @@
+% Common preamble for all device exports.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{etoolbox}
+\usepackage{fvextra}
+\usepackage{newunicodechar}
+\usepackage{pifont}
+
+% FreeSerif/FreeMono lack these glyphs in some faces (bold, italic); route them
+% through math mode so every weight renders identically.
+\newunicodechar{ₙ}{\textsubscript{n}}
+\newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
+\newunicodechar{ℚ}{\ensuremath{\mathbb{Q}}}
+\newunicodechar{ℝ}{\ensuremath{\mathbb{R}}}
+\newunicodechar{ℤ}{\ensuremath{\mathbb{Z}}}
+\newunicodechar{★}{\ding{72}}
+\newunicodechar{⟺}{\ensuremath{\Longleftrightarrow}}
+\newunicodechar{✓}{\ding{51}}
+\newunicodechar{✗}{\ding{55}}
+
+% Wrap long code lines instead of running off the narrow page.
+\fvset{breaklines=true,breakanywhere=true}
+
+% Table body font size, overridden per device.
+\providecommand{\deviceTableSize}{\footnotesize}
+\AtBeginEnvironment{longtable}{\deviceTableSize}
+
+% Long derivations may break across pages; ragged bottom avoids stretched gaps.
+\allowdisplaybreaks
+\raggedbottom
+\setlength{\emergencystretch}{3em}
+
+% Shrink over-wide display math to the column instead of letting it run
+% into the margin. On these narrow pages a handful of one-line derivations
+% (Taylor polynomials, telescoping sums) are wider than the text block.
+% All display math in these sources is single-line, so boxing it is safe.
+\usepackage{graphicx}
+\newsavebox{\fitmathbox}
+\AtBeginDocument{%
+  \renewcommand{\[}{%
+    \par\addvspace{\abovedisplayskip}%
+    \begingroup\begin{lrbox}{\fitmathbox}$\displaystyle}%
+  \renewcommand{\]}{$\end{lrbox}%
+    \noindent\makebox[\linewidth]{%
+      \ifdim\wd\fitmathbox>\linewidth
+        \resizebox{\linewidth}{!}{\usebox\fitmathbox}%
+      \else
+        \usebox\fitmathbox
+      \fi}%
+    \par\addvspace{\belowdisplayskip}\endgroup}%
+}
+
+% Let inline math break after commas. Long enumerations such as
+% $\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2, \dots\}$ are otherwise a single
+% unbreakable chunk and stick out past the edge of a narrow screen.
+\Umathcharnumdef\origcomma=\Umathcodenum`\,
+\begingroup\catcode`\,=\active
+\gdef,{\origcomma\allowbreak}
+\endgroup
+\AtBeginDocument{\mathcode`\,="8000 }
+
+% Definitions and theorems are set as blockquotes; the default 2.5em indent
+% on both sides is a lot of width to give up on a small screen.
+\AtBeginDocument{%
+  \renewenvironment{quote}%
+    {\list{}{\leftmargin=1em\rightmargin=0pt}\item\relax}%
+    {\endlist}%
+}
